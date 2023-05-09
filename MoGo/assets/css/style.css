@@ -1,0 +1,441 @@
+body {
+    margin: 0; /*убираем margin*/
+    font-family: 'Montserrat', sans-serif; /*основной шрифт*/
+    /* font-family: 'Kaushan Script', cursive; */
+    font-size: 15px; /*размер шрифта*/
+    line-height: 1.6; /*межстрочный отступ*/
+    color: #333; /*цвет шрифта? по умолчанию*/
+}
+
+*,
+*:before, /*псевдоэлементы?*/
+*:after {
+    box-sizing: border-box;
+} /*свойство определения размеров для всех элементов страницы*/
+h1, h2, h3, h4, h5, h6 {
+    margin: 0; /*сброс margin`ов для всех заголовков*/
+}
+
+hr {
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: #e5e5e5;
+    margin: 40px 0;
+}
+
+/*========КОНТЕЙНЕР 1200==========*/
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /*выравнивание по центру*/
+}
+
+/*=========ИНТРО=======*/
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh; /*размер браузера*/
+    background: url(../images/intro.jpg) center no-repeat; /*по центру без повторений*/
+
+    /*префиксы? можно посмотреть на caniuse.com*/
+    -webkit-background-size: cover; /*???*/
+    background-size: cover; /*покрывает всю площадь экрана*/
+}
+
+.intro__inner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.intro__suptitle {
+    margin-bottom: 25px; /*отступ (между заголовками h1 h2)*/
+    font-size: 72px;
+    color: #fff;
+    font-family: 'Kaushan Script', cursive;
+
+
+}
+
+.intro__title {
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1; /*высота между строками*/
+    color: #fff;
+}
+
+.intro__title:after { /*полоса*/
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #fff;
+    margin: 60px auto; /*отступ 60 и центрация*/
+}
+
+/*==========HEADER=======*/
+.header {
+    width: 100%;
+    padding-top: 30px; /*отступ элементов шапки сверху*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /*индекс расположения? сверху*/
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between; /*расположение элементов внутри flеxbox`а*/
+    align-items: center; /*выравниваем элементы по горизонт/центр*/
+
+}
+
+.header__logo {
+    font-size: 30px;
+    font-weight: 700; /*bold*/
+    color: #fff;
+}
+
+/*========NAV=======*/
+.nav {
+    font-size: 14px;
+    text-transform: uppercase; /*большими буквами*/
+}
+
+.nav__link {
+    display: inline-block; /*расположение в строку с доп.свойствами (например margin)?*/
+    vertical-align: top; /*Свойство CSS vertical-align описывает вертикальное позиционирование строчных (inline), строчно-блочных (inline-block) элементов или ячеек таблицы (table-cell).*/
+    margin: 0 15px; /*отступ слева 15px?*/
+    position: relative;
+
+    color: #fff;
+    text-decoration: none; /*убрал подчёркивание ссылок*/
+    transition: color .1s linear; /*0,3 сек плавный переход цвета*/
+}
+
+.nav__link:after { /*полоска под навигацией*/
+    content: ""; /*свойство контент(пустое?)*/
+    display: block; /*почему блок?*/
+    width: 100%;
+    height: 3px;
+    background-color: #fce38a;
+    opacity: 0; /*прозрачность 100%*/
+    position: absolute; /*относительно родителя*/
+    top: 100%; /*расположение в самом низу*/
+    left: 0;
+    z-index: 1;
+    transition: opacity .1s linear; /*скорость "прозрачности"*/
+}
+
+.nav__link:hover {
+    color: #fce38a; /*смена цвета при наведении*/
+}
+
+.nav__link:hover:after,
+.nav__link.active:after {
+    opacity: 1; /*прозрачность 0%*/
+}
+
+.nav__link.active { /*привязать к слайдеру*/
+    color: #fce38a;
+}
+
+/*==========BUTTON========*/
+
+.btn { 
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+    border: 3px solid #fff; /*граница кнопки*/
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none; /*убираем подчёркивание ссылки*/
+    transition: background .1s linear, color .1s linear;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #fce38a; /*color: #333;    ???*/
+}
+
+/*========SLIDER======*/
+
+.slider {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.slider__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__item {
+    width: 23%;
+    padding: 20px 0;
+    position: relative;
+    border-top: 3px solid #fff;
+    opacity: .7;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.slider__item.active { /*СДЕЛАТЬ СЛАЙДЕР РАБОЧИМ!!!!1111*/
+    opacity: 1;
+}
+
+.slider__item.active:before {/*СДЕЛАТЬ СЛАЙДЕР РАБОЧИМ!!!!1111*/
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+
+    background-color: #f38181;
+
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1;
+}
+
+.slider__num {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+/*=====SECTION=======*/
+
+.section {
+    padding: 80px;
+}
+
+.section--devices {
+    margin-bottom: 40px;
+    padding-bottom: 0;
+
+    background: url(../images/devices/devices-bg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.section__header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 50px; /*верх0/левправо-центр/отступ низ40*/
+    text-align: center;
+}
+
+.section__suptitle {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    color: #333;
+}
+
+.section__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.section__title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 30px auto; /*выравниваем по центру марджином*/
+    background-color: #f38181;
+}
+
+.section__text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #999;
+}
+
+
+/*======ABOUT======*/
+
+.about{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__item {
+    background-color: #95e1d3; /*ориг #999 цвет под изображением*/
+    width: 380px;
+    position: relative; /*позиционируем текст поверх картинки (а не внизу)*/
+}
+
+.about__item:hover .about__img {
+    transform: translate3d(-10px, -10px, 0); /*смещаем картинку*/
+}
+
+.about__item:hover .about__img img {
+    opacity: .1;
+}
+
+.about__img {
+    background: linear-gradient(to bottom, #f38181, #fce38a); /*градиент представляет собой переходы от одного цвета к другому поверх изобр*/
+    transition: transform .2s linear;
+}
+
+.about__img img {
+    display: block;
+    transition: opacity .1s linear;
+}
+.about__icon {
+    position: absolute;
+    top: 35%;
+    left: 43.75%;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity .1s linear;
+}
+
+.about__text {
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0; /*скрываем текст*/
+
+
+    position: absolute; /*позиционируем текст поверх картинки (а не внизу)*/
+    top: 45%;
+    left:-1.75%;
+    z-index: 2;
+    /* transform: translate3d(0, -50%, 0); */
+    /* transition: transform .2s linear; */
+
+    transition: opacity .1s linear; /*прозрачность текста*/
+}
+ /*СДВИНУТЬ ТЕКСТ ЛЕВО/ВЕРХ, ДОБАВИТЬ ИКОНКИ, ССЫЛКИ*/
+.about__item:hover .about__text {
+    opacity: 1; /*показываем текст*/
+}
+
+/*СДВИНУТЬ ТЕКСТ ЛЕВО/ВЕРХ, ДОБАВИТЬ ИКОНКИ, ССЫЛКИ*/
+.about__item:hover .about__icon {
+   opacity: 1; /*показываем текст*/
+}
+
+
+
+/*=============СТАТИСТИКА==================*/
+
+.statistics {
+    background-color: #95e1d3; /*#95e1d3*/
+}
+
+.stat {
+    display: flex;
+}
+
+.stat__item {
+    flex: 1 1 0; /*ячейки одинаковой ширины?????????*/
+    padding: 70px 25px;
+    border-left: 1px solid #b5eae0;
+    text-align: center;
+    color: #fff;
+}
+
+.stat__item:last-child { /*бордер для крайнего правого элемента*/
+    border-right: 1px solid #b5eae0;
+}
+
+.stat__count {
+    margin-bottom: 10px;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1; /* устанавливает величину пространства между строками*/
+}
+
+.stat__text {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/*===================SERVICES++++++++++++++++++*/
+
+.services {
+    display: flex;
+}
+
+.services__item {
+    flex: 1 1 0; /*ячейки одинаковой ширины?????????*/
+    padding-left: 85px;
+    padding-right: 35px;
+    position: relative;
+}
+
+.services__icon {
+    position: absolute;
+    top: 3px;
+    left: 28px;
+    z-index: 1;
+}
+
+.services__title{
+    font-size: 14px;
+    /* font-weight: 700; */
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.services__text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #999;
+}
+
+/*===========DEVICES====================*/
+
+.devices {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.devices__item {
+    display: block;
+}
+
+.devices__item--iphone {
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
