@@ -281,9 +281,14 @@ hr {
 }
 
 .card__item {
-    background-color: #95e1d3; /*ориг #999 цвет под изображением*/
+    /* background-color: #95e1d3; ориг #999 цвет под изображением */
     width: 380px;
-    position: relative; /*позиционируем текст поверх картинки (а не внизу)*/
+    /* position: relative; позиционируем текст поверх картинки (а не внизу) */
+}
+
+.card__inner {
+    background-color: #95e1d3;
+    position: relative;
 }
 
 .card__item:hover .card__img {
@@ -341,7 +346,27 @@ hr {
    opacity: 1; /*показываем текст*/
 }
 
+.card__info {
+    margin-top: 20px;
+    text-align: center;
+}
 
+
+.card__name {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 4px;
+    
+}
+
+.card__prof {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 15px;
+    color: #999;
+}
 
 /*=============СТАТИСТИКА==================*/
 
