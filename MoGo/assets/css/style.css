@@ -232,6 +232,10 @@ hr {
     background-size: cover;
 }
 
+.section--grey {
+    background-color: #f8f8f8;
+}
+
 .section__header {
     width: 100%;
     max-width: 950px;
@@ -268,38 +272,38 @@ hr {
 }
 
 
-/*======ABOUT======*/
+/*======card======*/
 
-.about{
+.card{
     margin-top: 80px;
     display: flex;
     justify-content: space-between;
 }
 
-.about__item {
+.card__item {
     background-color: #95e1d3; /*ориг #999 цвет под изображением*/
     width: 380px;
     position: relative; /*позиционируем текст поверх картинки (а не внизу)*/
 }
 
-.about__item:hover .about__img {
+.card__item:hover .card__img {
     transform: translate3d(-10px, -10px, 0); /*смещаем картинку*/
 }
 
-.about__item:hover .about__img img {
+.card__item:hover .card__img img {
     opacity: .1;
 }
 
-.about__img {
+.card__img {
     background: linear-gradient(to bottom, #f38181, #fce38a); /*градиент представляет собой переходы от одного цвета к другому поверх изобр*/
     transition: transform .2s linear;
 }
 
-.about__img img {
+.card__img img {
     display: block;
     transition: opacity .1s linear;
 }
-.about__icon {
+.card__icon {
     position: absolute;
     top: 35%;
     left: 43.75%;
@@ -308,7 +312,7 @@ hr {
     transition: opacity .1s linear;
 }
 
-.about__text {
+.card__text {
     width: 100%;
     font-size: 18px;
     color: #fff;
@@ -328,12 +332,12 @@ hr {
     transition: opacity .1s linear; /*прозрачность текста*/
 }
  /*СДВИНУТЬ ТЕКСТ ЛЕВО/ВЕРХ, ДОБАВИТЬ ИКОНКИ, ССЫЛКИ*/
-.about__item:hover .about__text {
+.card__item:hover .card__text {
     opacity: 1; /*показываем текст*/
 }
 
 /*СДВИНУТЬ ТЕКСТ ЛЕВО/ВЕРХ, ДОБАВИТЬ ИКОНКИ, ССЫЛКИ*/
-.about__item:hover .about__icon {
+.card__item:hover .card__icon {
    opacity: 1; /*показываем текст*/
 }
 
@@ -427,6 +431,206 @@ hr {
     z-index: 1;
 }
 
+/*=============WEDO===============*/
+
+.wedo {
+    display: flex;
+}
+
+.wedo__item {
+    width: 50%; /*можно было flex: 1 1 0;*/
+}
+
+/*============accordion========*/
+
+.accordion__item {
+    margin-bottom: 10px;
+    border: solid 1px #e5e5e5;
+}
+
+.accordion__item.active
+.accordion__content {
+    display: block;
+}
+
+.accordion__item.active
+.accordion__header {
+    border-bottom-color: #e5e5e5;
+
+}
+
+.accordion__item.active
+.accordion__header:after {
+    transform: translateY(-50%)
+    rotate(-45deg); /*вращаем*/
+    margin-top: 5px; /*выравниваем визуально*/
+}
+
+
+.accordion__header {
+    padding: 15px 20px 15px 65px;
+    position: relative;
+
+    border-bottom: solid 1px transparent;
+    cursor: pointer;
+}
+
+.accordion__header:after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    margin-top: -5px; /*выравниваем визуально*/
+
+    border-top: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 1;
+
+    transform: translateY(-50%)
+    rotate(135deg); /*вращаем*/
+}
+
+.accordion__icon {
+    position: absolute;
+    top: 50%;
+    left: 20px; /*вровень с контентом*/
+    z-index: 1;
+
+    transform: translateY(-50%); /*выравниваем по Y*/
+}
+
+.accordion__content {
+    padding: 15px 20px;
+    display: none;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 15px;
+    color: #999;
+}
+
+.accordion__title {
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/*=======Reviews========*/
+
+.reviews {
+    position: relative;
+    padding: 0 110px;
+}
+
+
+.reviews__item {
+    margin-bottom: 50px;
+    padding-left: 240px;
+    position: relative;
+}
+
+.reviews__photo {
+    /* border: 2px solid #95e1d3; */
+    width: 18%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.reviews__text {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    color: #999;
+    /* margin-bottom: 20px; */
+}
+
+.reviews__author {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    color: #333;
+}
+
+.reviews__author:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin-right: 10px;
+}
+
+.reviews__btn {
+    font-size: 0;
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.reviews__btn:after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    border-top: 2px solid #ccc;
+    border-left: 2px solid #ccc;
+
+    
+}
+
+.reviews__btn--prev {
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.reviews__btn--next {
+    right: 0;
+    transform: rotate(135deg);
+}
+
+
+/*============SOCIAL++++++++*/
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social__item {
+    width: 55px;
+    height: 55px;
+    padding: 13px 10px;
+    background-color: #fce38a;
+    border-right: 1px solid #f9bd87;
+
+    font-size: 30px;
+    text-decoration: none;
+    color: #f38181;
+
+    line-height: 1;
+    transition: background .1s linear, color .1s linear;
+}
+
+.social__item:last-child {
+    border-right: 0;
+}
+
+.social__item:hover {
+    color: #fff;
+    background-color: #f38181;
+}
 
 
 
