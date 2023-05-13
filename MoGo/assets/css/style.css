@@ -238,7 +238,9 @@ hr {
 
 .section--map {
     padding: 40px 0;
-    background: #e6e6e6 url("../images/map/map-bg.jpg") center no-repeat / cover;
+    background: #e6e6e6 url("../images/map/map-bg.jpg") center no-repeat;
+    -webkit-background-size : cover;
+    background-size: cover;
 }
 
 .section__header {
@@ -937,11 +939,27 @@ hr {
     text-decoration: underline; /*ссылка при наведении*/
 }
 
+/*=======FOOTER++++++++*/
 
+.footer {
+    padding-top: 65px;
+    background-color: #f8f8f8;
+}
 
+.footer__logo {
+    margin-bottom: 30px;
 
+    font-size: 46px;
+    font-weight: 700;
+    color: #ccc;
+}
 
-
+.footer__text {
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #999;
+    font-size: 15px;
+}
 
 
 
