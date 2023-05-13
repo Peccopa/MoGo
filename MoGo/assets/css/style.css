@@ -946,6 +946,24 @@ hr {
     background-color: #f8f8f8;
 }
 
+.footer__inner {
+    padding-bottom: 65px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.footer__col--first {
+width: 40%;
+}
+
+.footer__col--second {
+    width: 29%;
+    }
+
+.footer__col--third {
+        width: 22%;
+        }    
+
 .footer__logo {
     margin-bottom: 30px;
 
@@ -961,17 +979,110 @@ hr {
     font-size: 15px;
 }
 
+.footer__social {
+    margin-bottom: 25px;
+}
 
+.footer__social-header {
+    padding-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #e5e5e5;
+}
 
+.footer__social-header b {
+    font-size: 18px;
+}
 
+.footer__social-content {
+    padding-top: 15px;
 
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    color: #999;
+    font-weight: 300;
+    font-size: 15px;
+}
 
+.footer__social-content a {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px; /*отстуа у каждой ссылки*/
+    font-size: 18px;
+    color: #95e1d3;
+    transition: background .2s linear;
+}
 
+.footer__social-content a:hover {
+    color: #74c7b8;
+}
 
+.footer__title {
+    margin: 30px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #333;
+}
 
+/*=======SUBSCRIBE======*/
 
+.subscribe {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+}
 
+.subscribe__input {
+    width: 60%;
+    padding: 12px;
+    height: 40px;
 
+    background: #fff;
+    border: 1px solid #e7e7e7;
+
+    font-family: 'Roboto', sans-serif; /*для импутов и кнопок прописываем обязательно*/
+    font-style: italic;
+    color: #333; /*цвет ввода текста*/
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.1;
+    border-right: 0;
+}
+
+.subscribe__input::placeholder {
+    color: #ccc; /*ОСОБЫЕ УСЛОВИЯ ДЛЯ ПЛЕЙСХОЛДЕРА*/
+}
+
+.subscribe__input:focus {
+    outline: 0; /*убираем границы оутлайна*/
+    border-color: #95e1d3;
+
+}
+
+.subscribe__button {
+    width: 40%;
+    height: 40px;
+    background-color: #95e1d3;
+    border: 0;
+    cursor: pointer;
+    padding: 12px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.1;
+    transition: background .2s linear;
+
+}
+
+.subscribe__button:hover {
+    background-color: #74c7b8;
+}
+
+.subscribe__button:focus {
+    outline: 0; /*убираем границы оутлайна*/
+}
 
 
 
