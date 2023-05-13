@@ -221,7 +221,7 @@ hr {
 /*=====SECTION=======*/
 
 .section {
-    padding: 80px;
+    padding: 80px 0;
 }
 
 .section--devices {
@@ -241,6 +241,14 @@ hr {
     max-width: 950px;
     margin: 0 auto 50px; /*верх0/левправо-центр/отступ низ40*/
     text-align: center;
+}
+
+.section--clients {
+    background: #f5f5f5
+    url("../images/clients/clients-bg.jpg") center no-repeat;
+    -webkit-background-size : cover;
+    background-size: cover;
+
 }
 
 .section__suptitle {
@@ -562,6 +570,7 @@ hr {
 
 .reviews__photo {
     /* border: 2px solid #95e1d3; */
+    /* border-radius: 50%; */
     width: 18%;
     position: absolute;
     top: 0;
@@ -731,14 +740,63 @@ hr {
 }
 
 
+/*++++++++CLIENTS++++++++*/
 
+.clients {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap; /*перенос на новую строку*/
 
+}
 
+.clients__item {
+    width: 50%;
+    padding: 0 45px 0 175px;
+    position: relative;
+    margin-bottom: 60px;
+}
 
+.clients__photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
 
+    position: absolute;
+    top: 0;
+    left: 40px;
+    z-index: 1;
+    
+}
 
+.clients__name {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: #333;
+    font-size: 14px;
+}
 
+.clients__prof {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    color: #333;
+    font-weight: 300;
+    font-size: 15px;
+}
 
+.clients__text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #999;
+}
+
+.clients__text:before { /*полоска перед текстом*/
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: 15px 0;
+}
 
 
 
