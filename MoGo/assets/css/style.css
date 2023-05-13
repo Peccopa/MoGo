@@ -1024,6 +1024,63 @@ width: 40%;
     color: #333;
 }
 
+/*=========BLOGS+++++++++*/
+
+.blogs__item {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.blogs__img {
+    width: 120px;
+    height: 80px;
+}
+
+.blogs__content {
+    padding-left: 20px;
+}
+
+.blogs__title {
+    color: #333;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    /* line-height: 1.2; */
+}
+
+.blogs__title:hover {
+    text-decoration: underline;
+}
+
+.blogs__date {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    color: #999;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+
+
+/*+++++++++++++INSTAGRAM++++++++++++++++*/
+
+.instagram {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+.instagram__item {
+    width: 32.33%;
+    /* flex: 1 1 0; */
+    border-bottom: 1px solid #fff;
+}
+
+.instagram__item img {
+    display: block;
+}
+
 /*=======SUBSCRIBE======*/
 
 .subscribe {
@@ -1085,10 +1142,19 @@ width: 40%;
 }
 
 
+/*******************COPYRIGHT*******************/
 
+.copyright {
+    padding: 20px 0;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+}
 
-
-
+.copyright span {
+    color: #f38181;
+}
 
 
 
