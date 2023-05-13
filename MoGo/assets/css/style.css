@@ -236,6 +236,11 @@ hr {
     background-color: #f8f8f8;
 }
 
+.section--map {
+    padding: 40px 0;
+    background: #e6e6e6 url("../images/map/map-bg.jpg") center no-repeat / cover;
+}
+
 .section__header {
     width: 100%;
     max-width: 950px;
@@ -797,6 +802,170 @@ hr {
     background-color: #f38181;
     margin: 15px 0;
 }
+
+/*+++++++++BLOG+++++++++*/
+
+.blog {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog__item {
+    width: 31%;
+}
+
+.blog__header {
+    position: relative;
+    margin-bottom: 15px;
+
+}
+
+.blog__photo {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.blog__date {
+    padding: 10px 15px;
+    background-color: #95e1d3;
+    position: absolute;
+    bottom: 10px;
+    left: -10px;
+    z-index: 1;
+    /* text-align: right; */
+}
+
+.blog__date-day {
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+}
+
+.blog__date-month {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    color: #fff;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1;
+    text-align: center;
+}
+
+.blog__content {
+    margin-bottom: 14px; /*убрать*/
+}
+
+.blog__title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.blog__title a {
+    text-decoration: none;
+    color: inherit; /*ссылка принимает значение родителя*/
+}
+
+.blog__title a:hover {
+    text-decoration: underline; /*ссылка при наведении*/
+}
+
+.blog__text {
+    font-family: 'Roboto', sans-serif;
+    color: #999;
+    /* font-weight: 400; */
+    font-size: 15px;
+}
+
+.blog__footer {
+    padding-top: 14px;
+    border-top: 1px solid #e5e5e5;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    color: #999;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.blog-stat__item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 16px;
+}
+
+.blog-stat__item i {
+    color: #95e1d3;
+    margin-right: 5px;
+}
+
+
+
+
+/**___________MAP+++++++++*/
+
+.map {
+    text-align: center;
+}
+
+.map__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #f38181  ;
+    text-transform: uppercase;
+}
+
+.map__title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 15px auto 0; /*выравниваем по центру марджином*/
+    background-color: #f38181;
+}
+
+.map__title a {
+    color: inherit; /*ссылка принимает значение родителя*/
+    text-decoration: none;
+}
+
+.map__title a:hover {
+    text-decoration: underline; /*ссылка при наведении*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
