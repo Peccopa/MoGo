@@ -1289,11 +1289,11 @@ width: 40%;
         border-bottom: 1px solid #b5eae0;
     }
 
-    .stat__item: :last-child {
+    .stat__item:last-child {
         border-bottom: 0;
     }
 
     .stat__count {
         font-size: 52px;
     }
-} /***/?
+} /***/
