@@ -427,13 +427,19 @@ hr {
 
 .services {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .services__item {
-    flex: 1 1 0; /*ячейки одинаковой ширины?????????*/
-    padding-left: 85px;
-    padding-right: 35px;
+    width: 33.33333%;
+    /* flex: 1 1 0; ячейки одинаковой ширины????????? */
+    padding: 0 35px 40px 85px;
     position: relative;
+    margin-bottom: 40px;
+}
+
+.services__item--border {
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .services__icon {
@@ -468,6 +474,8 @@ hr {
 
 .devices__item {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .devices__item--iphone {
@@ -481,12 +489,20 @@ hr {
 
 .wedo {
     display: flex;
+    margin: 0 -15px;
+    flex-wrap: wrap;
 }
 
 .wedo__item {
     width: 50%; /*можно было flex: 1 1 0;*/
+    padding: 0 15px;
 }
 
+.wedo__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 /*============accordion========*/
 
 .accordion__item {
@@ -582,9 +598,12 @@ hr {
 }
 
 .reviews__photo {
+    display: block;
+    width: 210px;
+    height: 210px;
     /* border: 2px solid #95e1d3; */
     /* border-radius: 50%; */
-    width: 18%;
+    /* width: 18%; */
     position: absolute;
     top: 0;
     left: 0;
@@ -685,9 +704,18 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 -15px;
 }
 
+.logos__item {
+    padding: 0 15px;
+}
 
+.logos__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 /*===========WORKS===+++++++++++++*/
 
 .works {
@@ -1177,6 +1205,11 @@ width: 40%;
     .intro__title {
         font-size: 120px;
     }
+
+    /* Reviews */
+    .reviews__text {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 990px) {
@@ -1208,20 +1241,49 @@ width: 40%;
         border: 0;
     }
 
+        /* Services */
+        .services__item {
+            width: 50%;
+            padding-bottom: 0;
+    }
+
+          
+        .services__item--border {
+            border-bottom: 0;
+    }
+
+        /* Reviews */
+        .reviews {
+            padding: 0 60px;
+        }
+
+        .reviews__photo {
+            width: 150px;
+            height: 150px;
+        }
+
+        .reviews__item {
+            padding-left: 175px;
+        }
+
 }
 
 @media (max-width: 770px) {
 
         /* Nav */
 
-    .nav {
-        display: none;
-    }
+        .nav {
+           display: none;
+        }
 
         /* Section */
 
         .section {
             padding: 40px;
+        }
+
+        .section--devices {
+            padding-bottom: 0;
         }
 
         /* Card */
@@ -1243,13 +1305,55 @@ width: 40%;
 
         /* Slider */
 
-    .slider__text {
-        display: none;
-    }
+        .slider__text {
+            display: none;
+        }
 
-    .slider__item.active:before {
-        width: 50%;
-    }
+        .slider__item.active:before {
+            width: 50%;
+        }
+
+        /* Services */
+        .services {
+            justify-content: center;
+        }
+        .services__item {
+            width: 100%;
+            max-width: 400px;
+            padding-left: 55px;
+            padding-right: 0;
+        }
+
+        .services__icon {
+            left: 0;
+        }
+
+        /* WEDO */
+        .wedo__img {
+            display: none;
+        }
+
+        .wedo__item {
+            width: 100%;
+        }
+
+        /* Reviews */
+        .reviews__photo {
+            position: static;
+            margin: 0 auto 20px;
+        }
+
+        .reviews__item {
+            padding-left: 0;
+        }
+
+        .reviews__text {
+            font-size: 16px;
+        }
+
+        .reviews__author {
+            font-size: 20px;
+        }
 
 }
 
@@ -1296,4 +1400,40 @@ width: 40%;
     .stat__count {
         font-size: 52px;
     }
-} /***/
+
+    /* Devices */
+
+    .devices {
+        max-width: 320px;
+    }
+
+    .devices__item--iphone {
+        width: 180px;
+        bottom: -50px;
+        right: -80px;
+    }
+
+        /* REVIEWS */
+    .reviews {
+        padding: 0;
+    }        
+    .reviews__btn {
+        top: 18%;
+    }
+
+    /* logos */
+    .logos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logos__item {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .logos__img {
+        margin: 0 auto;
+    }
+
+
+}   
