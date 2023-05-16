@@ -13,15 +13,16 @@
 </head>
 <body>
 
-<header class="header">
+<header class="header" id="header">
+    <!-- <header class="header  header--fixed"> -->
     <div class="container">
         <div class="header__inner">
             <div class="header__logo">MoGo</div> <!--test-->
             <nav class="nav">
-                <a class="nav__link active" href="#">About</a><!--active-->
-                <a class="nav__link" href="#">Service</a>
-                <a class="nav__link" href="#">Work</a>
-                <a class="nav__link" href="#">Blog</a>
+                <a class="nav__link active" href="#" data-scroll="#about">About</a><!--active-->
+                <a class="nav__link" href="#" data-scroll="#service">Service</a>
+                <a class="nav__link" href="#" data-scroll="#work">Work</a>
+                <a class="nav__link" href="#" data-scroll="#blog">Blog</a>
                 <!-- <a class="nav__link" href="#">Registration</a> -->
                 <a class="nav__link" href="#">Contact</a>
                 <a class="nav__link" href="#">
@@ -29,16 +30,20 @@
                 </a>
                 <a class="nav__link" href="#">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-                
+                </a>    
             </nav>
+
+            <button class="nav-toggle" type="button">
+                <span class="nav-toggle__item">Menu</span>
+            </button>
+
         </div>
     </div>
 </header>
 
 <div class="page">
 
-    <div class="intro">
+    <div class="intro" id="intro">
 
         <div class="container">
             <div class="intro__inner">
@@ -73,7 +78,7 @@
 
     </div>
         
-    <section class="section">
+    <section class="section" id = "about">
         <div class="container">
             
             <div class="section__header">
@@ -782,5 +787,7 @@
 
 
     <script src="https://kit.fontawesome.com/48db125bfd.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./assets/js/jquery.js"></script>
 </body>
 </html>
