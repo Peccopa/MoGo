@@ -17,14 +17,15 @@
     <!-- <header class="header  header--fixed"> -->
     <div class="container">
         <div class="header__inner">
-            <div class="header__logo">MoGo</div> <!--test-->
-            <nav class="nav">
-                <a class="nav__link active" href="#" data-scroll="#about">About</a><!--active-->
-                <a class="nav__link" href="#" data-scroll="#service">Service</a>
-                <a class="nav__link" href="#" data-scroll="#work">Work</a>
+            <!-- <div class="header__logo">MoGo</div> -->
+            <a class="header__logo" href="#" data-scroll="#intro">MoGo</a>
+            <nav class="nav" id="nav">
+                <a class="nav__link" href="#" data-scroll="#about">About</a>
+                <a class="nav__link" href="#" data-scroll="#services">Service</a>
+                <a class="nav__link" href="#" data-scroll="#works">Work</a>
                 <a class="nav__link" href="#" data-scroll="#blog">Blog</a>
                 <!-- <a class="nav__link" href="#">Registration</a> -->
-                <a class="nav__link" href="#">Contact</a>
+                <a class="nav__link" href="#" data-scroll="#footer">Contact</a>
                 <a class="nav__link" href="#">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
@@ -33,7 +34,7 @@
                 </a>    
             </nav>
 
-            <button class="nav-toggle" type="button">
+            <button class="nav-toggle" id="nav_toggle" type="button">
                 <span class="nav-toggle__item">Menu</span>
             </button>
 
@@ -42,7 +43,7 @@
 </header>
 
 <div class="page">
-
+    <!-- intro  -->
     <div class="intro" id="intro">
 
         <div class="container">
@@ -77,7 +78,7 @@
         </div>
 
     </div>
-        
+    <!-- about  -->
     <section class="section" id = "about">
         <div class="container">
             
@@ -113,8 +114,8 @@
         
         </div>
     </section>
-
-    <div class="statistics">
+    <!-- statistics  -->
+    <div class="statistics" id="statistics">
         <div class="container">
             <div class="stat">
                 <div class="stat__item"> <!--вставить скрипт счётчика (тупо таймер для визуализации часы/минуты/секунды)-->
@@ -141,8 +142,8 @@
 
         </div>
     </div>
-
-    <section class="section">
+    <!-- services  -->
+    <section class="section" id="services">
         <div class="container">
             
             <div class="section__header">
@@ -188,8 +189,8 @@
         </div>
     </section>
 
-
-    <section class="section section--devices">
+    <!-- devices  -->
+    <section class="section section--devices" id="devices">
         <div class="container">
 
             <div class="section__header">
@@ -204,8 +205,8 @@
 
         </div>
     </section>
-
-    <section class="section">
+    <!-- wedo  -->
+    <section class="section" id="wedo">
         <div class="container">
             
             <div class="section__header">
@@ -223,30 +224,30 @@
                 <div class="wedo__item">
                     <div class="accordion">
 
-                        <div class="accordion__item">
+                        <div class="accordion__item" data-collapse="#wedo_1">
                             <div class="accordion__header">
                                 <img class="accordion__icon" src="./assets/images/wedo/photography.png" alt="">
                                 <div class="accordion__title">Photography</div>
                             </div>
-                            <div class="accordion__content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="accordion__content" id="wedo_1"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
                         </div> <!-- accordion__item -->
 
-                        <div class="accordion__item active">
+                        <div class="accordion__item active" data-collapse="#wedo_2">
                             <div class="accordion__header">
                                 <img class="accordion__icon" src="./assets/images/wedo/creativity.png" alt="">
                                 <div class="accordion__title">creativity</div>
                             </div>
-                            <div class="accordion__content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="accordion__content" id="wedo_2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
                         </div> <!-- accordion__item -->
 
-                        <div class="accordion__item">
+                        <div class="accordion__item" data-collapse="#wedo_3">
                             <div class="accordion__header">
                                 <img class="accordion__icon" src="./assets/images/wedo/webdesign.png" alt="">
                                 <div class="accordion__title">web design</div>
                             </div>
-                            <div class="accordion__content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="accordion__content" id="wedo_3"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
                         </div> <!-- accordion__item -->
 
@@ -256,7 +257,7 @@
 
         </div>
     </section>
-
+    <!-- reviews1  -->
     <div class="section section--grey"><!--секция без заголовка (div вместо section)-->
         <div class="container">
             
@@ -274,8 +275,8 @@
 
         </div>
     </div>
-
-    <section class="section">
+    <!-- team  -->
+    <section class="section" id="team">
         <div class="container">
 
             <div class="section__header">
@@ -364,8 +365,8 @@
             </div> <!--card-->
         </div> <!--cont-->
     </section>
-
-    <div class="section section--grey">
+    <!-- logos  -->
+    <div class="section section--grey" id="logos">
         <div class="container">
             <div class="logos">
                 <div class="logos__item">
@@ -389,8 +390,8 @@
             </div>
         </div>
     </div>
-
-    <section class="section">
+    <!-- works  -->
+    <section class="section" id="works">
         <div class="container">
             <div class="section__header">
                 <h3 class="section__suptitle">What we do</h3>
@@ -481,8 +482,8 @@
             </div>
         </div>
     </section>
-
-    <div class="section">
+    <!-- reviews2  -->
+    <div class="section" id="reviews2">
         <div class="container">
             
             <div class="reviews">
@@ -500,8 +501,8 @@
         </div>
     </div>
 
-
-    <section class="section section--clients">
+    <!-- clients  -->
+    <section class="section section--clients" id="clients">
         <div class="container">
 
             <div class="section__header">
@@ -547,8 +548,8 @@
 
         </div> <!--cont-->
     </section>
-
-    <section class="section">
+    <!-- blog  -->
+    <section class="section" id="blog">
         <div class="container">
 
             <div class="section__header">
@@ -639,8 +640,8 @@
         </div>
     </section>
 
-
-    <section class="section  section--map">
+    <!-- map  -->
+    <section class="section  section--map" id="map">
         <div class="container">
             <div class="map">    
                 <h2 class="map__title">
@@ -650,8 +651,8 @@
             </div>
         </div>
     </section>
-
-    <footer class="footer">
+    <!-- footer  -->
+    <footer class="footer" id="footer">
         <div class="container">
 
             <div class="footer__inner">

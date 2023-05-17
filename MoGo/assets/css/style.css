@@ -128,6 +128,7 @@ hr {
     font-size: 30px;
     font-weight: 700; /*bold*/
     color: #fff;
+    text-decoration: none;
 }
 
 /*========NAV=======*/
@@ -190,6 +191,10 @@ hr {
     border: 0;
     background: none;
     cursor: pointer;
+}
+
+.nav-toggle:focus {
+    outline: 0;
 }
 
 .nav-toggle__item {
@@ -1431,6 +1436,10 @@ width: 40%;
            left: 0;
            background-color: #f38181;
 
+        }
+
+        .nav.active {
+            display: block;
         }
 
         .nav__link {
