@@ -27,6 +27,7 @@ hr {
 
 /* page */
 
+
 .page {
     overflow: hidden;
 }
@@ -47,7 +48,7 @@ hr {
     justify-content: center;
     width: 100%;
     height: 100vh; /*размер браузера*/
-    background: url(../images/intro.jpg) center no-repeat; /*по центру без повторений*/
+    background: url(../images/intro1.jpg) center no-repeat; /*по центру без повторений*/
     min-height: 820px;
     position: relative;
 
@@ -55,6 +56,7 @@ hr {
     -webkit-background-size: cover; /*???*/
     background-size: cover; /*покрывает всю площадь экрана*/
 }
+
 
 .intro__inner {
     width: 100%;
@@ -65,18 +67,22 @@ hr {
 }
 
 .intro__suptitle {
-    margin-bottom: 25px; /*отступ (между заголовками h1 h2)*/
-    font-size: 72px;
+    /* font-family: 'Roboto', sans-serif; */
+    margin: 25px 0px 0px -400px;
+    font-size: 64px;
     color: #fff;
-    font-family: 'Kaushan Script', cursive;
+    /* font-style: italic; */
+    font-family: 'Kaushan Script';
 
 
 }
 
 .intro__title {
+    font-family: 'Kaushan Script', cursive;
     font-size: 150px;
+    /* font-style: italic; */
     font-weight: 700;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     line-height: 1; /*высота между строками*/
     color: #fff;
 }
@@ -86,7 +92,7 @@ hr {
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #fff;
+    background-color: #ccc;
     margin: 60px auto; /*отступ 60 и центрация*/
 }
 
@@ -103,7 +109,7 @@ hr {
 
 .header.fixed {
     padding: 10px 0;
-    background-color: #f38181;
+    background-color: #985739;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 0;
@@ -125,10 +131,16 @@ hr {
 }
 
 .header__logo {
+    font-family: 'Kaushan Script', cursive;
     font-size: 30px;
     font-weight: 700; /*bold*/
-    color: #fff;
+    color: #ccc;
     text-decoration: none;
+    transition: color .1s linear;
+}
+
+.header__logo:hover{
+    color: #fff;
 }
 
 /*========NAV=======*/
@@ -143,7 +155,7 @@ hr {
     margin: 0 15px; /*отступ слева 15px?*/
     position: relative;
 
-    color: #fff;
+    color: #ccc;
     text-decoration: none; /*убрал подчёркивание ссылок*/
     transition: color .1s linear; /*0,3 сек плавный переход цвета*/
 }
@@ -153,7 +165,7 @@ hr {
     display: block; /*почему блок?*/
     width: 100%;
     height: 3px;
-    background-color: #fce38a;
+    background-color: #fff;
     opacity: 0; /*прозрачность 100%*/
     position: absolute; /*относительно родителя*/
     top: 100%; /*расположение в самом низу*/
@@ -163,7 +175,7 @@ hr {
 }
 
 .nav__link:hover {
-    color: #fce38a; /*смена цвета при наведении*/
+    color: #fff; /*смена цвета при наведении*/
 }
 
 .nav__link:hover:after,
@@ -202,7 +214,7 @@ hr {
     width: 100%;
     height: 3px;
 
-    background-color: #fff;
+    background-color: #ccc;
     position: absolute;
     top: 0;
     left: 0;
@@ -224,7 +236,7 @@ hr {
 .nav-toggle__item:after {
     content: "";
     width: 100%;
-    background-color: #fff;
+    background-color: #ccc;
     height: 3px;
     position: absolute;
     left: 0;
@@ -257,8 +269,8 @@ hr {
     display: inline-block;
     vertical-align: top;
     padding: 8px 30px;
-    border: 3px solid #fff; /*граница кнопки*/
-    color: #fff;
+    border: 3px solid #ccc; /*граница кнопки*/
+    color: #ccc;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
@@ -268,7 +280,7 @@ hr {
 
 .btn:hover {
     background-color: #fff;
-    color: #fce38a; /*color: #333;    ???*/
+    color: #ccc; /*color: #333;    ???*/
 }
 
 /*========SLIDER======*/
@@ -290,11 +302,19 @@ hr {
     width: 23%;
     padding: 20px 0;
     position: relative;
-    border-top: 3px solid #fff;
+    border-top: 3px solid #ccc;
     opacity: .7;
     font-size: 18px;
-    color: #fff;
+    color: #ccc;
     text-transform: uppercase;
+    text-decoration: none;
+    transition: color .1s linear;
+}
+
+.slider__item:hover {
+    color: #fff;
+    border-top: 3px solid #fff;
+    /* text-transform: uppercase; */
 }
 
 .slider__item.active { /*СДЕЛАТЬ СЛАЙДЕР РАБОЧИМ!!!!1111*/
@@ -307,7 +327,7 @@ hr {
     width: 70px;
     height: 3px;
 
-    background-color: #f38181;
+    background-color: #985739;
 
     position: absolute;
     top: -3px;
@@ -315,10 +335,18 @@ hr {
     z-index: 1;
 }
 
-.slider__num {
-    font-size: 24px;
+.slider__text {
+    font-size: 20px;
     font-weight: 700;
 }
+
+.slider__num {
+    font-size: 24px;
+    transition: color .1s linear;
+    /* font-weight: 700; */
+}
+
+
 
 
 /*=====SECTION=======*/
@@ -1326,6 +1354,12 @@ width: 40%;
 
     /* Intro */
 
+    .intro {
+        background-size: cover;
+   
+    }
+    
+    
     .intro__suptitle {
         font-size: 52px;
     }
@@ -1338,6 +1372,7 @@ width: 40%;
     .reviews__text {
         font-size: 20px;
     }
+
 }
 
 @media (max-width: 990px) {
@@ -1349,7 +1384,7 @@ width: 40%;
     }
 
     .intro__title {
-        font-size: 80px;
+        font-size: 110px;
     }
 
     /* Stat */
@@ -1496,9 +1531,25 @@ width: 40%;
 
 
         /* Slider */
+        .slider__inner {
+            /* justify-content: center; */
+            margin: auto;
+        }
 
-        .slider__text {
+        .slider__item {
+            padding: 10px 0;
+            text-align: center;
+
+            
+        }
+
+        .slider__num {
             display: none;
+        }
+        .slider__text {
+            font-size: 14px;
+        
+
         }
 
         .slider__item.active:before {
@@ -1584,10 +1635,11 @@ width: 40%;
 
     .intro__suptitle {
         font-size: 22px;
+        margin: 25px 0px 0px -150px;
     }
 
     .intro__title {
-        font-size: 40px;
+        font-size: 65px;
     }
         /* Section */
 
