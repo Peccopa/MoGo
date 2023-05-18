@@ -115,6 +115,7 @@ hr {
     top: 0;
     left: 0;
     right: 0;
+    /* border-top: #333 1px solid; */
 
     transform: translate3d(0, 0, 0);
 }
@@ -184,7 +185,7 @@ hr {
 }
 
 .nav__link.active { /*привязать к слайдеру*/
-    color: #fce38a;
+    color: #fff;
 }
 
 
@@ -300,7 +301,7 @@ hr {
 
 .slider__item {
     width: 23%;
-    padding: 20px 0;
+    padding: 5px 0;
     position: relative;
     border-top: 3px solid #ccc;
     opacity: .7;
@@ -408,7 +409,7 @@ hr {
     width: 60px;
     height: 3px;
     margin: 30px auto; /*выравниваем по центру марджином*/
-    background-color: #f38181;
+    background-color: #985739;
 }
 
 .section__text {
@@ -435,7 +436,7 @@ hr {
 }
 
 .card__inner {
-    background-color: #95e1d3;
+    background-color: #ccc;
     position: relative;
 }
 
@@ -448,7 +449,7 @@ hr {
 }
 
 .card__img {
-    background: linear-gradient(to bottom, #f38181, #fce38a); /*градиент представляет собой переходы от одного цвета к другому поверх изобр*/
+    background: linear-gradient(to bottom, #985739, #c08569); /*градиент представляет собой переходы от одного цвета к другому поверх изобр*/
     transition: transform .2s linear;
 }
 
@@ -459,6 +460,8 @@ hr {
     transition: opacity .1s linear;
 }
 .card__icon {
+    color: #ccc ;
+    font-size: 30px;
     position: absolute;
     top: 35%;
     left: 43.75%;
@@ -468,11 +471,12 @@ hr {
 }
 
 .card__text {
+    padding: 30px;
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
     text-transform: uppercase;
-    font-weight: 700;
+    /* font-weight: 700; */
     text-align: center;
     opacity: 0; /*скрываем текст*/
 
@@ -521,7 +525,7 @@ hr {
 /*=============СТАТИСТИКА==================*/
 
 .statistics {
-    background-color: #95e1d3; /*#95e1d3*/
+    background-color: #ccc; /*#95e1d3*/
 }
 
 .stat {
@@ -531,24 +535,25 @@ hr {
 
 .stat__item {
     flex: 1 1 0; /*ячейки одинаковой ширины?????????*/
-    padding: 70px 25px;
-    border-left: 1px solid #b5eae0;
+    padding: 15px 15px;
+    border-left: 1px solid #fff;
     text-align: center;
     color: #fff;
 }
 
 .stat__item:last-child { /*бордер для крайнего правого элемента*/
-    border-right: 1px solid #b5eae0;
+    border-right: 1px solid #fff;
 }
 
 .stat__count {
     margin-bottom: 10px;
-    font-size: 72px;
+    font-size: 32px;
     font-weight: 700;
     line-height: 1; /* устанавливает величину пространства между строками*/
 }
 
 .stat__text {
+    color: #999;
     font-size: 14px;
     text-transform: uppercase;
 }

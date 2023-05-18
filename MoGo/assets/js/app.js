@@ -42,23 +42,14 @@ innerBtn4.addEventListener('click', ()=>{
     innerBtn4.classList.add('active');
     intro.style.background = 'url(./assets/images/intro4.jpg) center no-repeat';
 });
-// console.log(innerBtn);
 
-
-
-
-// document.querySelector('#inner_btn1').onclick = function () {
-//     intro.style.background = 'url(./assets/images/intro1.jpg) center no-repeat';
-// }
-// document.querySelector('#inner_btn2').onclick = function () {
-//     intro.style.background = 'url(./assets/images/intro2.jpg) center no-repeat';
-// }
-// document.querySelector('#inner_btn3').onclick = function () {
-//     intro.style.background = 'url(./assets/images/intro3.jpg) center no-repeat';
-// }
-// document.querySelector('#inner_btn4').onclick = function () {
-//     intro.style.background = 'url(./assets/images/intro4.jpg) center no-repeat';
+// let coffeeCup = document.querySelector('.stat__count-coffee');
+// function coffeeClicker(event) {
+//     event.preventDefault();
+//     let countClickBtn = coffeeCup.textContent;
+//     coffeeCup.textContent = parseInt(countClickBtn) + 1;
 // }
 
+// coffeeCup.addEventListener ('click', coffeeClicker);
 
 
