@@ -4,8 +4,8 @@
 $(function() {
 
     let header = $("#header"),
-    introH = $("#intro").innerHeight(),
-    scrollOffset = $(window).scrollTop();
+    introH = $("#intro").innerHeight(), 
+    scrollOffset = $(window).scrollTop(); 
 
 
     /* fixed header */
@@ -18,7 +18,7 @@ $(function() {
     });
 
     function checkScroll(scrollOffset) {
-       if (scrollOffset >= introH) {
+       if (scrollOffset >= (introH - 50)) {
         header.addClass("fixed");
        } else {
         header.removeClass("fixed");
@@ -68,6 +68,12 @@ $(function() {
 
     });
 
-
+    /*slider*/
+    $("[data-slider]").slick({
+        infinite: true,
+        // fade: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
 
 });

@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <title>MoGo</title>
 </head>
 <body>
@@ -262,14 +263,26 @@
         <div class="container">
             
             <div class="reviews">
-                <a class="reviews__btn reviews__btn--prev" href="#">Prev</a>
-                <a class="reviews__btn reviews__btn--next" href="#">Next</a>
+                <!-- <a class="reviews__btn reviews__btn--prev" href="#">Prev</a> -->
+                <!-- <a class="reviews__btn reviews__btn--next" href="#">Next</a> -->
 
-                <div class="reviews__item">
-                    <!-- <img class="reviews__photo" src="http://placehold.it/145" alt=""> -->
-                    <img class="reviews__photo" src="./assets/images/reviews/reviews_icon.png" alt="">
-                    <div class="reviews__text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p></div>
-                    <div class="reviews__author">Jon Doe</div>
+                <div data-slider>
+                    <div>
+                        <div class="reviews__item">
+                            <img class="reviews__photo" src="./assets/images/reviews/reviews_icon.png" alt="">
+                            <div class="reviews__text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p></div>
+                            <div class="reviews__author">Jon Doe</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="reviews__item">                     
+                            <img class="reviews__photo" src="./assets/images/reviews/reviews_icon.png" alt="">
+                            <div class="reviews__text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p></div>
+                            <div class="reviews__author">Jon Doe</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -487,14 +500,28 @@
         <div class="container">
             
             <div class="reviews">
-                <a class="reviews__btn reviews__btn--prev" href="#">Prev</a>
-                <a class="reviews__btn reviews__btn--next" href="#">Next</a>
+                <!-- <a class="reviews__btn reviews__btn--prev" href="#">Prev</a> -->
+                <!-- <a class="reviews__btn reviews__btn--next" href="#">Next</a> -->
+                <div data-slider>
 
-                <div class="reviews__item">
-                    <!-- <img class="reviews__photo" src="http://placehold.it/145" alt=""> -->
-                    <img class="reviews__photo" src="./assets/images/reviews/user0.png" alt="">
-                    <div class="reviews__text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p></div>
-                    <div class="reviews__author">Joshua Earle</div>
+                    <div>
+                        <div class="reviews__item">
+                            <!-- <img class="reviews__photo" src="http://placehold.it/145" alt=""> -->
+                            <img class="reviews__photo" src="./assets/images/reviews/user0.png" alt="">
+                            <div class="reviews__text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p></div>
+                            <div class="reviews__author">Joshua Earle</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="reviews__item">
+                            <!-- <img class="reviews__photo" src="http://placehold.it/145" alt=""> -->
+                            <img class="reviews__photo" src="./assets/images/reviews/user0.png" alt="">
+                            <div class="reviews__text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p></div>
+                            <div class="reviews__author">Joshua Earle</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -787,8 +814,9 @@
 
 
 
-    <script src="https://kit.fontawesome.com/48db125bfd.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/48db125bfd.js" crossorigin="anonymous"></script> <!--fonts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script><!--jquery-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script><!--slider-->
     <script src="./assets/js/jquery.js"></script>
 </body>
 </html>
