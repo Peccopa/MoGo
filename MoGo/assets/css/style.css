@@ -375,6 +375,14 @@ hr {
     background-size: cover;
 }
 
+.section--reviews2 {
+    padding: 40px 0 80px 0;
+}
+
+.section--registration {
+    padding: 80px 0 40px 0;
+}
+
 .section__header {
     width: 100%;
     max-width: 950px;
@@ -930,6 +938,170 @@ hr {
     font-weight: 300;
     font-size: 15px;
 }
+
+
+
+
+
+
+/* REGISTRATION */
+
+.reg__form {
+    display: flex;
+    justify-content: center;
+    /* border: black solid 3px; */
+
+}
+
+.method__post {
+    /* width: 100%; */
+    /* border: 2px solid #333; */
+    /* width: 25%;
+    min-width: 240px; */
+    /* position: relative; */
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.reg__item {
+    position: relative;
+}
+
+.reg__span {
+
+    position: absolute;
+    left: 105%;
+    top: 31%;
+    text-align: left;
+
+
+    /* padding: 5px; */
+    /* margin: 5px; */
+    /* background: red; */
+    /* border: 1px solid #ccc; */
+
+    width: 25%;
+    min-width: 200px;
+
+    font-family: 'Roboto', sans-serif; /*для импутов и кнопок прописываем обязательно*/
+    font-style: italic;
+    color: #ff4d4d; /*цвет ввода текста*/
+    font-weight: 300;
+    font-size: 10px;
+    /* line-height: 1.1; */
+}
+
+.reg__input {
+    padding: 5px;
+    margin: 5px;
+    background: #fff;
+    border: 1px solid #ccc;
+
+    width: 25%;
+    min-width: 240px;
+
+    font-family: 'Roboto', sans-serif; /*для импутов и кнопок прописываем обязательно*/
+    font-style: italic;
+    color: #333; /*цвет ввода текста*/
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.1;
+
+}
+
+.reg__input::placeholder {
+    color: #ccc; /*ОСОБЫЕ УСЛОВИЯ ДЛЯ ПЛЕЙСХОЛДЕРА*/
+}
+
+.reg__input:focus {
+    outline: 0; /*убираем границы оутлайна*/
+    /* border-color: #333; */
+
+}
+
+.reg__button {
+    border-radius: #ccc 3px;
+    padding: 5px;
+    margin: 5px;
+    width: 25%;
+    min-width: 240px;       
+}
+
+.reg__button {
+    background-color: #ccc;
+    border: 0;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    width: 25%;
+    min-width: 240px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.1;
+    transition: background .2s linear;
+
+}
+
+.reg__button:hover {
+    background-color: #333;
+}
+
+.reg__button:focus {
+    outline: 0; /*убираем границы оутлайна*/
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*++++++++CLIENTS++++++++*/
@@ -1761,3 +1933,17 @@ width: 40%;
         }
 
     }        
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
