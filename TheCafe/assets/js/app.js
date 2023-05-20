@@ -61,6 +61,9 @@ let fNameRes = ''; //результат ввода
 let fName = document.querySelector('#fname'); // получаем поле для ввода имени
 let fNameError = document.querySelector('#fname-p'); // получаем спан для вывода ошибки
 
+// let btnClick = document.querySelector('#btnClick');
+// btnClick.setAttribute('disabled', true);
+
 fName.addEventListener('focus', function() {
     fName.style.background = '#f0f0f0'; // выделяем поле ввода серым
     fName.style.fontWeight = '300'; // меняем стиль текста в поле ввода
@@ -167,7 +170,7 @@ eMail.addEventListener('blur', function(){
     }
 });
 
-// ПРОВЕРКА ПАРОЛЯ НА ПРАВИЛЬНОСТЬ ВВОДА
+// ПРОВЕРКА ПАРОЛЯ НА ПРАВИЛЬНОСТЬ ВВОДА (ВЗЯЛ ГОТОВОЕ РЕШЕНИЕ - РАЗОБРАТЬСЯ!!!)
 let pWordRes = ''; //результат ввода
 let pWord = document.querySelector('#pword'); // поле для ввода пароля
 let pWordError = document.querySelector('#pword-p'); // спан для вывода ошибки
@@ -208,28 +211,30 @@ pWord.addEventListener('blur', function(){
                 pWordError.textContent = '* Please, enter your password.'; // выводим в спан текст
                 pWord.style.backgroundColor = 'transparent'; // снимаем выделение с поля
             }else if (value.length < 6 && rating < 3 || value.length >= 6 && rating == 1) {// Далее идёт анализ длины пароля и полученного рейтинга, и на основании этого готовится текстовое описание сложности пароля
-                pWordError.textContent = 'Простой (должны быть цифры, спец.символы и загл.буквы)';   // выводим в спан текст ошибки
+                pWordError.textContent = ' * Use upper and lowercase letters, numbers and special characters.';   // выводим в спан текст ошибки
                 pWord.style.backgroundColor = '#ffdede';      // красим поле ввода в красный
             }else if (value.length < 6 && rating >= 3 || value.length >= 8 && rating < 3 || value.length >= 6 && rating > 1 && rating < 4) { 
-                pWordError.textContent = 'Средний (должны быть цифры, спец.символы и загл.буквы)';              // выводим в спан текст ошибки
+                pWordError.textContent = ' * Use upper and lowercase letters, numbers and special characters.';              // выводим в спан текст ошибки
                 pWord.style.backgroundColor = '#ffdede';      // красим поле ввода в красный
             }else if (value.length >= 8 && rating >= 3 || value.length >= 6 && rating == 4) {
-                pWord.style.backgroundColor = 'hsl(154, 59%, 51%)';     // красим поле ввода в красный
-                pWordError.textContent = '.'; 
-                pWordError.style.color = 'white';
+                pWord.style.backgroundColor = 'transparent'; // красим поле ввода в нейтральный 
+                pWordError.textContent = 'Correct password.'; 
+                pWordError.style.color = '#ccc'; // изменяем текст спана на нейтральный
+                pWord.style.fontWeight = '700'; // меняем стиль текста в поле ввода
                 pWordRes = value;
                 console.log(pWordRes);
             }
     });
-    
-    let btnClick = document.querySelector('#btnClick');
+
+
+let btnClick = document.querySelector('#btnClick');
     btnClick.setAttribute('disabled', true);
-    btnClick.addEventListener('click', function(){
-        if (fNameRes.length < 2){
+    fName.addEventListener('click', function(){
+
+        if (fNameRes.length < 2 && lNameRes.length < 2){
+            console.log ('1');
         btnClick.setAttribute('disabled', true)
-        }else{btnClick.removeAttribute('disablled');}
-        console.log('12312312321');
+        } else {console.log ('2');
+            btnClick.removeAttribute('disabled');}
+    
     });
-          
- 
- 

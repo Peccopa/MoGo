@@ -969,6 +969,7 @@ hr {
 
 .reg__input {
     width: 30%;
+    min-width: 300px;
     height: 32px;
     padding: 5px;
     margin: 1px;
@@ -1000,11 +1001,12 @@ hr {
     font-size: 12px;
 }
 
-.reg__button {
+.reg__button1 {
     height: 32px;
     padding: 5px;
     margin: 1px;
     width: 30%;
+    min-width: 300px;
     background-color: #ccc;
     border: 0;
     cursor: pointer;
@@ -1026,11 +1028,11 @@ hr {
 
 }
 
-.reg__button:hover {
+.reg__button1:hover {
     background-color: #333;
 }
 
-.reg__button:focus {
+.reg__button1:focus {
     outline: 0;
 } 
 
