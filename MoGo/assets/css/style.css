@@ -947,102 +947,82 @@ hr {
 /* REGISTRATION */
 
 .reg__form {
-    display: flex;
-    justify-content: center;
     /* border: black solid 3px; */
-
 }
 
 .method__post {
-    /* width: 100%; */
-    /* border: 2px solid #333; */
-    /* width: 25%;
-    min-width: 240px; */
-    /* position: relative; */
-    
-    display: flex;
-    flex-direction: column;
+    /* border: 2px solid #db1d1d; */
 }
 
 .reg__item {
-    position: relative;
+    /* border: #98ff12 1px solid; */
+    display: flex;
+    justify-content: center;
 }
 
-.reg__span {
-
-    position: absolute;
-    left: 105%;
-    top: 31%;
-    text-align: left;
-
-
-    /* padding: 5px; */
-    /* margin: 5px; */
-    /* background: red; */
-    /* border: 1px solid #ccc; */
-
-    width: 25%;
-    min-width: 200px;
-
-    font-family: 'Roboto', sans-serif; /*для импутов и кнопок прописываем обязательно*/
-    font-style: italic;
-    color: #ff4d4d; /*цвет ввода текста*/
-    font-weight: 300;
-    font-size: 10px;
-    /* line-height: 1.1; */
+.reg__img {
+    padding: 5px;
+    margin: 3px;
+    width: 30%;
+    /* border: 1px solid #761dc9; */
 }
 
 .reg__input {
+    width: 30%;
+    height: 32px;
     padding: 5px;
-    margin: 5px;
+    margin: 1px;
     background: #fff;
-    border: 1px solid #ccc;
-
-    width: 25%;
-    min-width: 240px;
-
-    font-family: 'Roboto', sans-serif; /*для импутов и кнопок прописываем обязательно*/
+    border: #ccc 1px solid;
+    font-family: 'Roboto', sans-serif;
     font-style: italic;
-    color: #333; /*цвет ввода текста*/
+    color: #333;
     font-weight: 300;
     font-size: 15px;
-    line-height: 1.1;
+    /* transition: border .1s linear; */
+}
+
+.reg__input:hover {
+    border: #999 1px solid;
 
 }
 
-.reg__input::placeholder {
-    color: #ccc; /*ОСОБЫЕ УСЛОВИЯ ДЛЯ ПЛЕЙСХОЛДЕРА*/
-}
+.reg__span {
+    /* border: #333 1px solid; */
+    padding: 0;
+    margin: 8px 0 0 5px;
+    width: 30%;
 
-.reg__input:focus {
-    outline: 0; /*убираем границы оутлайна*/
-    /* border-color: #333; */
-
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    color: #ff4d4d;
+    font-weight: 300;
+    font-size: 12px;
 }
 
 .reg__button {
-    border-radius: #ccc 3px;
+    height: 32px;
     padding: 5px;
-    margin: 5px;
-    width: 25%;
-    min-width: 240px;       
-}
-
-.reg__button {
+    margin: 1px;
+    width: 30%;
     background-color: #ccc;
     border: 0;
     cursor: pointer;
-    padding: 10px;
-    margin: 5px;
-    width: 25%;
-    min-width: 240px;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: #fff;
     text-transform: uppercase;
-    line-height: 1.1;
-    transition: background .2s linear;
+    transition: background .1s linear;
+}
+
+.reg__input::placeholder {
+    color: #ccc;
+}
+
+.reg__input:focus {
+    outline: 0;
+    border-color: #333;
 
 }
 
@@ -1051,7 +1031,7 @@ hr {
 }
 
 .reg__button:focus {
-    outline: 0; /*убираем границы оутлайна*/
+    outline: 0;
 } 
 
 

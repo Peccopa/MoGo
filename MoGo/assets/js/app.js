@@ -168,14 +168,13 @@ eMail.addEventListener('blur', function(){
 });
 
 // ПРОВЕРКА ПАРОЛЯ НА ПРАВИЛЬНОСТЬ ВВОДА
-let pWordRes = '';
-let pWord = document.querySelector('#pword');                   // поле для ввода пароля
-let pWordError = document.querySelector('#pword-p');            // спан для вывода ошибки
+let pWordRes = ''; //результат ввода
+let pWord = document.querySelector('#pword'); // поле для ввода пароля
+let pWordError = document.querySelector('#pword-p'); // спан для вывода ошибки
 
 pWord.addEventListener('focus', function() {
     pWord.style.background = '#f0f0f0'; // выделяем поле ввода серым
-    pWord.placeholder = 'Password';
-    pWord.textContent = '';
+    pWord.style.fontWeight = '300'; // меняем стиль текста в поле ввода
 });
 
 pWord.addEventListener('blur', function(){
@@ -188,12 +187,16 @@ pWord.addEventListener('blur', function(){
     let is_b = false;                                           // Есть ли в пароле буквы в верхнем регистре
     let is_d = false;                                           // Есть ли в пароле цифры
     let is_sp = false;                                          // Есть ли в пароле спецсимволы
+
+
     for (let i = 0; i < value.length; i++) {                                                    
-        if (!is_s && s_letters.indexOf(value[i]) != -1) is_s = true;    //Проверяем каждый символ пароля на принадлежность к тому или иному типу 
+        if (!is_s && s_letters.indexOf(value[i]) != -1) is_s = true; //Проверка символов пароля на принадлежность к типу
         else if (!is_b && b_letters.indexOf(value[i]) != -1) is_b = true;
         else if (!is_d && digits.indexOf(value[i]) != -1) is_d = true;
         else if (!is_sp && specials.indexOf(value[i]) != -1) is_sp = true;
         }
+
+
         let rating = 0;
             if (is_s) rating++;                                  // Если в пароле есть символы в нижнем регистре, то увеличиваем рейтинг сложности
             if (is_b) rating++;                                  // Если в пароле есть символы в верхнем регистре, то увеличиваем рейтинг сложности
@@ -201,10 +204,9 @@ pWord.addEventListener('blur', function(){
             if (is_sp) rating++;                                 // Если в пароле есть спецсимволы, то увеличиваем рейтинг сложности
             
             
-            if(value.length === 0){                                     // Проверка 1. если пользователь ничего не ввел
-                pWordError.textContent = '* Please, enter your password.';   // выводим в спан текст ошибки
-                pWord.style.backgroundColor = 'transparent';      // снимаем выделение серым
-                pWord.style.color = 'black';                            // основной текст черный
+            if(value.length === 0){ // если поле ввода пустое
+                pWordError.textContent = '* Please, enter your password.'; // выводим в спан текст
+                pWord.style.backgroundColor = 'transparent'; // снимаем выделение с поля
             }else if (value.length < 6 && rating < 3 || value.length >= 6 && rating == 1) {// Далее идёт анализ длины пароля и полученного рейтинга, и на основании этого готовится текстовое описание сложности пароля
                 pWordError.textContent = 'Простой (должны быть цифры, спец.символы и загл.буквы)';   // выводим в спан текст ошибки
                 pWord.style.backgroundColor = '#ffdede';      // красим поле ввода в красный
@@ -220,14 +222,14 @@ pWord.addEventListener('blur', function(){
             }
     });
     
-    /*let btnClick = document.querySelector('#btnClick');
+    let btnClick = document.querySelector('#btnClick');
     btnClick.setAttribute('disabled', true);
     btnClick.addEventListener('click', function(){
         if (fNameRes.length < 2){
         btnClick.setAttribute('disabled', true)
         }else{btnClick.removeAttribute('disablled');}
-    
-    });*/
+        console.log('12312312321');
+    });
           
  
  
