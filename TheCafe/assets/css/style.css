@@ -891,7 +891,7 @@ hr {
 .works__item {
     position: relative;
 
-    background: linear-gradient(to bottom, #f38181, #fce38a);
+    background: linear-gradient(to bottom, #985739, #fff);
 }
 
 .works__item:hover .works__image{
@@ -1489,7 +1489,7 @@ width: 40%;
 /*******************COPYRIGHT*******************/
 
 .copyright {
-    padding: 20px 0;
+    padding: 20px 0 0;
     border-top: 1px solid #e5e5e5;
     text-align: center;
     color: #333;
@@ -1500,7 +1500,13 @@ width: 40%;
     color: #f38181;
 }
 
-
+.date_now {
+    padding: 0 20px 10px 0;
+    /* border-top: 1px solid #e5e5e5; */
+    text-align: right;
+    color: #333;
+    font-size: 12px;
+}
 
 
 

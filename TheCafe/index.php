@@ -123,23 +123,23 @@
         <div class="container">
             <div class="stat">
                 <div class="stat__item"> <!--вставить скрипт счётчика (тупо таймер для визуализации часы/минуты/секунды)-->
-                    <div class="stat__count">41</div>
+                    <div class="stat__count"><?= mt_rand(1, 20); ?></div>
                     <div class="stat__text">art projects</div>
                 </div>
                 <div class="stat__item">
-                    <div class="stat__count">123</div>
+                    <div class="stat__count"><?= mt_rand(100, 200); ?></div>
                     <div class="stat__text">happy client</div>
                 </div>
                 <div class="stat__item">
-                    <div class="stat__count">15</div>
+                    <div class="stat__count"><?= mt_rand(5, 15); ?></div>
                     <div class="stat__text">award winner</div>
                 </div>
                 <div class="stat__item">
-                    <div class="stat__count">894</div>
+                    <div class="stat__count"><?= mt_rand(800, 999); ?></div>
                     <div class="stat__text">cup of coffee</div>
                 </div>
                 <div class="stat__item">
-                    <div class="stat__count">24</div>
+                    <div class="stat__count"><?= mt_rand(20, 30); ?></div>
                     <div class="stat__text">club members</div>
                 </div>
             </div>
@@ -515,9 +515,6 @@
         </div>
     </section>
 
-
-
-
     <!-- registration  -->
     <section class="section section--registration" id="registration">
         <div class="container">
@@ -566,9 +563,6 @@
 
         </div>
     </section>
-
-
-    
 
     <!-- reviews2  -->
     <div class="section section--reviews2" id="reviews2">
@@ -874,9 +868,12 @@
 
             </div> <!--footer__inner-->
 
-            <div class="copyright">
-                © 2016 MoGo free PSD template by <span>Laaqiq</span>
-            </div>
+                </div>        
+                    <div class="copyright">
+                        © 2016 MoGo free PSD template by <span>Laaqiq</span>
+                    </div>
+                    <div class="date_now"><?=date(DATE_RSS)?></div>
+                </div>
 
         </div> <!--cont-->
     </footer>
