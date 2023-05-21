@@ -60,6 +60,7 @@ innerBtn4.addEventListener('click', ()=>{
 let fNameRes = ''; //результат ввода
 let fName = document.querySelector('#fname'); // получаем поле для ввода имени
 let fNameError = document.querySelector('#fname-p'); // получаем спан для вывода ошибки
+let enableBtn = 0;
 
 // let btnClick = document.querySelector('#btnClick');
 // btnClick.setAttribute('disabled', true);
@@ -91,6 +92,8 @@ fName.addEventListener('blur', function(){
         fName.style.backgroundColor = 'transparent'; // красим поле ввода в нейтральный 
         fName.style.fontWeight = '700'; // меняем стиль текста в поле ввода
         fNameRes = value; // присваиваем полученое значение
+        enableBtn++;
+        enableButton();
         console.log(fNameRes) // передаём полученое значение
     }
 });
@@ -127,6 +130,8 @@ lName.addEventListener('blur', function(){
         lName.style.backgroundColor = 'transparent'; // красим поле ввода в нейтральный 
         lName.style.fontWeight = '700'; // меняем стиль текста в поле ввода
         lNameRes = value; // присваиваем полученое значение
+        enableBtn++;
+        enableButton();
         console.log(lNameRes) // передаём полученое значение
     }
 });
@@ -163,6 +168,8 @@ eMail.addEventListener('blur', function(){
         eMail.style.backgroundColor = 'transparent'; // красим поле ввода в нейтральный 
         eMail.style.fontWeight = '700'; // меняем стиль текста в поле ввода
         eMailRes = value; // присваиваем полученое значение
+        enableBtn++;
+        enableButton();
         console.log(eMailRes) // передаём полученое значение
     }else{ // все проверки пройдены и данные введены верно
         eMailError.textContent = '* Your email address must contain "@" and "."'; // выводим в спан текст ошибки
@@ -222,6 +229,8 @@ pWord.addEventListener('blur', function(){
                 pWordError.style.color = '#ccc'; // изменяем текст спана на нейтральный
                 pWord.style.fontWeight = '700'; // меняем стиль текста в поле ввода
                 pWordRes = value;
+                enableBtn++;
+                enableButton();
                 console.log(pWordRes);
             }
     });
@@ -229,12 +238,13 @@ pWord.addEventListener('blur', function(){
 
 let btnClick = document.querySelector('#btnClick');
     btnClick.setAttribute('disabled', true);
-    fName.addEventListener('click', function(){
-
-        if (fNameRes.length < 2 && lNameRes.length < 2){
+    // fName.addEventListener('click', function(){
+    function enableButton() {
+        // if (fNameRes.length < 2){
+        if (enableBtn == 4){
             console.log ('1');
-        btnClick.setAttribute('disabled', true)
+            btnClick.removeAttribute('disabled')
+            btnClick.style.backgroundColor = '#333';
         } else {console.log ('2');
-            btnClick.removeAttribute('disabled');}
-    
-    });
+        btnClick.setAttribute('disabled', true)}
+    };

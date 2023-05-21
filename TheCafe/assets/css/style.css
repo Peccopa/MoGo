@@ -586,8 +586,10 @@ hr {
 }
 
 .services__icon {
+    font-size: 30px;
+    color: #6b3d28;
     position: absolute;
-    top: 3px;
+    top: -10px;
     left: 28px;
     z-index: 1;
 }
@@ -946,14 +948,6 @@ hr {
 
 /* REGISTRATION */
 
-.reg__form {
-    /* border: black solid 3px; */
-}
-
-.method__post {
-    /* border: 2px solid #db1d1d; */
-}
-
 .reg__item {
     /* border: #98ff12 1px solid; */
     display: flex;
@@ -1001,7 +995,7 @@ hr {
     font-size: 12px;
 }
 
-.reg__button1 {
+.reg__button {
     height: 32px;
     padding: 5px;
     margin: 1px;
@@ -1018,6 +1012,7 @@ hr {
     transition: background .1s linear;
 }
 
+
 .reg__input::placeholder {
     color: #ccc;
 }
@@ -1028,11 +1023,11 @@ hr {
 
 }
 
-.reg__button1:hover {
+.reg__button:hover {
     background-color: #333;
 }
 
-.reg__button1:focus {
+.reg__button:focus {
     outline: 0;
 } 
 
