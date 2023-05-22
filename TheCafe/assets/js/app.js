@@ -238,9 +238,7 @@ pWord.addEventListener('blur', function(){
 
 let btnClick = document.querySelector('#btnClick');
     btnClick.setAttribute('disabled', true);
-    // fName.addEventListener('click', function(){
     function enableButton() {
-        // if (fNameRes.length < 2){
         if (enableBtn == 4){
             console.log ('1');
             btnClick.removeAttribute('disabled')
