@@ -175,6 +175,10 @@ hr {
     transition: opacity .1s linear; /*скорость "прозрачности"*/
 }
 
+.whatsup:after {
+    background-color: transparent;
+}
+
 .nav__link:hover {
     color: #fff; /*смена цвета при наведении*/
 }
@@ -263,6 +267,9 @@ hr {
     transform-origin: left bottom;
     transform: rotate(-45deg) translate3d(0, 3px, 0);
 }
+
+
+
 
 /*==========BUTTON========*/
 
@@ -889,8 +896,8 @@ hr {
 
 
 .works__item {
+    /* max-width: 360px; */
     position: relative;
-
     background: linear-gradient(to bottom, #985739, #fff);
 }
 
@@ -907,6 +914,7 @@ hr {
     transition: opacity .2s linear;
 
     max-width: 100%;
+    /* max-wi   dth: 360px; */
     height: auto;
 }
 

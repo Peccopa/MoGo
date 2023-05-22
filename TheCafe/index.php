@@ -22,17 +22,17 @@
             <a class="header__logo" href="#" data-scroll="#intro">TheCafe</a>
             <nav class="nav" id="nav">
                 <a class="nav__link" href="#" data-scroll="#about">about</a>
-                <a class="nav__link" href="#" data-scroll="#works">Works</a>
+                <a class="nav__link" href="#" data-scroll="#works">Arts</a>
                 <a class="nav__link" href="#" data-scroll="#registration">join us</a>
                 <a class="nav__link" href="#" data-scroll="#blog">Blogs</a>
                 <!-- <a class="nav__link" href="#">Registration</a> -->
                 <a class="nav__link" href="#" data-scroll="#footer">Contact</a>
-                <a class="nav__link" href="#">
-                    <i class="fas fa-shopping-cart"></i>
+                <a class="nav__link whatsup" href="https://api.whatsapp.com/send?phone=79168291896">
+                <i class="fa-brands fa-whatsapp fa-2xl"></i>
                 </a>
-                <a class="nav__link" href="#">
+                <!-- <a class="nav__link" href="#">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                </a>    
+                </a>     -->
             </nav>
 
             <button class="nav-toggle" id="nav_toggle" type="button">
@@ -86,7 +86,7 @@
         <div class="container">
             
             <div class="section__header">
-                <h3 class="section__suptitle">What we do</h3>
+                <h3 class="section__suptitle">What we do...</h3>
                 <h2 class="section__title">Story about us</h2>
                 <div class="section__text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
             </div>
@@ -426,8 +426,8 @@
     <section class="section" id="works">
         <div class="container">
             <div class="section__header">
-                <h3 class="section__suptitle">What we do</h3>
-                <h2 class="section__title">some of our work</h2>
+                <h3 class="section__suptitle">What we do...</h3>
+                <h2 class="section__title">some of our arts</h2>
                 <div class="section__text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                 </div>
             </div>
@@ -650,7 +650,7 @@
         <div class="container">
 
             <div class="section__header">
-                <h3 class="section__suptitle">Our stories</h3>
+                <h3 class="section__suptitle">Our stories...</h3>
                 <h2 class="section__title">Latest blog</h2>
             </div>
 
@@ -755,7 +755,7 @@
 
             <div class="footer__inner">
                 <div class="footer__col footer__col--first">
-                    <div class="footer__logo">MoGo</div>
+                    <div class="footer__logo">TheCafe</div>
                     <div class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </div>
 
