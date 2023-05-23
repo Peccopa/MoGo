@@ -792,8 +792,8 @@
                         </div>
                     </div>
 
-                    <form class="subscribe" action="/" method="post">
-                        <input class="subscribe__input" type="email" name="name" placeholder="Your Email...">
+                    <form class="subscribe" action="" method="">
+                        <input class="subscribe__input" type="email" name="footersub" placeholder="Your Email...">
                         <button class="subscribe__button" type="submit">Subscribe</button>
 
                     </form>
