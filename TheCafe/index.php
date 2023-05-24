@@ -668,7 +668,7 @@
 
                 <div class="blog__item">
                     <div class="blog__header">
-                        <a href="./assets/php/blogs.php">
+                        <a href="./assets/php/blogs.php?id=1">
                             <img class="blog__photo" src="./assets/images/blog/1.jpg" alt="">
                         </a>
                     <div class="blog__date">
@@ -678,7 +678,7 @@
                     </div>
                     <div class="blog__content">
                         <div class="blog__title">
-                            <a href="./assets/php/blogs.php">Lorem ipsum dolor sit amet</a>
+                            <a href="./assets/php/blogs.php?id=1">Lorem ipsum dolor sit amet</a>
                         </div>
                         <div class="blog__text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                     </div>
@@ -693,7 +693,7 @@
                 </div>
                 <div class="blog__item">
                     <div class="blog__header">
-                        <a href="./assets/php/blogs.php">
+                        <a href="./assets/php/blogs.php?id=2">
                             <img class="blog__photo" src="./assets/images/blog/2.jpg" alt="">
                         </a>
                     <div class="blog__date">
@@ -703,7 +703,7 @@
                     </div>
                     <div class="blog__content">
                         <div class="blog__title">
-                            <a href="./assets/php/blogs.php">sed do eiusmod tempor</a>
+                            <a href="./assets/php/blogs.php?id=2">sed do eiusmod tempor</a>
                         </div>
                         <div class="blog__text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                     </div>
@@ -718,7 +718,7 @@
                 </div>
                 <div class="blog__item">
                     <div class="blog__header">
-                        <a href="./assets/php/blogs.php">
+                        <a href="./assets/php/blogs.php?id=3">
                             <img class="blog__photo" src="./assets/images/blog/3.jpg" alt="">
                         </a>
                     <div class="blog__date">
@@ -728,7 +728,7 @@
                     </div>
                     <div class="blog__content">
                         <div class="blog__title">
-                            <a href="./assets/php/blogs.php">incididunt ut labore et dolore</a>
+                            <a href="./assets/php/blogs.php?id=3">incididunt ut labore et dolore</a>
                         </div>
                         <div class="blog__text">Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                     </div>
