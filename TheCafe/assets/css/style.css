@@ -27,6 +27,9 @@ hr {
 
 /* page */
 
+.hide {
+    display: none;
+}
 
 .page {
     overflow: hidden;
@@ -961,6 +964,8 @@ hr {
     display: flex;
     justify-content: center;
 }
+
+
 
 .reg__img {
     padding: 5px;

@@ -1,3 +1,13 @@
+<?php
+    if($_SERVER['REQUEST_METHOD'] === 'POST') { //убираем блок рег, убираем из меню пункт рег, добавляем в меню имя с ссылкой на личный кабинет
+        $hidereg = 'class="section section--registration hide"';
+        $navlinkreg = "<b>$_POST[fname] $_POST[lname]</b>";
+    } else {
+        $hidereg = 'class="section section--registration"';
+        $navlinkreg = 'join us';
+    }    
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,11 +31,10 @@
             <!-- <div class="header__logo">MoGo</div> -->
             <a class="header__logo" href="#" data-scroll="#intro">TheCafe</a>
             <nav class="nav" id="nav">
+                <a class="nav__link" href="#" data-scroll="#registration"><?=$navlinkreg;?></a>
                 <a class="nav__link" href="#" data-scroll="#about">about</a>
                 <a class="nav__link" href="#" data-scroll="#works">Arts</a>
-                <a class="nav__link" href="#" data-scroll="#registration">join us</a>
                 <a class="nav__link" href="#" data-scroll="#blog">Blogs</a>
-                <!-- <a class="nav__link" href="#">Registration</a> -->
                 <a class="nav__link" href="#" data-scroll="#footer">Contact</a>
                 <a class="nav__link whatsup" href="https://api.whatsapp.com/send?phone=79168291896">
                 <i class="fa-brands fa-whatsapp fa-2xl"></i>
@@ -435,24 +444,24 @@
 
         <div class="works"> <!--вне контейнера-->
             <div class="works__col">
-                <div class="works__item">
-                    <img class="works__image" src="./assets/images/works/a1.jpg" alt="">
+            <a href="./assets/php/arts.php"><div class="works__item">
+                <img class="works__image" src="./assets/images/works/a1.jpg" alt="">
                     <div class="works__info">
                         <div class="works__icon">
-                            <img src="./assets/images/works/worksIcon.png" alt="">
+                        <img src="./assets/images/works/worksIcon.png" alt="">
                         </div>
-                        <div class="works__title">creatively designed</div>
-                        <div class="works__text">Lorem ipsum dolor sit</div>
+                        <div class="works__title">adipisicing elit</div>
+                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe dolores blanditiis fugiat nesciunt quibusdam?</div>
                     </div>
-                </div>
+                </div></a>
                 <div class="works__item">
                     <img class="works__image" src="./assets/images/works/a2.jpg" alt="">
                     <div class="works__info">
                         <div class="works__icon">
                             <img src="./assets/images/works/worksIcon.png" alt="">
                         </div>
-                        <div class="works__title">creatively designed</div>
-                        <div class="works__text">Lorem ipsum dolor sit</div>
+                        <div class="works__title">dolor sit amet</div>
+                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam.</div>
                     </div>
                 </div>
             </div>
@@ -463,8 +472,8 @@
                         <div class="works__icon">
                             <img src="./assets/images/works/worksIcon.png" alt="">
                         </div>
-                        <div class="works__title">creatively designed</div>
-                        <div class="works__text">Lorem ipsum dolor sit</div>
+                        <div class="works__title">Necessitatibus</div>
+                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, pariatur nostrum!</div>
                     </div>
                 </div>
                 <div class="works__item">
@@ -473,8 +482,8 @@
                         <div class="works__icon">
                             <img src="./assets/images/works/worksIcon.png" alt="">
                         </div>
-                        <div class="works__title">creatively designed</div>
-                        <div class="works__text">Lorem ipsum dolor sit</div>
+                        <div class="works__title">Mollitia fugiat</div>
+                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugiat accusantium assumenda minima suscipit aperiam laudantium odio? Ratione, cum veritatis?</div>
                     </div>
                 </div>
             </div>
@@ -485,8 +494,8 @@
                         <div class="works__icon">
                             <img src="./assets/images/works/worksIcon.png" alt="">
                         </div>
-                        <div class="works__title">creatively designed</div>
-                        <div class="works__text">Lorem ipsum dolor sit</div>
+                        <div class="works__title">vitae mo</div>
+                        <div class="works__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aperiam, vitae molestiae quasi in minus officia?</div>
                     </div>
                 </div>
             </div>
@@ -497,8 +506,8 @@
                         <div class="works__icon">
                             <img src="./assets/images/works/worksIcon.png" alt="">
                         </div>
-                        <div class="works__title">creatively designed</div>
-                        <div class="works__text">Lorem ipsum dolor sit</div>
+                        <div class="works__title">sit amet consectetur</div>
+                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
                     </div>
                 </div>
                 <div class="works__item">
@@ -507,16 +516,16 @@
                         <div class="works__icon">
                             <img src="./assets/images/works/worksIcon.png" alt="">
                         </div>
-                        <div class="works__title">creatively designed</div>
-                        <div class="works__text">Lorem ipsum dolor sit</div>
+                        <div class="works__title">ipsum dolor sit</div>
+                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod assumenda quia illum, excepturi soluta in, corrupti necessitatibus qui placeat, tempore aspernatur repellat possimus. Odit, cumque.</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- registration  -->
-    <section class="section section--registration" id="registration">
+        <!-- registration  -->
+    <section <?=$hidereg?> id="registration">
         <div class="container">
             
             <div class="section__header">
@@ -526,7 +535,8 @@
             </div>
 
             <div class="reg__form">
-                <form class="method__post" action="#" method="POST">
+                <!-- <form class="method__POST" action="./assets/php/reg.php" method="POST"> -->
+                <form class="method__POST" action="" method="POST">
 
                     <div class="reg__item">    
                         <img class="reg__img" src="" alt="">                        
@@ -658,7 +668,7 @@
 
                 <div class="blog__item">
                     <div class="blog__header">
-                        <a href="#">
+                        <a href="./assets/php/blogs.php">
                             <img class="blog__photo" src="./assets/images/blog/1.jpg" alt="">
                         </a>
                     <div class="blog__date">
@@ -668,7 +678,7 @@
                     </div>
                     <div class="blog__content">
                         <div class="blog__title">
-                            <a href="#">Lorem ipsum dolor sit amet</a>
+                            <a href="./assets/php/blogs.php">Lorem ipsum dolor sit amet</a>
                         </div>
                         <div class="blog__text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                     </div>
@@ -683,7 +693,7 @@
                 </div>
                 <div class="blog__item">
                     <div class="blog__header">
-                        <a href="#">
+                        <a href="./assets/php/blogs.php">
                             <img class="blog__photo" src="./assets/images/blog/2.jpg" alt="">
                         </a>
                     <div class="blog__date">
@@ -693,7 +703,7 @@
                     </div>
                     <div class="blog__content">
                         <div class="blog__title">
-                            <a href="#">sed do eiusmod tempor</a>
+                            <a href="./assets/php/blogs.php">sed do eiusmod tempor</a>
                         </div>
                         <div class="blog__text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                     </div>
@@ -708,7 +718,7 @@
                 </div>
                 <div class="blog__item">
                     <div class="blog__header">
-                        <a href="#">
+                        <a href="./assets/php/blogs.php">
                             <img class="blog__photo" src="./assets/images/blog/3.jpg" alt="">
                         </a>
                     <div class="blog__date">
@@ -718,7 +728,7 @@
                     </div>
                     <div class="blog__content">
                         <div class="blog__title">
-                            <a href="#">incididunt ut labore et dolore</a>
+                            <a href="./assets/php/blogs.php">incididunt ut labore et dolore</a>
                         </div>
                         <div class="blog__text">Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                     </div>
@@ -792,7 +802,7 @@
                         </div>
                     </div>
 
-                    <form class="subscribe" action="" method="">
+                    <form class="subscribe" action="./assets/php/reg.php" method="POST">
                         <input class="subscribe__input" type="email" name="footersub" placeholder="Your Email...">
                         <button class="subscribe__button" type="submit">Subscribe</button>
 
@@ -805,7 +815,7 @@
                         <div class="blogs__item">
                             <img class="blogs__img" src="./assets/images/footer/blogs/1.png" alt="">
                             <div class="blogs__content">
-                                <a class="blogs__title" href="#"><p>Lorem ipsum dolor sit amet, consectetur adipiscing</p></a>
+                                <a class="blogs__title" href="./assets/php/arts.php"><p>Lorem ipsum dolor sit amet, consectetur adipiscing</p></a>
                                 <div class="blogs__date">
                                     Jan 9, 2016
                                 </div>
@@ -814,7 +824,7 @@
                         <div class="blogs__item">
                             <img class="blogs__img" src="./assets/images/footer/blogs/2.png" alt="">
                             <div class="blogs__content">
-                                <a class="blogs__title" href="#"><p>Consectetur adipiscing elit, sed do eiusmod tempor</p></a>
+                                <a class="blogs__title" href="./assets/php/arts.php"><p>Consectetur adipiscing elit, sed do eiusmod tempor</p></a>
                                 <div class="blogs__date">
                                     Jan 9, 2016
                                 </div>
@@ -823,7 +833,7 @@
                         <div class="blogs__item">
                             <img class="blogs__img" src="./assets/images/footer/blogs/3.png" alt="">
                             <div class="blogs__content">
-                                <a class="blogs__title" href="#"><p>sed do eiusmod tempor 
+                                <a class="blogs__title" href="./assets/php/arts.php"><p>sed do eiusmod tempor 
                                     incididunt ut labore</p></a>
                                 <div class="blogs__date">
                                     Jan 9, 2016
@@ -879,13 +889,6 @@
     </footer>
 
 </div>
-
-
-
-
-
-
-
 
 
     <script src="https://kit.fontawesome.com/48db125bfd.js" crossorigin="anonymous"></script> <!--fonts-->
