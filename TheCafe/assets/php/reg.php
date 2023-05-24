@@ -5,9 +5,10 @@ function d($arr) {
     echo '</pre>';
 }
 
-// d($_GET);
+d($_COOKIE);
+echo $_COOKIE['regdone'];
 
-// echo "<h1>Привет, $_GET[fname] $_GET[lname]!</h1>";
+echo "<h1>Привет, $_POST[fname] $_POST[lname]!</h1>";
 
 ?>
 

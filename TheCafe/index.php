@@ -1,11 +1,16 @@
 <?php
     if($_SERVER['REQUEST_METHOD'] === 'POST') { //убираем блок рег, убираем из меню пункт рег, добавляем в меню имя с ссылкой на личный кабинет
         $hidereg = 'class="section section--registration hide"';
-        $navlinkreg = "<b>$_POST[fname] $_POST[lname]</b>";
+        $navlinkreg = htmlspecialchars(trim("<b>$_POST[fname] $_POST[lname]</b>"));
+        setcookie('regdone', $navlinkreg, time() + 600);
+        header('Location: ./assets/php/reg.php');
+        exit;
+
     } else {
         $hidereg = 'class="section section--registration"';
         $navlinkreg = 'join us';
-    }    
+    }
+    echo $_COOKIE['regdone'];
     ?>
 
 <!DOCTYPE html>
@@ -536,7 +541,7 @@
 
             <div class="reg__form">
                 <!-- <form class="method__POST" action="./assets/php/reg.php" method="POST"> -->
-                <form class="method__POST" action="" method="POST">
+                <form class="method__POST" action="./assets/php/reg.php" method="POST">
 
                     <div class="reg__item">    
                         <img class="reg__img" src="" alt="">                        
