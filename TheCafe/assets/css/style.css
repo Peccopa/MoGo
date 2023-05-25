@@ -957,6 +957,8 @@ hr {
 
 
 
+
+
 /* REGISTRATION */
 
 .reg__item {
@@ -974,9 +976,10 @@ hr {
     /* border: 1px solid #761dc9; */
 }
 
+
 .reg__input {
     width: 30%;
-    min-width: 300px;
+    /* min-width: 300px; */
     height: 32px;
     padding: 5px;
     margin: 1px;
@@ -1008,12 +1011,14 @@ hr {
     font-size: 12px;
 }
 
+
 .reg__button {
     height: 32px;
     padding: 5px;
     margin: 1px;
-    width: 30%;
-    min-width: 300px;
+    width: 21%;
+    /* min-width: 300px; */
+    /* max-width: 250px; */
     background-color: #ccc;
     border: 0;
     cursor: pointer;
@@ -1023,6 +1028,32 @@ hr {
     color: #fff;
     text-transform: uppercase;
     transition: background .1s linear;
+}
+
+.login__button {
+    height: 32px;
+    padding: 5px;
+    margin: 1px;
+    width: 21%;
+    background-color: #333;
+    border: 0;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background .1s linear;
+    text-align: center;
+}
+
+.login__button {
+    width: 9%;
+}
+
+.login__button:hover {
+    width: 9%;
+    background-color: #757575;
 }
 
 
@@ -1041,6 +1072,10 @@ hr {
 }
 
 .reg__button:focus {
+    outline: 0;
+}
+
+.login__button:focus {
     outline: 0;
 } 
 
@@ -1802,6 +1837,25 @@ width: 40%;
                     width: 100%;
                 }
 
+
+
+
+    /*registration*/
+    .reg__img {
+        width: 15%;
+    }
+    .reg__span {
+        width: 15%;
+    }
+    .reg__input {
+        width: 60%;
+    }
+    .reg__button {
+        width: 30%;
+    }
+    .login__button {
+        width: 30%;
+    }
 }
 
 @media (max-width: 575px) {

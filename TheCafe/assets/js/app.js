@@ -1,3 +1,9 @@
+/* login */
+let loginBtn = document.querySelector('#loginClick');
+loginBtn.addEventListener('click', ()=>{
+    console.log('111')
+});
+
 
 
     /* intro */

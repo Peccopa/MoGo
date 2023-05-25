@@ -66,10 +66,14 @@ function d($arr) {
             <div class="section__header">
                 <h3 class="section__suptitle">Welcom to TheCafe ...</h3>
                 <!-- <h2 class="section__title">?="$_POST[fname] $_POST[lname]!";?></h2> --> 
-                <h2 class="section__title"><?= $_COOKIE['regdone']; ?></h2>
+                <h2 class="section__title"><?= $_COOKIE['postToReg']; ?></h2>
                 <div class="section__text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
             </div>
                     
+        </div>
+
+        <div class="exit__cookie">
+            <a href="exit.php"><button class="exit__button" type="button">Exit</button></a>
         </div>
     </section>
 

@@ -1,19 +1,37 @@
-<?php if(isset($_COOKIE['regdone'])) {
-    $navlinkreg = '<a class="nav__link" href="./assets/php/reg.php"><b>' . htmlspecialchars(trim($_COOKIE['regdone'])) . '</b></a>';
+<?php
+
+function d($arr) {
+    echo '<pre>';
+    print_r($arr);
+    echo '</pre>';
+}
+
+
+
+// d($_COOKIE);
+// echo $_COOKIE['postToReg'];
+
+
+
+
+if(isset($_COOKIE['postToReg'])) {
+    $navlinkreg = '<a class="nav__link" href="./assets/php/reg.php"><b>' . htmlspecialchars(trim($_COOKIE['postToReg'])) . '</b></a>';
     $hidereg = 'class="section section--registration hide"';
 } else {
         if($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
             $hidereg = 'class="section section--registration"';
-            $navlinkreg = $_COOKIE['regdone'] = '<a class="nav__link" href="#" data-scroll="#registration">join us</a>';
+            $navlinkreg = $_COOKIE['postToReg'] = '<a class="nav__link" href="#" data-scroll="#registration">join us</a>';
 
         } else {
 
             $hidereg = 'class="section section--registration hide"';
-            $navlinkreg = '<b>' . htmlspecialchars(trim($_COOKIE['regdone'])) . '</b>';
-            $postToReg = htmlspecialchars(trim($_POST['fname']));
-            // $postToReg = '123';
-            setcookie('regdone', $postToReg, time() + 60);
+            $navlinkreg = '<b>' . htmlspecialchars(trim($_COOKIE['postToReg'])) . '</b>';
+            $postToReg = htmlspecialchars(trim($_POST['fname'])) . ' ' . htmlspecialchars(trim($_POST['lname']));
+            // $postToReg = '111';
+            // echo $postToReg;
+            // setcookie('postToReg', $postToReg, time() + 60);
+            setcookie("postToReg","$postToReg",time()+3600,"/");
             header('Location: ./assets/php/reg.php');
             // exit;
         }
@@ -49,9 +67,10 @@
                 <a class="nav__link" href="#" data-scroll="#works">Arts</a>
                 <a class="nav__link" href="#" data-scroll="#blog">Blogs</a>
                 <a class="nav__link" href="#" data-scroll="#footer">Contact</a>
+                <!-- <a class="nav__link" href="#" data-scroll="#footer">log in</a> -->
                 <a class="nav__link whatsup" href="https://api.whatsapp.com/send?phone=79168291896">
-                <i class="fa-brands fa-whatsapp fa-2xl"></i>
-                </a>
+                <i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+                
                 <!-- <a class="nav__link" href="#">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>     -->
@@ -576,10 +595,20 @@
                     </div>
 
                     <div class="reg__item">    
-                        <img class="reg__img" src="" alt="">
+                        <!-- <img class="reg__img" src="" alt=""> -->
                         <button class="reg__button" type="submit" id="btnClick">Registration</button>
-                        <span class="reg__span" id="button-p"></span>
+                        <div class="login__button" id="loginClick">log in</div>
+                        <!-- <button class="login__button" type="button" id="loginClick">log in</button> -->
+                        <!-- <span class="reg__span" id="button-p"></span> -->
                     </div>
+
+                    <!-- <div class="reg__item">    
+                        <img class="reg__img" src="" alt="">
+                        <button class="reg__button" type="submit" id="btnClick">just let me in</button>
+                        <span class="reg__span" id="button-p"></span>
+                    </div> -->
+
+                
 
                 </form>  
             </div>
