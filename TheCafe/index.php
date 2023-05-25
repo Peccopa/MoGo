@@ -1,17 +1,24 @@
-<?php
-    if($_SERVER['REQUEST_METHOD'] === 'POST') { //убираем блок рег, убираем из меню пункт рег, добавляем в меню имя с ссылкой на личный кабинет
-        $hidereg = 'class="section section--registration hide"';
-        $navlinkreg = htmlspecialchars(trim("<b>$_POST[fname] $_POST[lname]</b>"));
-        setcookie('regdone', $navlinkreg, time() + 600);
-        header('Location: ./assets/php/reg.php');
-        exit;
+<?php if(isset($_COOKIE['regdone'])) {
+    $navlinkreg = '<a class="nav__link" href="./assets/php/reg.php"><b>' . htmlspecialchars(trim($_COOKIE['regdone'])) . '</b></a>';
+    $hidereg = 'class="section section--registration hide"';
+} else {
+        if($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
-    } else {
-        $hidereg = 'class="section section--registration"';
-        $navlinkreg = 'join us';
+            $hidereg = 'class="section section--registration"';
+            $navlinkreg = $_COOKIE['regdone'] = '<a class="nav__link" href="#" data-scroll="#registration">join us</a>';
+
+        } else {
+
+            $hidereg = 'class="section section--registration hide"';
+            $navlinkreg = '<b>' . htmlspecialchars(trim($_COOKIE['regdone'])) . '</b>';
+            $postToReg = htmlspecialchars(trim($_POST['fname']));
+            // $postToReg = '123';
+            setcookie('regdone', $postToReg, time() + 60);
+            header('Location: ./assets/php/reg.php');
+            // exit;
+        }
     }
-    echo $_COOKIE['regdone'];
-    ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +43,8 @@
             <!-- <div class="header__logo">MoGo</div> -->
             <a class="header__logo" href="#" data-scroll="#intro">TheCafe</a>
             <nav class="nav" id="nav">
-                <a class="nav__link" href="#" data-scroll="#registration"><?=$navlinkreg;?></a>
+                <!-- <a class="nav__link" href="#" data-scroll="#registration">?=$navlinkreg;?></a> -->
+                <?=$navlinkreg;?>
                 <a class="nav__link" href="#" data-scroll="#about">about</a>
                 <a class="nav__link" href="#" data-scroll="#works">Arts</a>
                 <a class="nav__link" href="#" data-scroll="#blog">Blogs</a>
@@ -541,7 +549,7 @@
 
             <div class="reg__form">
                 <!-- <form class="method__POST" action="./assets/php/reg.php" method="POST"> -->
-                <form class="method__POST" action="./assets/php/reg.php" method="POST">
+                <form class="method__POST" action="" method="POST">
 
                     <div class="reg__item">    
                         <img class="reg__img" src="" alt="">                        
