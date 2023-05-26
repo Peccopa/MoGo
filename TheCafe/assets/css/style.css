@@ -5,6 +5,7 @@ body {
     font-size: 15px; /*размер шрифта*/
     line-height: 1.6; /*межстрочный отступ*/
     color: #333; /*цвет шрифта? по умолчанию*/
+    /* background-color: #ebe0db; */
 }
 
 *,
@@ -50,14 +51,14 @@ hr {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 100vh; /*размер браузера*/
-    background: url(../images/intro1.jpg) center no-repeat; /*по центру без повторений*/
+    height: 100vh;
     min-height: 820px;
     position: relative;
 
     /*префиксы? можно посмотреть на caniuse.com*/
     -webkit-background-size: cover; /*???*/
     background-size: cover; /*покрывает всю площадь экрана*/
+    background: url(../images/intro1.jpg) center no-repeat;
 }
 
 
