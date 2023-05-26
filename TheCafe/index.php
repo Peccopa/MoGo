@@ -7,7 +7,7 @@ function d($arr) {
 }
 
 
-
+//11
 // d($_COOKIE);
 // echo $_COOKIE['postToReg'];
 
