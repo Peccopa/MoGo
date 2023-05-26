@@ -193,7 +193,7 @@ if(isset($_COOKIE['postToReg'])) {
         <div class="container">
             
             <div class="section__header">
-                <h3 class="section__suptitle">We work with</h3>
+                <h3 class="section__suptitle">We work with...</h3>
                 <h2 class="section__title">Amazing Services</h2>
             </div>
 
@@ -201,37 +201,37 @@ if(isset($_COOKIE['postToReg'])) {
                 <div class="services__item  services__item--border">
                     <!-- <img class="services__icon" src="./assets/images/servises/photography.png" alt=""> -->
                     <div class="services__icon"><i class="fa-solid fa-mug-hot"></i></i></div>
-                    <div class="services__title">Photography</div>
+                    <div class="services__title">consectetur</div>
                     <div class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
                 </div>
                 <div class="services__item  services__item--border">
                     <!-- <img class="services__icon" src="./assets/images/servises/webdesign.png" alt=""> -->
                     <div class="services__icon"><i class="fa-solid fa-couch"></i></i></div>
-                    <div class="services__title">Web Design</div>
+                    <div class="services__title">eiusmod tempor</div>
                     <div class="services__text">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
                 </div>
                 <div class="services__item  services__item--border">
                     <!-- <img class="services__icon" src="./assets/images/servises/creativity.png" alt=""> -->
                     <div class="services__icon"><i class="fa-solid fa-book-open"></i></i></div>
-                    <div class="services__title">Creativity</div>
+                    <div class="services__title">adipiscing elit</div>
                     <div class="services__text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
                 </div>
                 <div class="services__item">
                     <!-- <img class="services__icon" src="./assets/images/servises/seo.png" alt=""> -->
                     <div class="services__icon"><i class="fa-solid fa-utensils"></i></div>
-                    <div class="services__title">seo</div>
-                    <div class="services__text">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
+                    <div class="services__title">sit amet</div>
+                    <div class="services__text">Ipsum dolor , consectetur adipiscing elit, sed do eiusmod.</div>
                 </div>
                 <div class="services__item">
                     <!-- <img class="services__icon" src="./assets/images/servises/csshtml.png" alt=""> -->
                     <div class="services__icon"><i class="fa-solid fa-plate-wheat"></i></div>
-                    <div class="services__title">Css/Html</div>
+                    <div class="services__title">sed do tempor</div>
                     <div class="services__text">Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.</div>
                 </div>
                 <div class="services__item">
                     <!-- <img class="services__icon" src="./assets/images/servises/digital.png" alt=""> -->
                     <div class="services__icon"><i class="fa-solid fa-camera"></i></div>
-                    <div class="services__title">digital</div>
+                    <div class="services__title">adipiscing</div>
                     <div class="services__text">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
                 </div>
             </div>
@@ -250,8 +250,8 @@ if(isset($_COOKIE['postToReg'])) {
         <div class="container">
 
             <div class="section__header">
-                <h3 class="section__suptitle">For all devices</h3>
-                <h2 class="section__title">Unique design</h2>
+                <h3 class="section__suptitle">For all devices...</h3>
+                <h2 class="section__title">we are everywhere</h2>
             </div>
             
             <div class="devices">
@@ -267,7 +267,7 @@ if(isset($_COOKIE['postToReg'])) {
         <div class="container">
             
             <div class="section__header">
-                <h3 class="section__suptitle">Service</h3>
+                <h3 class="section__suptitle">Service...</h3>
                 <h2 class="section__title">what we do</h2>
                 <div class="section__text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
@@ -284,7 +284,7 @@ if(isset($_COOKIE['postToReg'])) {
                         <div class="accordion__item" data-collapse="#wedo_1">
                             <div class="accordion__header">
                                 <img class="accordion__icon" src="./assets/images/wedo/photography.png" alt="">
-                                <div class="accordion__title">Photography</div>
+                                <div class="accordion__title">consectetur</div>
                             </div>
                             <div class="accordion__content" id="wedo_1"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
@@ -293,7 +293,7 @@ if(isset($_COOKIE['postToReg'])) {
                         <div class="accordion__item active" data-collapse="#wedo_2">
                             <div class="accordion__header">
                                 <img class="accordion__icon" src="./assets/images/wedo/creativity.png" alt="">
-                                <div class="accordion__title">creativity</div>
+                                <div class="accordion__title">sit amet</div>
                             </div>
                             <div class="accordion__content" id="wedo_2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
@@ -302,7 +302,7 @@ if(isset($_COOKIE['postToReg'])) {
                         <div class="accordion__item" data-collapse="#wedo_3">
                             <div class="accordion__header">
                                 <img class="accordion__icon" src="./assets/images/wedo/webdesign.png" alt="">
-                                <div class="accordion__title">web design</div>
+                                <div class="accordion__title">adipiscing</div>
                             </div>
                             <div class="accordion__content" id="wedo_3"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>

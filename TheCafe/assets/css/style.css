@@ -8,6 +8,13 @@ body {
     /* background-color: #ebe0db; */
 }
 
+/* body {
+    background: white no-repeat center cover fixed;
+    background-image: url(https://picsum.photos/1024/768);
+    background-size: cover;
+    transition: 2s;
+  } */
+
 *,
 *:before, /*псевдоэлементы?*/
 *:after {
@@ -558,6 +565,11 @@ hr {
     border-left: 1px solid #fff;
     text-align: center;
     color: #fff;
+    transition: background .1s linear, color .1s linear;
+}
+
+.stat__item:hover {
+    background-color: #c2c2c2;
 }
 
 .stat__item:last-child { /*бордер для крайнего правого элемента*/
