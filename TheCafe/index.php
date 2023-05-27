@@ -5,8 +5,8 @@ function d($arr) {
     print_r($arr);
     echo '</pre>';
 }
-
-
+require './assets/php/DBConnect.php';
+//echo DBConnect::$dbName;
 //11
 // d($_COOKIE);
 // echo $_COOKIE['postToReg'];
