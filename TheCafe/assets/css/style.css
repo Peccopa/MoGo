@@ -64,7 +64,7 @@ hr {
 
     /*префиксы? можно посмотреть на caniuse.com*/
     -webkit-background-size: cover; /*???*/
-    background-size: cover; /*покрывает всю площадь экрана*/
+    background-size: cover; /*на всю площадь экрана*/
     background: url(../images/intro1.jpg) center no-repeat;
 }
 
