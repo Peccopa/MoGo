@@ -5,13 +5,17 @@ function d($arr) {
     print_r($arr);
     echo '</pre>';
 }
+
+//require 'DBConnect.php';
 require './assets/php/DBConnect.php';
 //echo DBConnect::$dbName;
 //11
 // d($_COOKIE);
 // echo $_COOKIE['postToReg'];
 
-
+$pdo = DBConnect::getConnection();
+//d($pdo);
+//DBConnect::d($pdo);
 
 
 if(isset($_COOKIE['postToReg'])) {
