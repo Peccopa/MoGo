@@ -15,9 +15,18 @@ require './assets/php/DBConnect.php';
 
 $pdo = DBConnect::getConnection();
 //d($pdo);
-//DBConnect::d($pdo);
+DBConnect::d($pdo);
 
-$staff = "SELECT id, first_name, last_name, photo, contact FROM blogers;";
+$query = "SELECT id, first_name, last_name, photo, contact FROM blogers;";
+$result = $pdo->query($query, PDO::FETCH_ASSOC);
+$db_str = $result->fetch();
+
+
+DBConnect::d($db_str);
+
+
+
+
 
 
 if(isset($_COOKIE['postToReg'])) {
@@ -364,9 +373,11 @@ if(isset($_COOKIE['postToReg'])) {
             </div>
 
             <div class="card">
+
+
                 <div class="card__item">
                     <div class="card__inner">
-                    <div class="card__img"><img src="./assets/images/ourteam/11.jpg" alt=""></div>                
+                    <div class="card__img"><img src="<?=$db_str['photo'];?>" alt=""></div>
                         <div class="card__text">
                             <div class="social">
                                 <a class="social__item" href="#" target="_blank">
@@ -387,13 +398,15 @@ if(isset($_COOKIE['postToReg'])) {
                     <div class="card__info">
 <!--                        <div class="card__name">Sandra Dix</div>-->
 <!--                        <div class="card__prof">Barista</div>-->
-                        <div class="card__name">Sandra Dix</div>
-                        <div class="card__prof">Barista</div>
+                        <div class="card__name"><?=$db_str['first_name'];?> <?=$db_str['last_name'];?></div>
+                        <div class="card__prof"><?=$db_str['contact'];?></div>
                     </div>
                 </div>
+
+
                 <div class="card__item">
                     <div class="card__inner">
-                    <div class="card__img"><img src="assets/images/ourteam/33.jpg" alt=""></div>
+                    <div class="card__img"><img src="assets/images/ourteam/campbell.jpg" alt=""></div>
                         <div class="card__text">
                             <div class="social">
                                 <a class="social__item" href="#" target="_blank">
@@ -416,9 +429,11 @@ if(isset($_COOKIE['postToReg'])) {
                         <div class="card__prof">Client Manager</div>
                     </div>
                 </div>
+
+
                 <div class="card__item">
                     <div class="card__inner">
-                    <div class="card__img"><img src="assets/images/ourteam/22.jpg" alt=""></div>
+                    <div class="card__img"><img src="assets/images/ourteam/fertig.jpg" alt=""></div>
                             <div class="card__text">
                                 <div class="social">
                                 <a class="social__item" href="#" target="_blank">
@@ -441,6 +456,8 @@ if(isset($_COOKIE['postToReg'])) {
                         <div class="card__prof">Pastry Chef</div>
                     </div>
                 </div>
+
+
             </div> <!--card-->
         </div> <!--cont-->
     </section>
