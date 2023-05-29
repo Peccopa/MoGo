@@ -548,6 +548,99 @@ hr {
     color: #999;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*======card======*/
+/*======card======*/
+
+.card__item--active {
+    width: 33.33333%;
+    padding: 0 15px;
+}
+.card__inner--active {
+    background-color: #ccc;
+    position: relative;
+}
+.card__img--active {
+    /*background: linear-gradient(to bottom, #985739, #c08569);*/
+    background: linear-gradient(to bottom, #985739, #c08569);
+    transform: translate3d(-10px, -10px, 0); /*смещаем картинку*/
+    transition: transform .2s linear;
+}
+.card__img--active img {
+    opacity: .1;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: opacity .1s linear;
+
+}
+.card__icon--active {
+    color: #ccc;
+    font-size: 30px;
+    position: absolute;
+    top: 35%;
+    left: 43.75%;
+    z-index: 3;
+    opacity: 1;
+    transition: opacity .1s linear;
+}
+.card__text--active {
+    padding: 30px;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 1; /*скрываем текст*/
+    position: absolute; /*позиционируем текст поверх картинки (а не внизу)*/
+    top: 45%;
+    left: -1.75%;
+    z-index: 2;
+    transition: opacity .1s linear; /*прозрачность текста*/
+}
+
+/*hover*/
+.card__inner--active:hover .card__img--active {
+    transform: translate3d(0, 0, 0); /*смещаем картинку*/
+}
+.card__inner--active:hover .card__img--active img {
+    opacity: 1;
+}
+.card__inner--active:hover .card__text--active {
+    opacity: 0; /*показываем текст*/
+}
+.card__item--active:hover .card__icon--active {
+    opacity: 0; /*показываем текст*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============СТАТИСТИКА==================*/
 /*=============СТАТИСТИКА==================*/
 
 .statistics {

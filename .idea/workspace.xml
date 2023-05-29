@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9c28645-b097-40f9-85ea-9df6376e0d3d" name="Default Changelist" comment="storm">
+    <list default="true" id="d9c28645-b097-40f9-85ea-9df6376e0d3d" name="Default Changelist" comment="item_card2php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/ourteam/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/ourteam/22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/ourteam/33.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/ourteam/dix.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/images/ourteam/dix.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/js/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/DBConnect.php" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/php/DBConnect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TheCafe/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +26,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -49,7 +50,7 @@
       <workItem from="1685199382624" duration="3511000" />
       <workItem from="1685203650629" duration="11000" />
       <workItem from="1685242452493" duration="10258000" />
-      <workItem from="1685334629162" duration="4883000" />
+      <workItem from="1685334629162" duration="19242000" />
     </task>
     <task id="LOCAL-00001" summary="storm">
       <created>1685351222541</created>
@@ -58,7 +59,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685351222541</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="item_card2php">
+      <created>1685354429613</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685354429613</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -78,7 +86,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="storm" />
-    <option name="LAST_COMMIT_MESSAGE" value="storm" />
+    <MESSAGE value="item_card2php" />
+    <option name="LAST_COMMIT_MESSAGE" value="item_card2php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

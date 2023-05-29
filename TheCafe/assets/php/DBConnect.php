@@ -28,7 +28,11 @@ class DBConnect
 
 	// получаем объект соединения с БД
 	public static function getConnection(){
-		return new PDO(self::getDSN(), self::DB_LOGIN, self::DB_PASSWORD);
+        return new PDO(self::getDSN(), self::DB_LOGIN, self::DB_PASSWORD,
+            [
+                PDO::ATTR_DEFAULT_FETCH_MODE =>PDO::FETCH_ASSOC,
+                PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
+            ]);
 		// return new PDO("mysql:dbname=test;host=localhost", 'root', '123456');
 	}
 

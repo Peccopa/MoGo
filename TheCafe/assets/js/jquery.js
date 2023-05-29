@@ -76,4 +76,10 @@ $(function() {
         slidesToScroll: 1
     });
 
+    // $("#onabout").one("mouseover", function() {
+    //     $("#onabout").addClass('permahover');
+    // });
+
+    // $(#intro).onmouseover().css("display","block");
+
 });

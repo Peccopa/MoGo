@@ -27,6 +27,7 @@ loginBtn.addEventListener('click', ()=>{
           img.src = url
           return img
         });
+        console.log(images);
         
         // с какого индекса начинаем перебор, index 0 уже установлен в CSS
         let index = 1;

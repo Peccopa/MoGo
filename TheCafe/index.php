@@ -15,14 +15,15 @@ require './assets/php/DBConnect.php';
 
 $pdo = DBConnect::getConnection();
 //d($pdo);
-DBConnect::d($pdo);
+//DBConnect::d($pdo);
 
 $query = "SELECT id, first_name, last_name, photo, contact FROM blogers;";
-$result = $pdo->query($query, PDO::FETCH_ASSOC);
-$db_str = $result->fetch();
+//$result = $pdo->query($query, PDO::FETCH_ASSOC);
+$result = $pdo->query($query);
+//$db_str = $result->fetchAll();
 
 
-DBConnect::d($db_str);
+//DBConnect::d($db_str);
 
 
 
@@ -101,6 +102,10 @@ if(isset($_COOKIE['postToReg'])) {
 
 <div class="page">
 
+
+
+
+
     <!-- intro  -->
     <div class="intro" id="intro">
 
@@ -148,11 +153,18 @@ if(isset($_COOKIE['postToReg'])) {
             </div>
 
             <div class="card">
-                <div class="card__item">
-                    <div class="card__inner">
-                        <div class="card__img"><img src="./assets/images/about/1.jpg" alt=""></div>
-                        <div class="card__icon"><i class="fa-solid fa-umbrella"></i></div>
-                        <div class="card__text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, non! </div>
+<!--                <div class="card__item--active">-->
+<!--                    <div class="card__inner--active">-->
+<!--                        <div class="card__img--active"><img src="./assets/images/about/1.jpg" alt=""></div>-->
+<!--                        <div class="card__icon--active"><i class="fa-solid fa-umbrella"></i></div>-->
+<!--                        <div class="card__text--active"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, non! </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <div class="card__item card__item--active">
+                    <div class="card__inner card__inner--active">
+                        <div class="card__img card__img--active"><img src="./assets/images/about/1.jpg" alt=""></div>
+                        <div class="card__icon card__icon--active"><i class="fa-solid fa-umbrella"></i></div>
+                        <div class="card__text card__text--active"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, non! </div>
                     </div>
                 </div>
                 <div class="card__item">
@@ -374,10 +386,11 @@ if(isset($_COOKIE['postToReg'])) {
 
             <div class="card">
 
+<?php while ($db_cards = $result->fetch()):?>
 
                 <div class="card__item">
                     <div class="card__inner">
-                    <div class="card__img"><img src="<?=$db_str['photo'];?>" alt=""></div>
+                    <div class="card__img"><img src="<?=$db_cards['photo'];?>" alt=""></div>
                         <div class="card__text">
                             <div class="social">
                                 <a class="social__item" href="#" target="_blank">
@@ -396,66 +409,65 @@ if(isset($_COOKIE['postToReg'])) {
                         </div>
                     </div>
                     <div class="card__info">
-<!--                        <div class="card__name">Sandra Dix</div>-->
-<!--                        <div class="card__prof">Barista</div>-->
-                        <div class="card__name"><?=$db_str['first_name'];?> <?=$db_str['last_name'];?></div>
-                        <div class="card__prof"><?=$db_str['contact'];?></div>
+                        <div class="card__name"><?=$db_cards['first_name'];?> <?=$db_cards['last_name'];?></div>
+                        <div class="card__prof"><?=$db_cards['contact'];?></div>
                     </div>
                 </div>
 
+<?php endwhile;?>
 
-                <div class="card__item">
-                    <div class="card__inner">
-                    <div class="card__img"><img src="assets/images/ourteam/campbell.jpg" alt=""></div>
-                        <div class="card__text">
-                            <div class="social">
-                                <a class="social__item" href="#" target="_blank">
-                                <i class="fa-brands fa-facebook"></i>
-                                </a>
-                                <a class="social__item" href="#" target="_blank">
-                                <i class="fa-brands fa-twitter"></i>
-                                </a>
-                                <a class="social__item" href="#" target="_blank">
-                                <i class="fa-brands fa-youtube"></i>
-                                </a>
-                                <a class="social__item" href="#" target="_blank">
-                                <i class="fa-brands fa-instagram"></i>
-                                </a>                        
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card__info">
-                        <div class="card__name">Christopher Campbell</div>
-                        <div class="card__prof">Client Manager</div>
-                    </div>
-                </div>
-
-
-                <div class="card__item">
-                    <div class="card__inner">
-                    <div class="card__img"><img src="assets/images/ourteam/fertig.jpg" alt=""></div>
-                            <div class="card__text">
-                                <div class="social">
-                                <a class="social__item" href="#" target="_blank">
-                                <i class="fa-brands fa-facebook"></i>
-                                </a>
-                                <a class="social__item" href="#" target="_blank">
-                                <i class="fa-brands fa-twitter"></i>
-                                </a>
-                                <a class="social__item" href="#" target="_blank">
-                                <i class="fa-brands fa-youtube"></i>
-                                </a>
-                                <a class="social__item" href="#" target="_blank">
-                                <i class="fa-brands fa-instagram"></i>
-                                </a>                        
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card__info">
-                        <div class="card__name">Michael Fertig</div>
-                        <div class="card__prof">Pastry Chef</div>
-                    </div>
-                </div>
+<!--                <div class="card__item">-->
+<!--                    <div class="card__inner">-->
+<!--                    <div class="card__img"><img src="assets/images/ourteam/campbell.jpg" alt=""></div>-->
+<!--                        <div class="card__text">-->
+<!--                            <div class="social">-->
+<!--                                <a class="social__item" href="#" target="_blank">-->
+<!--                                <i class="fa-brands fa-facebook"></i>-->
+<!--                                </a>-->
+<!--                                <a class="social__item" href="#" target="_blank">-->
+<!--                                <i class="fa-brands fa-twitter"></i>-->
+<!--                                </a>-->
+<!--                                <a class="social__item" href="#" target="_blank">-->
+<!--                                <i class="fa-brands fa-youtube"></i>-->
+<!--                                </a>-->
+<!--                                <a class="social__item" href="#" target="_blank">-->
+<!--                                <i class="fa-brands fa-instagram"></i>-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="card__info">-->
+<!--                        <div class="card__name">Christopher Campbell</div>-->
+<!--                        <div class="card__prof">Client Manager</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+<!---->
+<!--                <div class="card__item">-->
+<!--                    <div class="card__inner">-->
+<!--                    <div class="card__img"><img src="assets/images/ourteam/fertig.jpg" alt=""></div>-->
+<!--                            <div class="card__text">-->
+<!--                                <div class="social">-->
+<!--                                <a class="social__item" href="#" target="_blank">-->
+<!--                                <i class="fa-brands fa-facebook"></i>-->
+<!--                                </a>-->
+<!--                                <a class="social__item" href="#" target="_blank">-->
+<!--                                <i class="fa-brands fa-twitter"></i>-->
+<!--                                </a>-->
+<!--                                <a class="social__item" href="#" target="_blank">-->
+<!--                                <i class="fa-brands fa-youtube"></i>-->
+<!--                                </a>-->
+<!--                                <a class="social__item" href="#" target="_blank">-->
+<!--                                <i class="fa-brands fa-instagram"></i>-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="card__info">-->
+<!--                        <div class="card__name">Michael Fertig</div>-->
+<!--                        <div class="card__prof">Pastry Chef</div>-->
+<!--                    </div>-->
+<!--                </div>-->
 
 
             </div> <!--card-->
