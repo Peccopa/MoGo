@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d9c28645-b097-40f9-85ea-9df6376e0d3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/DBConnect.php" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/php/DBConnect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TheCafe/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/old_index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +26,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -47,6 +45,7 @@
       <workItem from="1685199382624" duration="3511000" />
       <workItem from="1685203650629" duration="11000" />
       <workItem from="1685242452493" duration="10258000" />
+      <workItem from="1685334629162" duration="2158000" />
     </task>
     <servers />
   </component>

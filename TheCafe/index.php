@@ -17,6 +17,8 @@ $pdo = DBConnect::getConnection();
 //d($pdo);
 //DBConnect::d($pdo);
 
+$staff = "SELECT id, first_name, last_name, photo, contact FROM blogers;";
+
 
 if(isset($_COOKIE['postToReg'])) {
     $navlinkreg = '<a class="nav__link" href="./assets/php/reg.php"><b>' . htmlspecialchars(trim($_COOKIE['postToReg'])) . '</b></a>';
@@ -383,6 +385,8 @@ if(isset($_COOKIE['postToReg'])) {
                         </div>
                     </div>
                     <div class="card__info">
+<!--                        <div class="card__name">Sandra Dix</div>-->
+<!--                        <div class="card__prof">Barista</div>-->
                         <div class="card__name">Sandra Dix</div>
                         <div class="card__prof">Barista</div>
                     </div>
