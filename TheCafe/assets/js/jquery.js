@@ -4,7 +4,7 @@
 $(function() {
 
     let header = $("#header"),
-    introH = $("#intro").innerHeight(), 
+    introH = $("#intro").innerHeight(),
     scrollOffset = $(window).scrollTop(); 
 
 
@@ -18,7 +18,7 @@ $(function() {
     });
 
     function checkScroll(scrollOffset) {
-       if (scrollOffset >= (introH - 50)) {
+       if (scrollOffset >= (introH -50)) {
         header.addClass("fixed");
        } else {
         header.removeClass("fixed");

@@ -15,6 +15,31 @@ $blogs = [
 $blogId = (int)$_GET['id'];
 $blog = $blogs[$blogId -1];
 
+
+if(isset($_COOKIE['postToReg'])) {
+    $navlinkreg = '<a class="nav__link" href="./assets/php/reg.php"><b>' . htmlspecialchars(trim($_COOKIE['postToReg'])) . '</b></a>';
+    $hidereg = 'class="section section--registration hide"';
+} else {
+    if($_SERVER['REQUEST_METHOD'] !== 'POST') {
+
+        $hidereg = 'class="section section--registration"';
+        $navlinkreg = $_COOKIE['postToReg'] = '<a class="nav__link" href="../../index.php#registration">join us</a>';
+
+    } else {
+
+        $hidereg = 'class="section section--registration hide"';
+        $navlinkreg = '<b>' . htmlspecialchars(trim($_COOKIE['postToReg'])) . '</b>';
+        $postToReg = htmlspecialchars(trim($_POST['fname'])) . ' ' . htmlspecialchars(trim($_POST['lname']));
+        // $postToReg = '111';
+        // echo $postToReg;
+        // setcookie('postToReg', $postToReg, time() + 60);
+        setcookie("postToReg","$postToReg",time()+3600,"/");
+        header('Location: ./assets/php/reg.php');
+        // exit;
+    }
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -26,27 +51,189 @@ $blog = $blogs[$blogId -1];
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <title>TheCafe</title>
 </head>
 <body>
 
-    <section class="section" id="blog">
-            <div class="container">
 
-                <div class="section__header">
-                    <h3 class="section__suptitle">Our stories...</h3>
-                    <h2 class="section__title">Latest blog</h2>
-                </div>
+
+
+
+
+<header class="header" id="header">
+    <!-- <header class="header  header--fixed"> -->
+    <div class="container">
+        <div class="header__inner">
+            <!-- <div class="header__logo">MoGo</div> -->
+            <a class="header__logo" href="../../index.php">TheCafe</a>
+            <nav class="nav" id="nav">
+                <!-- <a class="nav__link" href="#" data-scroll="#registration">?=$navlinkreg;?></a> -->
+                <?=$navlinkreg;?>
+                <a class="nav__link" href="../../index.php#about">about</a>
+                <a class="nav__link" href="../../index.php#works"">Arts</a>
+                <a class="nav__link" href="../../index.php#blog">Blogs</a>
+                <a class="nav__link" href="../../index.php#footer">Contact</a>
+                <!-- <a class="nav__link" href="#" data-scroll="#footer">log in</a> -->
+                <a class="nav__link whatsup" href="https://api.whatsapp.com/send?phone=79168291896">
+                    <i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+
+                <!-- <a class="nav__link" href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>     -->
+            </nav>
+
+            <button class="nav-toggle" id="nav_toggle" type="button">
+                <span class="nav-toggle__item">Menu</span>
+            </button>
+
+        </div>
+    </div>
+</header>
+
+
+<!-- intro  -->
+<div class="intro intro--noback" id="intro">
+<!---->
+<!--    <div class="container">-->
+<!--        <div class="intro__inner">-->
+<!--            <p class="intro__suptitle">#aCupToGo</p>-->
+<!--            <h1 class="intro__title">Welcome to TheCafe</h1>-->
+<!--            <a class="btn" href="#" data-scroll="#works">show me more</a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+<!--    <div class="slider">-->
+<!--        <div class="container">-->
+<!--            <div class="slider__inner">-->
+<!--                <a class="slider__item" id="inner_btn1" href="#">-->
+<!--                    <span class="slider__num">#</span>-->
+<!--                    <span class="slider__text">pure</span>-->
+<!--                </a>-->
+<!--                <a class="slider__item" id="inner_btn2" href="#">-->
+<!--                    <span class="slider__num">#</span>-->
+<!--                    <span class="slider__text">cozy</span>-->
+<!--                </a>-->
+<!--                <a class="slider__item" id="inner_btn3" href="#">-->
+<!--                    <span class="slider__num">#</span>-->
+<!--                    <span class="slider__text">sweet</span>-->
+<!--                </a>-->
+<!--                <a class="slider__item" id="inner_btn4" href="#">-->
+<!--                    <span class="slider__num">#</span>-->
+<!--                    <span class="slider__text">pleasure</span>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+</div>
+
+
+
+
+<!--    <section class="section" id="blog">-->
+<!--            <div class="container">-->
+<!---->
+<!--                <div class="section__header">-->
+<!--                    <h3 class="section__suptitle">Our stories...</h3>-->
+<!--                    <h2 class="section__title">Latest blog</h2>-->
+<!--                </div>-->
+
+
+                <section class="section" id="blog">
+                    <div class="container">
+
+                        <div class="section__header">
+                            <h3 class="section__suptitle">Our stories...</h3>
+                            <h2 class="section__title">Latest blog</h2>
+                        </div>
+
+
+
+
+                        <div class="blog blog--opened">
+
+                            <div class="blog__item blog__item--opened">
+
+                                <div class="blog__header blog__header--opened">
+
+                                    <div class="blog__inner--opened">
+                                    <a class="blog__img--opened" href="./assets/php/blogs.php?id=1">
+                                        <img class="blog__photo blog__photo--active" src="../images/blog/11.jpg" alt=""></a>
+
+                                    <div class="blog__date blog__date--opened">
+                                        <div class="blog__date-day blog__date-day--opened">15</div>
+                                        <div class="blog__date-month blog__date-month--opened">Jan</div>
+                                    </div>
+                                    </div>
+
+
+                                <div class="blog__photo--under">
+                                        <div class="blog__footer">
+                                        <div class="blog-stat">
+                                        <span class="blog-stat__item">
+                                        <i class="fa-solid fa-eye"></i>542</span>
+                                            <span class="blog-stat__item">
+                                        <i class="fa-solid fa-comment-dots"></i>17</span>
+                                        </div>
+                                        </div>
+
+                                        <div class="blog_author">
+                                            <p><b>Author: </b> Sandra Dix</p>
+                                        </div>
+
+
+                                </div>
+
+
+
+
+                                </div>
+
+                                <div class="blog__content blog__content--opened">
+                                    <div class="blog__title blog__title--opened">
+                                        <a href="./assets/php/blogs.php?id=1">Lorem ipsum dolor sit amet</a>
+                                    </div>
+                                    <div class="blog__text blog__text--opened">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl. Volutpat sed cras ornare arcu dui. Gravida rutrum quisque non tellus orci ac auctor augue. Nec nam aliquam sem et tortor consequat id porta. Viverra tellus in hac habitasse platea dictumst. Tincidunt praesent semper feugiat nibh sed pulvinar proin. Sit amet justo donec enim diam vulputate ut pharetra sit. Tincidunt vitae semper quis lectus. Porta nibh venenatis cras sed felis eget velit aliquet.
+
+                                        Massa massa ultricies mi quis hendrerit dolor magna. Velit ut tortor pretium viverra suspendisse potenti. Enim facilisis gravida neque convallis a cras. Quam quisque id diam vel quam elementum. Ultrices tincidunt arcu non sodales neque sodales ut. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Est ante in nibh mauris cursus mattis molestie a. Ipsum consequat nisl vel pretium lectus quam. Eu sem integer vitae justo eget magna fermentum. Id porta nibh venenatis cras sed. Nulla pellentesque dignissim enim sit amet. Scelerisque purus semper eget duis at tellus at urna condimentum. Id diam vel quam elementum pulvinar etiam non. Fames ac turpis egestas sed. Condimentum mattis pellentesque id nibh tortor id. Risus viverra adipiscing at in tellus integer. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Enim blandit volutpat maecenas volutpat. Gravida arcu ac tortor dignissim convallis.
+
+                                        Venenatis a condimentum vitae sapien pellentesque habitant. </div>
+                                </div>
+                            </div>
+                            <a href="../../index.php#blog" class="back__button" id="backClick">back to blogs</a>
+                        </div>
+                    </div>
+
+                </section>
+
+
 
 
 
     <div class="blog">
-        <h2>Date: <?=$blog['month']?> <?=$blog['day']?></h2>
-        <h3>Date: <?=$blog['photo']?> <?=$blog['title']?></h3>
-        <p>Date: <?=$blog['text']?></p>
+
+<!--        <h2>Date: --><?//=$blog['month']?><!-- --><?//=$blog['day']?><!--</h2>-->
+<!--        <h3>Date: --><?//=$blog['photo']?><!-- --><?//=$blog['title']?><!--</h3>-->
+<!--        <p>Date: --><?//=$blog['text']?><!--</p>-->
+
+
     </div>
+
+
+
+
+                <script src="https://kit.fontawesome.com/48db125bfd.js" crossorigin="anonymous"></script> <!--fonts-->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script><!--jquery-->
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script><!--slider-->
+                <script src="../js/jquery.js"></script>
+<!--                <script src="./assets/js/app.js"></script>-->
+
+
+
+
+
 </body>
 </html>

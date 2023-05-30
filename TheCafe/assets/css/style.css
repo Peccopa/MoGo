@@ -68,6 +68,18 @@ hr {
     background: url(../images/intro1.jpg) center no-repeat;
 }
 
+.intro--noback {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*width: 1%;*/
+    height: 0vh;
+    min-height: 0px;
+    /*position: relative;*/
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
+    /*background: url(../images/intro1.jpg) center no-repeat;*/
+}
 
 .intro__inner {
     width: 100%;
@@ -1289,7 +1301,7 @@ hr {
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #f38181;
+    background-color: #985739;
     margin: 15px 0;
 }
 
@@ -1301,31 +1313,95 @@ hr {
     justify-content: space-between;
 }
 
+.blog--opened {
+    /*border-top: #ccc 2px solid;*/
+    padding-top: 35px;
+    margin-top: 40px;
+}
+
 .blog__item {
     width: 31%;
+}
+
+.blog__item--opened{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: #ccc 2px solid;
 }
 
 .blog__header {
     position: relative;
     margin-bottom: 15px;
-
+    background-color: #ccc;
 }
+
+.blog__inner--opened {
+    position: relative;
+    margin-bottom: 15px;
+    background-color: #ccc;
+}
+
+.blog__header--opened {
+    max-width: 48%;
+    min-width: 48%;
+    background-color: transparent;
+}
+
 
 .blog__photo {
     display: block;
     width: 100%;
     height: auto;
+    transition: transform .2s linear;
 }
+
+.blog__photo--under {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog_author{
+    display: flex;
+    align-items: flex-end;
+}
+
+.blog__img--opened {
+    background-color: #ccc;
+    display: block;
+}
+
+.blog__photo:hover {
+    transform: translate3d(-10px, -10px, 0);
+}
+
+.blog__photo--active {
+    transform: translate3d(-10px, -10px, 0);
+    transition: transform .2s linear;
+}
+
+.blog__photo--active:hover {
+    transform: translate3d(0px, 0px, 0px);
+    /*transition: transform .2s linear;*/
+}
+
+
 
 .blog__date {
     padding: 10px 15px;
-    background-color: #95e1d3;
+    background-color: #985739;
     position: absolute;
     bottom: 10px;
     left: -10px;
     z-index: 1;
     /* text-align: right; */
 }
+
+/*.blog__date--opened{*/
+/*    padding: 20px 30px;*/
+
+/*}*/
 
 .blog__date-day {
     color: #fff;
@@ -1335,18 +1411,32 @@ hr {
     text-align: center;
 }
 
+/*blog__date-day--opened {*/
+/*    font-size: 140px;*/
+/*}*/
+
 .blog__date-month {
     font-family: 'Roboto', sans-serif;
     font-style: italic;
     color: #fff;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 25px;
     line-height: 1;
     text-align: center;
 }
 
+/*blog__date-month--opened {*/
+/*    font-size: 35px;*/
+/*}*/
+
 .blog__content {
     margin-bottom: 14px; /*убрать*/
+}
+
+.blog__content--opened {
+    /*margin-top: 10px;*/
+    max-width: 48%;
+    min-width: 48%;
 }
 
 .blog__title {
@@ -1354,6 +1444,16 @@ hr {
     font-size: 14px;
     color: #333;
     text-transform: uppercase;
+}
+
+.blog__title--opened {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    /*font-style: revert;*/
+    color: #333;
+    /*text-transform: uppercase;*/
 }
 
 .blog__title a {
@@ -1371,6 +1471,10 @@ hr {
     /* font-weight: 400; */
     font-size: 15px;
 }
+
+/*.blog__text--opened {*/
+/*   */
+/*}*/
 
 .blog__footer {
     padding-top: 14px;
@@ -1390,11 +1494,102 @@ hr {
 }
 
 .blog-stat__item i {
-    color: #95e1d3;
+    color: #c08569;
     margin-right: 5px;
 }
 
 
+
+
+
+.back__button {
+    height: 32px;
+    padding: 5px;
+    margin-top: 10px;
+    width: 25%;
+    background-color: #333;
+    border: 0;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background .1s linear;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.back__button:hover {
+    background-color: #757575;
+}
+
+
+
+/*======card======*/
+/*======card======*/
+
+/*.card__item--active {*/
+/*    width: 33.33333%;*/
+/*    padding: 0 15px;*/
+/*}*/
+/*.card__inner--active {*/
+/*    background-color: #ccc;*/
+/*    position: relative;*/
+/*}*/
+/*.card__img--active {*/
+/*    !*background: linear-gradient(to bottom, #985739, #c08569);*!*/
+/*    background: linear-gradient(to bottom, #985739, #c08569);*/
+/*    transform: translate3d(-10px, -10px, 0); !*смещаем картинку*!*/
+/*    transition: transform .2s linear;*/
+/*}*/
+/*.card__img--active img {*/
+/*    opacity: .1;*/
+/*    display: block;*/
+/*    max-width: 100%;*/
+/*    height: auto;*/
+/*    transition: opacity .1s linear;*/
+
+/*}*/
+/*.card__icon--active {*/
+/*    color: #ccc;*/
+/*    font-size: 30px;*/
+/*    position: absolute;*/
+/*    top: 35%;*/
+/*    left: 43.75%;*/
+/*    z-index: 3;*/
+/*    opacity: 1;*/
+/*    transition: opacity .1s linear;*/
+/*}*/
+/*.card__text--active {*/
+/*    padding: 30px;*/
+/*    width: 100%;*/
+/*    font-size: 16px;*/
+/*    color: #fff;*/
+/*    text-transform: uppercase;*/
+/*    text-align: center;*/
+/*    opacity: 1; !*скрываем текст*!*/
+/*    position: absolute; !*позиционируем текст поверх картинки (а не внизу)*!*/
+/*    top: 45%;*/
+/*    left: -1.75%;*/
+/*    z-index: 2;*/
+/*    transition: opacity .1s linear; !*прозрачность текста*!*/
+/*}*/
+
+/*!*hover*!*/
+/*.card__inner--active:hover .card__img--active {*/
+/*    transform: translate3d(0, 0, 0); !*смещаем картинку*!*/
+/*}*/
+/*.card__inner--active:hover .card__img--active img {*/
+/*    opacity: 1;*/
+/*}*/
+/*.card__inner--active:hover .card__text--active {*/
+/*    opacity: 0; !*показываем текст*!*/
+/*}*/
+/*.card__item--active:hover .card__icon--active {*/
+/*    opacity: 0; !*показываем текст*!*/
+/*}*/
 
 
 /**___________MAP+++++++++*/
@@ -1406,7 +1601,7 @@ hr {
 .map__title {
     font-size: 24px;
     font-weight: 700;
-    color: #f38181  ;
+    color: #985739  ;
     text-transform: uppercase;
 }
 
@@ -1416,7 +1611,7 @@ hr {
     width: 60px;
     height: 3px;
     margin: 15px auto 0; /*выравниваем по центру марджином*/
-    background-color: #f38181;
+    background-color: #985739;
 }
 
 .map__title a {

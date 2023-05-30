@@ -748,8 +748,7 @@ if(isset($_COOKIE['postToReg'])) {
                 <div class="blog__item">
                     <div class="blog__header">
                         <a href="./assets/php/blogs.php?id=1">
-                            <img class="blog__photo" src="./assets/images/blog/1.jpg" alt="">
-                        </a>
+                            <img class="blog__photo blog__photo--active" src="./assets/images/blog/1.jpg" alt=""></a>
                     <div class="blog__date">
                             <div class="blog__date-day">15</div>
                             <div class="blog__date-month">Jan</div>
@@ -770,6 +769,7 @@ if(isset($_COOKIE['postToReg'])) {
                         </div>
                     </div>
                 </div>
+
                 <div class="blog__item">
                     <div class="blog__header">
                         <a href="./assets/php/blogs.php?id=2">
@@ -795,6 +795,7 @@ if(isset($_COOKIE['postToReg'])) {
                         </div>
                     </div>
                 </div>
+
                 <div class="blog__item">
                     <div class="blog__header">
                         <a href="./assets/php/blogs.php?id=3">
