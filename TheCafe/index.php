@@ -738,6 +738,9 @@ if(isset($_COOKIE['postToReg'])) {
     <section class="section" id="blog">
         <div class="container">
 
+
+
+
             <div class="section__header">
                 <h3 class="section__suptitle">Our stories...</h3>
                 <h2 class="section__title">Latest blog</h2>
@@ -822,7 +825,7 @@ if(isset($_COOKIE['postToReg'])) {
                     </div>
                 </div>
 
-            </div> 
+            </div>
 
         </div>
     </section>

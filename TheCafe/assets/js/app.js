@@ -287,7 +287,7 @@ pWord.addEventListener('blur', function(){
 let btnClick = document.querySelector('#btnClick');
     btnClick.setAttribute('disabled', true);
     function enableButton() {
-        if (enableBtn == 4){
+        if (enableBtn > 4){
             console.log ('1');
             btnClick.removeAttribute('disabled')
             btnClick.style.backgroundColor = '#333';
