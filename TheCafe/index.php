@@ -19,7 +19,7 @@ $pdo = DBConnect::getConnection();
 
 //$query = "SELECT id, first_name, last_name, photo, contact FROM blogers;";
 
-$query = "SELECT blogs.`id` AS blogs_id, `title`, `full`, `image`, `day`, `month`, blogers.id AS blogers_id, first_name, last_name, photo 
+$query = "SELECT blogs.`id` AS blogs_id, `title`, `full`, `image`, `day`, `month`, blogers.id AS blogers_id, first_name, last_name, photo, contact 
         FROM `blogs`, blogers 
         WHERE blogers.id = author_id 
         ORDER BY `blogs`.`day` DESC";
