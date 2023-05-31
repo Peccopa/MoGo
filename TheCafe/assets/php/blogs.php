@@ -2,26 +2,33 @@
 
 require '../php/DBConnect.php';
 $pdo = DBConnect::getConnection();
-
-
-
-function d($arr) {
-    echo '<pre>';
-    print_r($arr);
-    echo '</pre>';
-}
-
-d($pdo);
-
-$blogs = [
-    ['id' => 1, 'day' => '111', 'month' => '111', 'photo' => './assets/images/blog/test.png', 'title' => 'Lorem', 'text' => 'Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты). '],
-    ['id' => 2, 'day' => '222', 'month' => '222', 'photo' => './assets/images/blog/test.png', 'title' => 'asdfsadfs', 'text' => 'Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или "невозможных" слов.'],
-    ['id' => 3, 'day' => '333', 'month' => '333', 'photo' => './assets/images/blog/test.png', 'title' => 'asdfsadfs', 'text' => 'Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur", и занялся его поисками в классической латинской литературе. В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33 книги "de Finibus Bonorum et Malorum" ("О пределах добра и зла"), написанной Цицероном в 45 году н.э. Этот трактат по теории этики был очень популярен в эпоху Возрождения. Первая строка Lorem Ipsum, "Lorem ipsum dolor sit amet..", происходит от одной из строк в разделе 1.10.32'],
-    ['id' => 4, 'day' => '444', 'month' => '444', 'photo' => './assets/images/blog/test.png', 'title' => 'asdfsadfs', 'text' => 'sdafwfwefsaefawes'],
-];
-
+$query = "SELECT blogs.`id` AS blogs_id, `title`, `full`, `image`, `data`, blogers.id AS blogers_id, first_name, last_name FROM `blogs`, blogers WHERE blogers.id = author_id ORDER BY `blogs`.`data` DESC";
+$result = $pdo->query($query);
+$blogs = $result->fetchAll();
 $blogId = (int)$_GET['id'];
 $blog = $blogs[$blogId -1];
+DBConnect::d($blogs);
+
+
+
+
+//function d($arr) {
+//    echo '<pre>';
+//    print_r($arr);
+//    echo '</pre>';
+//}
+//
+//d($pdo);
+
+//$blogs = [
+//    ['id' => 1, 'day' => '111', 'month' => '111', 'photo' => './assets/images/blog/test.png', 'title' => 'Lorem', 'text' => 'Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты). '],
+//    ['id' => 2, 'day' => '222', 'month' => '222', 'photo' => './assets/images/blog/test.png', 'title' => 'asdfsadfs', 'text' => 'Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или "невозможных" слов.'],
+//    ['id' => 3, 'day' => '333', 'month' => '333', 'photo' => './assets/images/blog/test.png', 'title' => 'asdfsadfs', 'text' => 'Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur", и занялся его поисками в классической латинской литературе. В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33 книги "de Finibus Bonorum et Malorum" ("О пределах добра и зла"), написанной Цицероном в 45 году н.э. Этот трактат по теории этики был очень популярен в эпоху Возрождения. Первая строка Lorem Ipsum, "Lorem ipsum dolor sit amet..", происходит от одной из строк в разделе 1.10.32'],
+//    ['id' => 4, 'day' => '444', 'month' => '444', 'photo' => './assets/images/blog/test.png', 'title' => 'asdfsadfs', 'text' => 'sdafwfwefsaefawes'],
+//];
+
+//$blogId = (int)$_GET['id'];
+//$blog = $blogs[$blogId -1];
 
 
 if(isset($_COOKIE['postToReg'])) {
@@ -169,10 +176,11 @@ if(isset($_COOKIE['postToReg'])) {
 
                                     <div class="blog__inner--opened">
                                     <a class="blog__img--opened" href="./assets/php/blogs.php?id=1">
-                                        <img class="blog__photo blog__photo--active" src="../images/blog/11.jpg" alt=""></a>
+<!--                                        <img class="blog__photo blog__photo--active" src="../images/blog/11.jpg" alt=""></a>-->
+                                        <img class="blog__photo blog__photo--active" src="../images/blog/<?=$blog['image']?>" alt=""></a>
 
                                     <div class="blog__date blog__date--opened">
-                                        <div class="blog__date-day blog__date-day--opened">15</div>
+                                        <div class="blog__date-day blog__date-day--opened"><?=$blog['data']?></div>
                                         <div class="blog__date-month blog__date-month--opened">Jan</div>
                                     </div>
                                     </div>
@@ -202,13 +210,9 @@ if(isset($_COOKIE['postToReg'])) {
 
                                 <div class="blog__content blog__content--opened">
                                     <div class="blog__title blog__title--opened">
-                                        <a href="./assets/php/blogs.php?id=1">Lorem ipsum dolor sit amet</a>
+                                        <a href="./assets/php/blogs.php?id=1"><?=$blog['title']?></a>
                                     </div>
-                                    <div class="blog__text blog__text--opened">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl. Volutpat sed cras ornare arcu dui. Gravida rutrum quisque non tellus orci ac auctor augue. Nec nam aliquam sem et tortor consequat id porta. Viverra tellus in hac habitasse platea dictumst. Tincidunt praesent semper feugiat nibh sed pulvinar proin. Sit amet justo donec enim diam vulputate ut pharetra sit. Tincidunt vitae semper quis lectus. Porta nibh venenatis cras sed felis eget velit aliquet.
-
-                                        Massa massa ultricies mi quis hendrerit dolor magna. Velit ut tortor pretium viverra suspendisse potenti. Enim facilisis gravida neque convallis a cras. Quam quisque id diam vel quam elementum. Ultrices tincidunt arcu non sodales neque sodales ut. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Est ante in nibh mauris cursus mattis molestie a. Ipsum consequat nisl vel pretium lectus quam. Eu sem integer vitae justo eget magna fermentum. Id porta nibh venenatis cras sed. Nulla pellentesque dignissim enim sit amet. Scelerisque purus semper eget duis at tellus at urna condimentum. Id diam vel quam elementum pulvinar etiam non. Fames ac turpis egestas sed. Condimentum mattis pellentesque id nibh tortor id. Risus viverra adipiscing at in tellus integer. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Enim blandit volutpat maecenas volutpat. Gravida arcu ac tortor dignissim convallis.
-
-                                        Venenatis a condimentum vitae sapien pellentesque habitant. </div>
+                                    <div class="blog__text blog__text--opened"><?=$blog['full']?></div>
                                 </div>
                             </div>
                             <a href="../../index.php#blog" class="back__button" id="backClick">back to blogs</a>
