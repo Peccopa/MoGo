@@ -17,7 +17,13 @@ $pdo = DBConnect::getConnection();
 //d($pdo);
 //DBConnect::d($pdo);
 
-$query = "SELECT id, first_name, last_name, photo, contact FROM blogers;";
+//$query = "SELECT id, first_name, last_name, photo, contact FROM blogers;";
+
+$query = "SELECT blogs.`id` AS blogs_id, `title`, `full`, `image`, `day`, `month`, blogers.id AS blogers_id, first_name, last_name, photo 
+        FROM `blogs`, blogers 
+        WHERE blogers.id = author_id 
+        ORDER BY `blogs`.`day` DESC";
+
 //$result = $pdo->query($query, PDO::FETCH_ASSOC);
 $result = $pdo->query($query);
 //$db_str = $result->fetchAll();
@@ -594,7 +600,7 @@ if(isset($_COOKIE['postToReg'])) {
     </section>
 
         <!-- registration  -->
-    <section <?=$hidereg?> id="registration">
+    <section <?=$hidereg;?> id="registration">
         <div class="container">
             
             <div class="section__header">
@@ -734,12 +740,27 @@ if(isset($_COOKIE['postToReg'])) {
         </div> <!--cont-->
     </section>
 
+
+
+<?php
+    $query = "SELECT blogs.`id` AS blogs_id, `title`, `full`, `image`, `day`, `month`, blogers.id AS blogers_id, first_name, last_name, photo, short
+    FROM `blogs`, blogers
+    WHERE blogers.id = author_id
+    ORDER BY `blogs`.`day` DESC";
+
+    //$result = $pdo->query($query, PDO::FETCH_ASSOC);
+    $result = $pdo->query($query);
+//    $db_str = $result->fetchAll();
+
+//    d($db_str);
+
+$i = 0; //для цикла ниже
+
+?>
+
     <!-- blog  -->
     <section class="section" id="blog">
         <div class="container">
-
-
-
 
             <div class="section__header">
                 <h3 class="section__suptitle">Our stories...</h3>
@@ -748,85 +769,96 @@ if(isset($_COOKIE['postToReg'])) {
 
             <div class="blog">
 
+<?php while ($db_blogs = $result->fetch()):?>
+
                 <div class="blog__item">
                     <div class="blog__header">
-                        <a href="./assets/php/blogs.php?id=1">
-                            <img class="blog__photo blog__photo--active" src="./assets/images/blog/1.jpg" alt=""></a>
-                    <div class="blog__date">
-                            <div class="blog__date-day">15</div>
-                            <div class="blog__date-month">Jan</div>
+                        <a href="./assets/php/blogs.php?id=<?=$db_blogs['blogs_id'];?>">
+                            <?php
+                            if ($i === 0) {echo '<img class="blog__photo blog__photo--active" src="./assets/images/blog/' . $db_blogs['image'] . '" alt=""></a>'; $i++;}
+                            else {echo '<img class="blog__photo" src="./assets/images/blog/' . $db_blogs['image'] . '" alt=""></a>';}
+                            ?>
+                        <div class="blog__date">
+                            <div class="blog__date-day"><?=$db_blogs['day'];?>
+                            </div>
+                            <div class="blog__date-month"><?=$db_blogs['month'];?>
+                            </div>
+                        </div>
                     </div>
-                    </div>
+
                     <div class="blog__content">
                         <div class="blog__title">
-                            <a href="./assets/php/blogs.php?id=1">Lorem ipsum dolor sit amet</a>
+                            <a href="./assets/php/blogs.php?id=<?=$db_blogs['blogs_id'];?>"><?=$db_blogs['title'];?></a>
                         </div>
-                        <div class="blog__text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div class="blog__text"><?=$db_blogs['short'];?></div>
                     </div>
+
                     <div class="blog__footer">
                         <div class="blog-stat">
                             <span class="blog-stat__item">
-                                <i class="fa-solid fa-eye"></i>542</span>
+                                <i class="fa-solid fa-eye"></i><?=mt_rand(300, 700);?></span>
                             <span class="blog-stat__item">
-                                <i class="fa-solid fa-comment-dots"></i>17</span>
+                                <i class="fa-solid fa-comment-dots"></i><?=mt_rand(7, 30);?></span>
                         </div>
                     </div>
                 </div>
 
-                <div class="blog__item">
-                    <div class="blog__header">
-                        <a href="./assets/php/blogs.php?id=2">
-                            <img class="blog__photo" src="./assets/images/blog/2.jpg" alt="">
-                        </a>
-                    <div class="blog__date">
-                            <div class="blog__date-day">14</div>
-                            <div class="blog__date-month">Jan</div>
-                    </div>
-                    </div>
-                    <div class="blog__content">
-                        <div class="blog__title">
-                            <a href="./assets/php/blogs.php?id=2">sed do eiusmod tempor</a>
-                        </div>
-                        <div class="blog__text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                    </div>
-                    <div class="blog__footer">
-                        <div class="blog-stat">
-                            <span class="blog-stat__item">
-                                <i class="fa-solid fa-eye"></i>992</span>
-                            <span class="blog-stat__item">
-                                <i class="fa-solid fa-comment-dots"></i>42</span>
-                        </div>
-                    </div>
-                </div>
+<?php endwhile;?>
 
-                <div class="blog__item">
-                    <div class="blog__header">
-                        <a href="./assets/php/blogs.php?id=3">
-                            <img class="blog__photo" src="./assets/images/blog/3.jpg" alt="">
-                        </a>
-                    <div class="blog__date">
-                            <div class="blog__date-day">12</div>
-                            <div class="blog__date-month">Jan</div>
-                    </div>
-                    </div>
-                    <div class="blog__content">
-                        <div class="blog__title">
-                            <a href="./assets/php/blogs.php?id=3">incididunt ut labore et dolore</a>
-                        </div>
-                        <div class="blog__text">Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                    </div>
-                    <div class="blog__footer">
-                        <div class="blog-stat">
-                            <span class="blog-stat__item">
-                                <i class="fa-solid fa-eye"></i>1560</span>
-                            <span class="blog-stat__item">
-                                <i class="fa-solid fa-comment-dots"></i>98</span>
-                        </div>
-                    </div>
-                </div>
+<!--                <div class="blog__item">-->
+<!--                    <div class="blog__header">-->
+<!--                        <a href="./assets/php/blogs.php?id=2">-->
+<!--                            <img class="blog__photo" src="./assets/images/blog/2.jpg" alt="">-->
+<!--                        </a>-->
+<!--                    <div class="blog__date">-->
+<!--                            <div class="blog__date-day">14</div>-->
+<!--                            <div class="blog__date-month">Jan</div>-->
+<!--                    </div>-->
+<!--                    </div>-->
+<!--                    <div class="blog__content">-->
+<!--                        <div class="blog__title">-->
+<!--                            <a href="./assets/php/blogs.php?id=2">sed do eiusmod tempor</a>-->
+<!--                        </div>-->
+<!--                        <div class="blog__text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>-->
+<!--                    </div>-->
+<!--                    <div class="blog__footer">-->
+<!--                        <div class="blog-stat">-->
+<!--                            <span class="blog-stat__item">-->
+<!--                                <i class="fa-solid fa-eye"></i>992</span>-->
+<!--                            <span class="blog-stat__item">-->
+<!--                                <i class="fa-solid fa-comment-dots"></i>42</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="blog__item">-->
+<!--                    <div class="blog__header">-->
+<!--                        <a href="./assets/php/blogs.php?id=3">-->
+<!--                            <img class="blog__photo" src="./assets/images/blog/3.jpg" alt="">-->
+<!--                        </a>-->
+<!--                    <div class="blog__date">-->
+<!--                            <div class="blog__date-day">12</div>-->
+<!--                            <div class="blog__date-month">Jan</div>-->
+<!--                    </div>-->
+<!--                    </div>-->
+<!--                    <div class="blog__content">-->
+<!--                        <div class="blog__title">-->
+<!--                            <a href="./assets/php/blogs.php?id=3">incididunt ut labore et dolore</a>-->
+<!--                        </div>-->
+<!--                        <div class="blog__text">Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>-->
+<!--                    </div>-->
+<!--                    <div class="blog__footer">-->
+<!--                        <div class="blog-stat">-->
+<!--                            <span class="blog-stat__item">-->
+<!--                                <i class="fa-solid fa-eye"></i>1560</span>-->
+<!--                            <span class="blog-stat__item">-->
+<!--                                <i class="fa-solid fa-comment-dots"></i>98</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
 
             </div>
-
         </div>
     </section>
 

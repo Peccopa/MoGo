@@ -2,12 +2,15 @@
 
 require '../php/DBConnect.php';
 $pdo = DBConnect::getConnection();
-$query = "SELECT blogs.`id` AS blogs_id, `title`, `full`, `image`, `data`, blogers.id AS blogers_id, first_name, last_name FROM `blogs`, blogers WHERE blogers.id = author_id ORDER BY `blogs`.`data` DESC";
+$query = "SELECT blogs.`id` AS blogs_id, `title`, `full`, `image`, `day`, `month`, blogers.id AS blogers_id, first_name, last_name 
+        FROM `blogs`, blogers 
+        WHERE blogers.id = author_id 
+        ORDER BY `blogs`.`day` DESC";
 $result = $pdo->query($query);
 $blogs = $result->fetchAll();
 $blogId = (int)$_GET['id'];
 $blog = $blogs[$blogId -1];
-DBConnect::d($blogs);
+//DBConnect::d($blogs);
 
 
 
@@ -88,7 +91,7 @@ if(isset($_COOKIE['postToReg'])) {
                 <!-- <a class="nav__link" href="#" data-scroll="#registration">?=$navlinkreg;?></a> -->
                 <?=$navlinkreg;?>
                 <a class="nav__link" href="../../index.php#about">about</a>
-                <a class="nav__link" href="../../index.php#works"">Arts</a>
+                <a class="nav__link" href="../../index.php#works">Arts</a>
                 <a class="nav__link" href="../../index.php#blog">Blogs</a>
                 <a class="nav__link" href="../../index.php#footer">Contact</a>
                 <!-- <a class="nav__link" href="#" data-scroll="#footer">log in</a> -->
@@ -180,8 +183,8 @@ if(isset($_COOKIE['postToReg'])) {
                                         <img class="blog__photo blog__photo--active" src="../images/blog/<?=$blog['image']?>" alt=""></a>
 
                                     <div class="blog__date blog__date--opened">
-                                        <div class="blog__date-day blog__date-day--opened"><?=$blog['data']?></div>
-                                        <div class="blog__date-month blog__date-month--opened">Jan</div>
+                                        <div class="blog__date-day blog__date-day--opened"><?=$blog['day']?></div>
+                                        <div class="blog__date-month blog__date-month--opened"><?=$blog['month']?></div>
                                     </div>
                                     </div>
 
@@ -196,8 +199,8 @@ if(isset($_COOKIE['postToReg'])) {
                                         </div>
                                         </div>
 
-                                        <div class="blog_author">
-                                            <p><b>Author: </b> Sandra Dix</p>
+                                        <div class="blog__author">
+                                            <b>Author: </b><a href="../../index.php#team"><?=$blog['first_name']?> <?=$blog['last_name']?></a>
                                         </div>
 
 

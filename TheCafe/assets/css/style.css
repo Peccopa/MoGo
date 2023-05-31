@@ -1379,11 +1379,13 @@ hr {
 .blog__photo--active {
     transform: translate3d(-10px, -10px, 0);
     transition: transform .2s linear;
+    /*border: #cccccc 10px solid;*/
 }
 
 .blog__photo--active:hover {
     transform: translate3d(0px, 0px, 0px);
     /*transition: transform .2s linear;*/
+    /*border: #cccccc 10px solid;*/
 }
 
 
@@ -1592,6 +1594,18 @@ hr {
 /*}*/
 
 
+.blog__author a {
+    color: inherit; /*ссылка принимает значение родителя*/
+    text-decoration: none;
+}
+
+.blog__author a:hover {
+    text-decoration: underline; /*ссылка при наведении*/
+}
+
+/*.blog__author p b{*/
+/*    text-transform: none;*/
+/*}*/
 /**___________MAP+++++++++*/
 
 .map {
