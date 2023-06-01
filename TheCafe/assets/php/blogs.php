@@ -189,6 +189,8 @@ if(isset($_COOKIE['postToReg'])) {
                                     </div>
 
 
+
+
                                 <div class="blog__photo--under">
                                         <div class="blog__footer">
                                         <div class="blog-stat">
@@ -204,9 +206,43 @@ if(isset($_COOKIE['postToReg'])) {
                                         </div>
 
 
+
+
                                 </div>
 
-
+                                    <div class="footer__col footer__col--second">
+                                        <div class="footer__title">Also</div>
+                                        <div class="blogs">
+                                            <div class="blogs__item">
+                                                <img class="blogs__img" src="../images/footer/blogs/1.png" alt="">
+                                                <div class="blogs__content">
+                                                    <a class="blogs__title" href="../php/arts.php"><p>Lorem ipsum dolor sit amet, consectetur adipiscing</p></a>
+                                                    <div class="blogs__date">
+                                                        Jan 9, 2016
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="blogs__item">
+                                                <img class="blogs__img" src="../images/footer/blogs/2.png" alt="">
+                                                <div class="blogs__content">
+                                                    <a class="blogs__title" href="../php/arts.php"><p>Consectetur adipiscing elit, sed do eiusmod tempor</p></a>
+                                                    <div class="blogs__date">
+                                                        Jan 9, 2016
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="blogs__item">
+                                                <img class="blogs__img" src="../images/footer/blogs/3.png" alt="">
+                                                <div class="blogs__content">
+                                                    <a class="blogs__title" href="../php/arts.php"><p>sed do eiusmod tempor
+                                                            incididunt ut labore</p></a>
+                                                    <div class="blogs__date">
+                                                        Jan 9, 2016
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
                                 </div>
@@ -215,7 +251,7 @@ if(isset($_COOKIE['postToReg'])) {
                                     <div class="blog__title blog__title--opened">
                                         <a href="./assets/php/blogs.php?id=1"><?=$blog['title']?></a>
                                     </div>
-                                    <div class="blog__text blog__text--opened"><?=$blog['full']?></div>
+                                    <p class="blog__text blog__text--opened"><?=$blog['full'] = str_replace("\r\n\r\n",'<br><br>', $blog['full'])?></p>
                                 </div>
                             </div>
                             <a href="../../index.php#blog" class="back__button" id="backClick">back to blogs</a>
