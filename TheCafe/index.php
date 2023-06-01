@@ -6,14 +6,20 @@ function d($arr) {
     echo '</pre>';
 }
 
+
+
+
+
 //require 'DBConnect.php';
 require './assets/php/DBConnect.php';
+$pdo = DBConnect::getConnection();
 //echo DBConnect::$dbName;
 //11
 // d($_COOKIE);
 // echo $_COOKIE['postToReg'];
 
-$pdo = DBConnect::getConnection();
+
+
 //d($pdo);
 //DBConnect::d($pdo);
 
@@ -23,11 +29,9 @@ $pdo = DBConnect::getConnection();
 //        FROM `blogs`, blogers
 //        WHERE blogers.id = author_id
 //        ORDER BY `blogs`.`day` DESC";
-$query = "SELECT first_name, last_name, photo, contact 
-        FROM blogers;";
 
 //$result = $pdo->query($query, PDO::FETCH_ASSOC);
-$result = $pdo->query($query);
+
 //$db_str = $result->fetchAll();
 
 
@@ -94,6 +98,7 @@ if(isset($_COOKIE['postToReg'])) {
                 <!-- <a class="nav__link" href="#" data-scroll="#footer">log in</a> -->
                 <a class="nav__link whatsup" href="https://api.whatsapp.com/send?phone=79168291896">
                 <i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+                <a class="nav__link" href="./assets/php/admin.php" >ADMIN</a>
                 
                 <!-- <a class="nav__link" href="#">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -194,113 +199,120 @@ if(isset($_COOKIE['postToReg'])) {
         </div>
     </section>
 
-    <!-- statistics  -->
-    <div class="statistics" id="statistics">
+    <!-- map  -->
+    <a href="https://yandex.ru/maps/-/CCUkVQcODA" target="_blank" >
+    <section class="section  section--map" id="map">
         <div class="container">
-            <div class="stat">
-                <div class="stat__item"> <!--вставить скрипт счётчика (тупо таймер для визуализации часы/минуты/секунды)-->
-                    <div class="stat__count"><?= mt_rand(1, 20); ?></div>
-                    <div class="stat__text">art projects</div>
-                </div>
-                <div class="stat__item">
-                    <div class="stat__count"><?= mt_rand(100, 200); ?></div>
-                    <div class="stat__text">happy client</div>
-                </div>
-                <div class="stat__item">
-                    <div class="stat__count"><?= mt_rand(5, 15); ?></div>
-                    <div class="stat__text">award winner</div>
-                </div>
-                <div class="stat__item">
-                    <div class="stat__count"><?= mt_rand(800, 999); ?></div>
-                    <div class="stat__text">cup of coffee</div>
-                </div>
-                <div class="stat__item">
-                    <div class="stat__count"><?= mt_rand(20, 30); ?></div>
-                    <div class="stat__text">club members</div>
-                </div>
+            <div class="map">
+                <h2 class="map__title">
+                    <div><i class="fa-solid fa-location-dot"></i></div>
+                    <a href="https://yandex.ru/maps/-/CCUkVQcODA" target="_blank" >Open Map</a>
+                </h2>
             </div>
-
         </div>
-    </div>
+    </section>
+    </a>
 
-    <!-- services  -->
-    <section class="section" id="services">
+
+
+    <!-- works  -->
+    <section class="section section--works" id="works">
         <div class="container">
-            
             <div class="section__header">
-                <h3 class="section__suptitle">We work with...</h3>
-                <h2 class="section__title">Amazing Services</h2>
-            </div>
-
-            <div class="services">
-                <div class="services__item  services__item--border">
-                    <!-- <img class="services__icon" src="./assets/images/servises/photography.png" alt=""> -->
-                    <div class="services__icon"><i class="fa-solid fa-mug-hot"></i></i></div>
-                    <div class="services__title">consectetur</div>
-                    <div class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
-                </div>
-                <div class="services__item  services__item--border">
-                    <!-- <img class="services__icon" src="./assets/images/servises/webdesign.png" alt=""> -->
-                    <div class="services__icon"><i class="fa-solid fa-couch"></i></i></div>
-                    <div class="services__title">eiusmod tempor</div>
-                    <div class="services__text">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
-                </div>
-                <div class="services__item  services__item--border">
-                    <!-- <img class="services__icon" src="./assets/images/servises/creativity.png" alt=""> -->
-                    <div class="services__icon"><i class="fa-solid fa-book-open"></i></i></div>
-                    <div class="services__title">adipiscing elit</div>
-                    <div class="services__text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
-                </div>
-                <div class="services__item">
-                    <!-- <img class="services__icon" src="./assets/images/servises/seo.png" alt=""> -->
-                    <div class="services__icon"><i class="fa-solid fa-utensils"></i></div>
-                    <div class="services__title">sit amet</div>
-                    <div class="services__text">Ipsum dolor , consectetur adipiscing elit, sed do eiusmod.</div>
-                </div>
-                <div class="services__item">
-                    <!-- <img class="services__icon" src="./assets/images/servises/csshtml.png" alt=""> -->
-                    <div class="services__icon"><i class="fa-solid fa-plate-wheat"></i></div>
-                    <div class="services__title">sed do tempor</div>
-                    <div class="services__text">Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.</div>
-                </div>
-                <div class="services__item">
-                    <!-- <img class="services__icon" src="./assets/images/servises/digital.png" alt=""> -->
-                    <div class="services__icon"><i class="fa-solid fa-camera"></i></div>
-                    <div class="services__title">adipiscing</div>
-                    <div class="services__text">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+                <h3 class="section__suptitle">What we do...</h3>
+                <h2 class="section__title">some of our arts</h2>
+                <div class="section__text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                 </div>
             </div>
+        </div>
 
-            <!-- <hr>
-
-            <div class="services">
-                
-            </div> -->
-        
+        <div class="works"> <!--вне контейнера-->
+            <div class="works__col">
+                <a href="./assets/php/arts.php"><div class="works__item">
+                        <img class="works__image" src="./assets/images/works/a1.jpg" alt="">
+                        <div class="works__info">
+                            <div class="works__icon">
+                                <img src="./assets/images/works/worksIcon.png" alt="">
+                            </div>
+                            <div class="works__title">adipisicing elit</div>
+                            <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe dolores blanditiis fugiat nesciunt quibusdam?</div>
+                        </div>
+                    </div></a>
+                <div class="works__item">
+                    <img class="works__image" src="./assets/images/works/a2.jpg" alt="">
+                    <div class="works__info">
+                        <div class="works__icon">
+                            <img src="./assets/images/works/worksIcon.png" alt="">
+                        </div>
+                        <div class="works__title">dolor sit amet</div>
+                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="works__col">
+                <div class="works__item">
+                    <img class="works__image" src="./assets/images/works/b1.jpg" alt="">
+                    <div class="works__info">
+                        <div class="works__icon">
+                            <img src="./assets/images/works/worksIcon.png" alt="">
+                        </div>
+                        <div class="works__title">Necessitatibus</div>
+                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, pariatur nostrum!</div>
+                    </div>
+                </div>
+                <div class="works__item">
+                    <img class="works__image" src="./assets/images/works/b2.jpg" alt="">
+                    <div class="works__info">
+                        <div class="works__icon">
+                            <img src="./assets/images/works/worksIcon.png" alt="">
+                        </div>
+                        <div class="works__title">Mollitia fugiat</div>
+                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugiat accusantium assumenda minima suscipit aperiam laudantium odio? Ratione, cum veritatis?</div>
+                    </div>
+                </div>
+            </div>
+            <div class="works__col">
+                <div class="works__item">
+                    <img class="works__image" src="./assets/images/works/c1.jpg" alt="">
+                    <div class="works__info">
+                        <div class="works__icon">
+                            <img src="./assets/images/works/worksIcon.png" alt="">
+                        </div>
+                        <div class="works__title">vitae mo</div>
+                        <div class="works__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aperiam, vitae molestiae quasi in minus officia?</div>
+                    </div>
+                </div>
+            </div>
+            <div class="works__col">
+                <div class="works__item">
+                    <img class="works__image" src="./assets/images/works/d1.jpg" alt="">
+                    <div class="works__info">
+                        <div class="works__icon">
+                            <img src="./assets/images/works/worksIcon.png" alt="">
+                        </div>
+                        <div class="works__title">sit amet consectetur</div>
+                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    </div>
+                </div>
+                <div class="works__item">
+                    <img class="works__image" src="./assets/images/works/d2.jpg" alt="">
+                    <div class="works__info">
+                        <div class="works__icon">
+                            <img src="./assets/images/works/worksIcon.png" alt="">
+                        </div>
+                        <div class="works__title">ipsum dolor sit</div>
+                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod assumenda quia illum, excepturi soluta in, corrupti necessitatibus qui placeat, tempore aspernatur repellat possimus. Odit, cumque.</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- devices  -->
-    <section class="section section--devices" id="devices">
-        <div class="container">
-
-            <div class="section__header">
-                <h3 class="section__suptitle">For all devices...</h3>
-                <h2 class="section__title">we are everywhere</h2>
-            </div>
-            
-            <div class="devices">
-                <img class="devices__item" src="assets/images/devices/ipad.png" alt="">
-                <img class="devices__item devices__item--iphone" src="assets/images/devices/iphone.png" alt="">
-            </div>
-
-        </div>
-    </section>
 
     <!-- wedo  -->
     <section class="section" id="wedo">
         <div class="container">
-            
+
             <div class="section__header">
                 <h3 class="section__suptitle">Service...</h3>
                 <h2 class="section__title">what we do</h2>
@@ -350,10 +362,109 @@ if(isset($_COOKIE['postToReg'])) {
         </div>
     </section>
 
+
+    <!-- statistics  -->
+    <div class="statistics" id="statistics">
+        <div class="container">
+            <div class="stat">
+                <div class="stat__item"> <!--вставить скрипт счётчика (тупо таймер для визуализации часы/минуты/секунды)-->
+                    <div class="stat__count"><?= mt_rand(1, 20); ?></div>
+                    <div class="stat__text">art projects</div>
+                </div>
+                <div class="stat__item">
+                    <div class="stat__count"><?= mt_rand(100, 200); ?></div>
+                    <div class="stat__text">happy client</div>
+                </div>
+                <div class="stat__item">
+                    <div class="stat__count"><?= mt_rand(5, 15); ?></div>
+                    <div class="stat__text">award winner</div>
+                </div>
+                <div class="stat__item">
+                    <div class="stat__count"><?= mt_rand(800, 999); ?></div>
+                    <div class="stat__text">cup of coffee</div>
+                </div>
+                <div class="stat__item">
+                    <div class="stat__count"><?= mt_rand(20, 30); ?></div>
+                    <div class="stat__text">club members</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- blog  -->
+
+    <?php
+    $query = "SELECT blogs.`id` AS blogs_id, `title`, `full`, `image`, `day`, `month`, blogers.id AS blogers_id, first_name, last_name, photo, short
+FROM `blogs`, blogers
+WHERE blogers.id = author_id
+ORDER BY `blogs`.`day` DESC";
+    $result = $pdo->query($query);
+    $i = 0;
+    ?>
+
+    <section class="section" id="blog">
+        <div class="container">
+
+            <div class="section__header">
+                <h3 class="section__suptitle">Our stories...</h3>
+                <h2 class="section__title">Latest blog</h2>
+
+            </div>
+
+            <div class="blog">
+
+                <?php while ($db_blogs = $result->fetch()):?>
+
+                    <div class="blog__item">
+                        <div class="blog__header">
+                            <a href="./assets/php/blogs.php?id=<?=$db_blogs['blogs_id'];?>">
+                                <?php
+                                if ($i === 0) {echo '<img class="blog__photo blog__photo--active" src="./assets/images/blog/' . $db_blogs['image'] . '" alt=""></a>'; $i++;}
+                                else {echo '<img class="blog__photo" src="./assets/images/blog/' . $db_blogs['image'] . '" alt=""></a>';}
+                                ?>
+                                <div class="blog__date">
+                                    <div class="blog__date-day"><?=$db_blogs['day'];?>
+                                    </div>
+                                    <div class="blog__date-month"><?=$db_blogs['month'];?>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="blog__content">
+                            <div class="blog__title">
+                                <a href="./assets/php/blogs.php?id=<?=$db_blogs['blogs_id'];?>"><?=$db_blogs['title'];?></a>
+                            </div>
+                            <div class="blog__text"><?=$db_blogs['short'];?></div>
+                        </div>
+
+                        <div class="blog__footer">
+                            <div class="blog-stat">
+                            <span class="blog-stat__item">
+                                <i class="fa-solid fa-eye"></i><?=mt_rand(300, 700);?></span>
+                                <span class="blog-stat__item">
+                                <i class="fa-solid fa-comment-dots"></i><?=mt_rand(7, 30);?></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                <?php endwhile;?>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+
     <!-- reviews1  -->
     <div class="section section--grey"><!--секция без заголовка (div вместо section)-->
         <div class="container">
-            
+
             <div class="reviews">
                 <!-- <a class="reviews__btn reviews__btn--prev" href="#">Prev</a> -->
                 <!-- <a class="reviews__btn reviews__btn--next" href="#">Next</a> -->
@@ -368,7 +479,7 @@ if(isset($_COOKIE['postToReg'])) {
                     </div>
 
                     <div>
-                        <div class="reviews__item">                     
+                        <div class="reviews__item">
                             <img class="reviews__photo" src="./assets/images/reviews/reviews_icon.png" alt="">
                             <div class="reviews__text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p></div>
                             <div class="reviews__author">Jon Doe</div>
@@ -381,7 +492,19 @@ if(isset($_COOKIE['postToReg'])) {
         </div>
     </div>
 
+
+
+
+
+
     <!-- team  -->
+    <?php
+    $query = "SELECT first_name, last_name, photo, contact
+    FROM blogers;";
+    $result = $pdo->query($query);
+    ?>
+
+
     <section class="section" id="team">
         <div class="container">
 
@@ -482,6 +605,9 @@ if(isset($_COOKIE['postToReg'])) {
         </div> <!--cont-->
     </section>
 
+
+
+
     <!-- logos  -->
     <div class="section section--grey" id="logos">
         <div class="container">
@@ -508,98 +634,85 @@ if(isset($_COOKIE['postToReg'])) {
         </div>
     </div>
 
-    <!-- works  -->
-    <section class="section" id="works">
-        <div class="container">
-            <div class="section__header">
-                <h3 class="section__suptitle">What we do...</h3>
-                <h2 class="section__title">some of our arts</h2>
-                <div class="section__text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-            </div>
-        </div>
 
-        <div class="works"> <!--вне контейнера-->
-            <div class="works__col">
-            <a href="./assets/php/arts.php"><div class="works__item">
-                <img class="works__image" src="./assets/images/works/a1.jpg" alt="">
-                    <div class="works__info">
-                        <div class="works__icon">
-                        <img src="./assets/images/works/worksIcon.png" alt="">
-                        </div>
-                        <div class="works__title">adipisicing elit</div>
-                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe dolores blanditiis fugiat nesciunt quibusdam?</div>
-                    </div>
-                </div></a>
-                <div class="works__item">
-                    <img class="works__image" src="./assets/images/works/a2.jpg" alt="">
-                    <div class="works__info">
-                        <div class="works__icon">
-                            <img src="./assets/images/works/worksIcon.png" alt="">
-                        </div>
-                        <div class="works__title">dolor sit amet</div>
-                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam.</div>
-                    </div>
+    <!-- services  -->
+    <section class="section" id="services">
+        <div class="container">
+
+            <div class="section__header">
+                <h3 class="section__suptitle">We work with...</h3>
+                <h2 class="section__title">Amazing Services</h2>
+            </div>
+
+            <div class="services">
+                <div class="services__item  services__item--border">
+                    <!-- <img class="services__icon" src="./assets/images/servises/photography.png" alt=""> -->
+                    <div class="services__icon"><i class="fa-solid fa-mug-hot"></i></i></div>
+                    <div class="services__title">consectetur</div>
+                    <div class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+                </div>
+                <div class="services__item  services__item--border">
+                    <!-- <img class="services__icon" src="./assets/images/servises/webdesign.png" alt=""> -->
+                    <div class="services__icon"><i class="fa-solid fa-couch"></i></i></div>
+                    <div class="services__title">eiusmod tempor</div>
+                    <div class="services__text">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+                </div>
+                <div class="services__item  services__item--border">
+                    <!-- <img class="services__icon" src="./assets/images/servises/creativity.png" alt=""> -->
+                    <div class="services__icon"><i class="fa-solid fa-book-open"></i></i></div>
+                    <div class="services__title">adipiscing elit</div>
+                    <div class="services__text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+                </div>
+                <div class="services__item">
+                    <!-- <img class="services__icon" src="./assets/images/servises/seo.png" alt=""> -->
+                    <div class="services__icon"><i class="fa-solid fa-utensils"></i></div>
+                    <div class="services__title">sit amet</div>
+                    <div class="services__text">Ipsum dolor , consectetur adipiscing elit, sed do eiusmod.</div>
+                </div>
+                <div class="services__item">
+                    <!-- <img class="services__icon" src="./assets/images/servises/csshtml.png" alt=""> -->
+                    <div class="services__icon"><i class="fa-solid fa-plate-wheat"></i></div>
+                    <div class="services__title">sed do tempor</div>
+                    <div class="services__text">Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.</div>
+                </div>
+                <div class="services__item">
+                    <!-- <img class="services__icon" src="./assets/images/servises/digital.png" alt=""> -->
+                    <div class="services__icon"><i class="fa-solid fa-camera"></i></div>
+                    <div class="services__title">adipiscing</div>
+                    <div class="services__text">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
                 </div>
             </div>
-            <div class="works__col">
-                <div class="works__item">
-                    <img class="works__image" src="./assets/images/works/b1.jpg" alt="">
-                    <div class="works__info">
-                        <div class="works__icon">
-                            <img src="./assets/images/works/worksIcon.png" alt="">
-                        </div>
-                        <div class="works__title">Necessitatibus</div>
-                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, pariatur nostrum!</div>
-                    </div>
-                </div>
-                <div class="works__item">
-                    <img class="works__image" src="./assets/images/works/b2.jpg" alt="">
-                    <div class="works__info">
-                        <div class="works__icon">
-                            <img src="./assets/images/works/worksIcon.png" alt="">
-                        </div>
-                        <div class="works__title">Mollitia fugiat</div>
-                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugiat accusantium assumenda minima suscipit aperiam laudantium odio? Ratione, cum veritatis?</div>
-                    </div>
-                </div>
-            </div>
-            <div class="works__col">
-                <div class="works__item">
-                    <img class="works__image" src="./assets/images/works/c1.jpg" alt="">
-                    <div class="works__info">
-                        <div class="works__icon">
-                            <img src="./assets/images/works/worksIcon.png" alt="">
-                        </div>
-                        <div class="works__title">vitae mo</div>
-                        <div class="works__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aperiam, vitae molestiae quasi in minus officia?</div>
-                    </div>
-                </div>
-            </div>
-            <div class="works__col">
-                <div class="works__item">
-                    <img class="works__image" src="./assets/images/works/d1.jpg" alt="">
-                    <div class="works__info">
-                        <div class="works__icon">
-                            <img src="./assets/images/works/worksIcon.png" alt="">
-                        </div>
-                        <div class="works__title">sit amet consectetur</div>
-                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                    </div>
-                </div>
-                <div class="works__item">
-                    <img class="works__image" src="./assets/images/works/d2.jpg" alt="">
-                    <div class="works__info">
-                        <div class="works__icon">
-                            <img src="./assets/images/works/worksIcon.png" alt="">
-                        </div>
-                        <div class="works__title">ipsum dolor sit</div>
-                        <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod assumenda quia illum, excepturi soluta in, corrupti necessitatibus qui placeat, tempore aspernatur repellat possimus. Odit, cumque.</div>
-                    </div>
-                </div>
-            </div>
+
+            <!-- <hr>
+
+            <div class="services">
+
+            </div> -->
+
         </div>
     </section>
+
+    <!-- devices  -->
+    <section class="section section--devices" id="devices">
+        <div class="container">
+
+            <div class="section__header">
+                <h3 class="section__suptitle">For all devices...</h3>
+                <h2 class="section__title">we are everywhere</h2>
+            </div>
+
+            <div class="devices">
+                <img class="devices__item" src="assets/images/devices/ipad.png" alt="">
+                <img class="devices__item devices__item--iphone" src="assets/images/devices/iphone.png" alt="">
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
 
         <!-- registration  -->
     <section <?=$hidereg;?> id="registration">
@@ -744,139 +857,7 @@ if(isset($_COOKIE['postToReg'])) {
 
 
 
-<?php
-    $query = "SELECT blogs.`id` AS blogs_id, `title`, `full`, `image`, `day`, `month`, blogers.id AS blogers_id, first_name, last_name, photo, short
-    FROM `blogs`, blogers
-    WHERE blogers.id = author_id
-    ORDER BY `blogs`.`day` DESC";
 
-    //$result = $pdo->query($query, PDO::FETCH_ASSOC);
-    $result = $pdo->query($query);
-//    $db_str = $result->fetchAll();
-
-//    d($db_str);
-
-$i = 0; //для цикла ниже
-
-?>
-
-    <!-- blog  -->
-    <section class="section" id="blog">
-        <div class="container">
-
-            <div class="section__header">
-                <h3 class="section__suptitle">Our stories...</h3>
-                <h2 class="section__title">Latest blog</h2>
-            </div>
-
-            <div class="blog">
-
-<?php while ($db_blogs = $result->fetch()):?>
-
-                <div class="blog__item">
-                    <div class="blog__header">
-                        <a href="./assets/php/blogs.php?id=<?=$db_blogs['blogs_id'];?>">
-                            <?php
-                            if ($i === 0) {echo '<img class="blog__photo blog__photo--active" src="./assets/images/blog/' . $db_blogs['image'] . '" alt=""></a>'; $i++;}
-                            else {echo '<img class="blog__photo" src="./assets/images/blog/' . $db_blogs['image'] . '" alt=""></a>';}
-                            ?>
-                        <div class="blog__date">
-                            <div class="blog__date-day"><?=$db_blogs['day'];?>
-                            </div>
-                            <div class="blog__date-month"><?=$db_blogs['month'];?>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="blog__content">
-                        <div class="blog__title">
-                            <a href="./assets/php/blogs.php?id=<?=$db_blogs['blogs_id'];?>"><?=$db_blogs['title'];?></a>
-                        </div>
-                        <div class="blog__text"><?=$db_blogs['short'];?></div>
-                    </div>
-
-                    <div class="blog__footer">
-                        <div class="blog-stat">
-                            <span class="blog-stat__item">
-                                <i class="fa-solid fa-eye"></i><?=mt_rand(300, 700);?></span>
-                            <span class="blog-stat__item">
-                                <i class="fa-solid fa-comment-dots"></i><?=mt_rand(7, 30);?></span>
-                        </div>
-                    </div>
-                </div>
-
-
-
-<?php endwhile;?>
-
-<!--                <div class="blog__item">-->
-<!--                    <div class="blog__header">-->
-<!--                        <a href="./assets/php/blogs.php?id=2">-->
-<!--                            <img class="blog__photo" src="./assets/images/blog/2.jpg" alt="">-->
-<!--                        </a>-->
-<!--                    <div class="blog__date">-->
-<!--                            <div class="blog__date-day">14</div>-->
-<!--                            <div class="blog__date-month">Jan</div>-->
-<!--                    </div>-->
-<!--                    </div>-->
-<!--                    <div class="blog__content">-->
-<!--                        <div class="blog__title">-->
-<!--                            <a href="./assets/php/blogs.php?id=2">sed do eiusmod tempor</a>-->
-<!--                        </div>-->
-<!--                        <div class="blog__text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>-->
-<!--                    </div>-->
-<!--                    <div class="blog__footer">-->
-<!--                        <div class="blog-stat">-->
-<!--                            <span class="blog-stat__item">-->
-<!--                                <i class="fa-solid fa-eye"></i>992</span>-->
-<!--                            <span class="blog-stat__item">-->
-<!--                                <i class="fa-solid fa-comment-dots"></i>42</span>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!---->
-<!--                <div class="blog__item">-->
-<!--                    <div class="blog__header">-->
-<!--                        <a href="./assets/php/blogs.php?id=3">-->
-<!--                            <img class="blog__photo" src="./assets/images/blog/3.jpg" alt="">-->
-<!--                        </a>-->
-<!--                    <div class="blog__date">-->
-<!--                            <div class="blog__date-day">12</div>-->
-<!--                            <div class="blog__date-month">Jan</div>-->
-<!--                    </div>-->
-<!--                    </div>-->
-<!--                    <div class="blog__content">-->
-<!--                        <div class="blog__title">-->
-<!--                            <a href="./assets/php/blogs.php?id=3">incididunt ut labore et dolore</a>-->
-<!--                        </div>-->
-<!--                        <div class="blog__text">Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>-->
-<!--                    </div>-->
-<!--                    <div class="blog__footer">-->
-<!--                        <div class="blog-stat">-->
-<!--                            <span class="blog-stat__item">-->
-<!--                                <i class="fa-solid fa-eye"></i>1560</span>-->
-<!--                            <span class="blog-stat__item">-->
-<!--                                <i class="fa-solid fa-comment-dots"></i>98</span>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-
-            </div>
-        </div>
-    </section>
-
-    <!-- map  -->
-    <section class="section  section--map" id="map">
-        <div class="container">
-            <div class="map">    
-                <h2 class="map__title">
-                    <div><i class="fa-solid fa-location-dot"></i></div>
-                    <a href="https://yandex.ru/maps/-/CCUkVQcODA" target="_blank" >Open Map</a>
-                </h2>
-            </div>
-        </div>
-    </section>
 
     <!-- footer  -->
     <footer class="footer" id="footer">

@@ -428,6 +428,10 @@ hr {
 
 }
 
+.section--works {
+    padding: 80px 0 0px 0;
+}
+
 .section__suptitle {
     font-family: 'Kaushan Script', cursive;
     font-size: 24px;
@@ -657,6 +661,7 @@ hr {
 
 .statistics {
     background-color: #ccc; /*#95e1d3*/
+    /*border-bottom: #985739 2px solid;*/
 }
 
 .stat {
