@@ -210,9 +210,9 @@ if(isset($_COOKIE['postToReg'])) {
 
                                 </div>
 
-                                    <div class="footer__col footer__col--second">
-                                        <div class="footer__title">Also</div>
-                                        <div class="blogs">
+                                    <div class="footer__col footer__col--second--blogs">
+
+                                        <div class="blogs__blogs">
                                             <div class="blogs__item">
                                                 <img class="blogs__img" src="../images/footer/blogs/1.png" alt="">
                                                 <div class="blogs__content">

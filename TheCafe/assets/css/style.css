@@ -1320,6 +1320,7 @@ hr {
 }
 
 .blog__item {
+    margin: 10px 0 10px 0;
     width: 31%;
 }
 
@@ -1664,6 +1665,11 @@ width: 40%;
     width: 29%;
     }
 
+.footer__col--second--blogs {
+    padding-top: 55px;
+    width: 55%;
+}
+
 .footer__col--third {
         width: 22%;
         }    
@@ -1730,6 +1736,10 @@ width: 40%;
 
 /*=========BLOGS+++++++++*/
 
+/*.blogs__blogs {*/
+/*    margin: 50px 0 50px 0;*/
+
+/*}*/
 
 .blogs__item {
     display: flex;

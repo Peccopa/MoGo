@@ -19,10 +19,12 @@ $pdo = DBConnect::getConnection();
 
 //$query = "SELECT id, first_name, last_name, photo, contact FROM blogers;";
 
-$query = "SELECT blogs.`id` AS blogs_id, `title`, `full`, `image`, `day`, `month`, blogers.id AS blogers_id, first_name, last_name, photo, contact 
-        FROM `blogs`, blogers 
-        WHERE blogers.id = author_id 
-        ORDER BY `blogs`.`day` DESC";
+//$query = "SELECT blogs.`id` AS blogs_id, `title`, `full`, `image`, `day`, `month`, blogers.id AS blogers_id, first_name, last_name, photo, contact
+//        FROM `blogs`, blogers
+//        WHERE blogers.id = author_id
+//        ORDER BY `blogs`.`day` DESC";
+$query = "SELECT first_name, last_name, photo, contact 
+        FROM blogers;";
 
 //$result = $pdo->query($query, PDO::FETCH_ASSOC);
 $result = $pdo->query($query);
@@ -802,6 +804,8 @@ $i = 0; //для цикла ниже
                         </div>
                     </div>
                 </div>
+
+
 
 <?php endwhile;?>
 
