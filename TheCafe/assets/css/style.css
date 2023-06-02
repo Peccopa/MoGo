@@ -842,6 +842,7 @@ hr {
     z-index: 1;
 
     transform: translateY(-50%); /*выравниваем по Y*/
+
 }
 
 .accordion__content {
@@ -1621,7 +1622,7 @@ hr {
 .map__title {
     font-size: 24px;
     font-weight: 700;
-    color: #985739  ;
+    color: #985739;
     text-transform: uppercase;
 }
 
@@ -2117,6 +2118,7 @@ width: 40%;
         .wedo__item {
             width: 100%;
         }
+
 
         /* Reviews */
         .reviews__photo {

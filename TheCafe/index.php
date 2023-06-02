@@ -330,28 +330,33 @@ if(isset($_COOKIE['postToReg'])) {
 
                         <div class="accordion__item" data-collapse="#wedo_1">
                             <div class="accordion__header">
-                                <img class="accordion__icon" src="./assets/images/wedo/photography.png" alt="">
+<!--                                <img class="accordion__icon" src="./assets/images/wedo/photography.png" alt="">-->
+<!--                                <i class="fa-solid fa-bowl-food"></i>-->
+                                <i class="fa-solid fa-bowl-food fa-2xl accordion__icon" style="color: #985739;"></i>
                                 <div class="accordion__title">consectetur</div>
                             </div>
-                            <div class="accordion__content" id="wedo_1"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="accordion__content" id="wedo_1"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                             </div>
                         </div> <!-- accordion__item -->
 
                         <div class="accordion__item active" data-collapse="#wedo_2">
                             <div class="accordion__header">
-                                <img class="accordion__icon" src="./assets/images/wedo/creativity.png" alt="">
+<!--                                <img class="accordion__icon" src="./assets/images/wedo/creativity.png" alt="">-->
+<!--                                <i class="fa-solid fa-utensils"></i>-->
+                                <i class="fa-solid fa-utensils fa-2xl accordion__icon" style="color: #985739;"></i>
                                 <div class="accordion__title">sit amet</div>
                             </div>
-                            <div class="accordion__content" id="wedo_2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="accordion__content" id="wedo_2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                             </div>
                         </div> <!-- accordion__item -->
 
                         <div class="accordion__item" data-collapse="#wedo_3">
                             <div class="accordion__header">
-                                <img class="accordion__icon" src="./assets/images/wedo/webdesign.png" alt="">
+<!--                                <img class="accordion__icon" src="./assets/images/wedo/webdesign.png" alt="">-->
+                                <i class="fa-solid fa-mug-hot fa-2xl accordion__icon" style="color: #985739;"></i>
                                 <div class="accordion__title">adipiscing</div>
                             </div>
-                            <div class="accordion__content" id="wedo_3"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="accordion__content" id="wedo_3"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                             </div>
                         </div> <!-- accordion__item -->
 
