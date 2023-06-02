@@ -321,7 +321,7 @@ if(isset($_COOKIE['postToReg'])) {
             </div>
 
             <div class="wedo">
-                <div class="wedo__item">
+                <div class="wedo__item--photo">
                     <!-- <img src="http://placehold.it/570x830" alt=""> -->
                     <img class="wedo__img" src="./assets/images/wedo/wedo_bg.jpg" alt="">
                 </div>

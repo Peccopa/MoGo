@@ -766,20 +766,34 @@ hr {
 /*=============WEDO===============*/
 
 .wedo {
+    /*position: relative;*/
     display: flex;
     margin: 0 -15px;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
 }
 
 .wedo__item {
     width: 50%; /*можно было flex: 1 1 0;*/
-    padding: 0 15px;
+    /*padding: 0 15px;*/
+    margin-left: 10px;
 }
 
+.wedo__item--photo {
+    width: 50%; /*можно было flex: 1 1 0;*/
+    margin-right: 10px;
+    /*padding: 0 15px;*/
+    /*position: relative;*/
+    background-color: #cccccc;
+}
+
+
 .wedo__img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    /*position: absolute;*/
+    /*display: block;*/
+    /*max-width: 100%;*/
+    height: 100%;
+    transform: translate3d(-10px, -10px, 0);
 }
 /*============accordion========*/
 
@@ -2119,8 +2133,12 @@ width: 40%;
             width: 100%;
         }
 
+        .wedo__item--photo {
+            width: 100%;
+        }
 
-        /* Reviews */
+
+    /* Reviews */
         .reviews__photo {
             position: static;
             margin: 0 auto 20px;
