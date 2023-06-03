@@ -89,7 +89,20 @@ if(isset($_COOKIE['postToReg'])) {
     </div>
 </header>
 
+<section class="section" id="team">
+    <div class="container">
+
+        <div class="section__header">
+            <h3 class="section__suptitle">Who we are</h3>
+            <h2 class="section__title">Meet our team</h2>
+            <div class="section__text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+        </div>
+
+<section class="section--works"></section>
+
 <div class="intro intro--noback" id="intro"></div>
+
 
 
 <h1>Работа с сотрудниками</h1>
@@ -354,15 +367,22 @@ $result = $pdo->query($query);
 echo "<h2>Список всех пользователей</h2>";
 
 // 1. Ссылка на добавление нового пользователя
-echo "<a href='?add'>Добавить нового пользователя</a>";
-
+//echo "<a href='?add'>Добавить нового пользователя</a>";
+echo "<a href='?add' class='back__button' id='backClick'>add new user</a>";
 // тестовый вывод юзеров
 // DBConnect::d( $result->fetchAll() );
 // вывод пользователей в документ
-echo "<div class='container'>";
+echo "<div class='card'>";
 while( $user = $result->fetch() ){
     echo <<<_HTML_
-                    <div class="box">
+                    
+                    
+                    
+                    <div class="card__item">
+                        <input class='back__button' type="submit" name="action" value="EDIT USER">
+                        <input class='back__button' type="submit" name="action" value="DELETE USER">
+                        <button class='back__button' type="submit" formaction='?add'>add new user</button>
+                        
                         <img src="$user[avatar]" alt="$user[first_name] $user[last_name]">
                         <p>ID: <span>$user[id]</span></p>
                         <p>Имя: <span>$user[first_name]</span></p>
@@ -373,8 +393,7 @@ while( $user = $result->fetch() ){
                         <form method="POST">
                             <input type="hidden" name="id" value="$user[id]">
                             
-                            <input type="submit" name="action" value="Изменить">
-                            <input type="submit" name="action" value="Удалить">
+                            
                         </form>
                     </div>
 _HTML_;

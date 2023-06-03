@@ -173,11 +173,11 @@ if(isset($_COOKIE['postToReg'])) {
 <!--                        <div class="card__text--active"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, non! </div>-->
 <!--                    </div>-->
 <!--                </div>-->
-                <div class="card__item card__item--active">
-                    <div class="card__inner card__inner--active">
-                        <div class="card__img card__img--active"><img src="./assets/images/about/1.jpg" alt=""></div>
-                        <div class="card__icon card__icon--active"><i class="fa-solid fa-umbrella"></i></div>
-                        <div class="card__text card__text--active"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, non! </div>
+                <div class="card__item card__item--active" id="cardItem1">
+                    <div class="card__inner card__inner--active" id="cardInner1">
+                        <div class="card__img card__img--active" id="cardImg1"><img src="./assets/images/about/1.jpg" alt=""></div>
+                        <div class="card__icon card__icon--active" id="cardIcon1"><i class="fa-solid fa-umbrella"></i></div>
+                        <div class="card__text card__text--active" id="cardText1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, non! </div>
                     </div>
                 </div>
                 <div class="card__item">
@@ -404,7 +404,8 @@ if(isset($_COOKIE['postToReg'])) {
     $query = "SELECT blogs.`id` AS blogs_id, `title`, `full`, `image`, `day`, `month`, blogers.id AS blogers_id, first_name, last_name, photo, short
 FROM `blogs`, blogers
 WHERE blogers.id = author_id
-ORDER BY `blogs`.`day` DESC";
+ORDER BY `blogs`.`day` DESC
+LIMIT 6";
     $result = $pdo->query($query);
     $i = 0;
     ?>

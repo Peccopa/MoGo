@@ -144,7 +144,7 @@ hr {
 }
 
 .header.active {
-    background-color: #f38181;
+    background-color: #985739;
 }
 
 .header__inner {
@@ -474,6 +474,7 @@ hr {
     /* background-color: #95e1d3; ориг #999 цвет под изображением */
     width: 33.33333%;
     padding: 0 15px;
+    /*z-index: 9999;*/
     /* position: relative; позиционируем текст поверх картинки (а не внизу) */
 }
 
@@ -2038,7 +2039,7 @@ width: 40%;
            position: absolute;
            top: 100%;
            left: 0;
-           background-color: #f38181;
+           background-color: #985739;
 
         }
 
