@@ -10,52 +10,88 @@
 
 require 'DBConnect.php';
 $pdo = DBConnect::getConnection();
-echo '<h1>$_POST</h1>';
-DBConnect::d($_POST);
-echo '<h1>$_FILES</h1>';
-DBConnect::d($_FILES);
-echo '$_GET';
-DBConnect::d($_GET);
+
+//echo '<h1>$_POST</h1>';
+//DBConnect::d($_POST);
+//echo '<h1>$_FILES</h1>';
+//DBConnect::d($_FILES);
+//echo '$_GET';
+//DBConnect::d($_GET);
+
+if(isset($_COOKIE['postToReg'])) {
+    $navlinkreg = '<a class="nav__link" href="./assets/php/reg.php"><b>' . htmlspecialchars(trim($_COOKIE['postToReg'])) . '</b></a>';
+    $hidereg = 'class="section section--registration hide"';
+} else {
+    if($_SERVER['REQUEST_METHOD'] !== 'POST') {
+
+        $hidereg = 'class="section section--registration"';
+        $navlinkreg = $_COOKIE['postToReg'] = '<a class="nav__link" href="../../index.php#registration">join us</a>';
+
+    } else {
+
+        $hidereg = 'class="section section--registration hide"';
+        $navlinkreg = '<b>' . htmlspecialchars(trim($_COOKIE['postToReg'])) . '</b>';
+        $postToReg = htmlspecialchars(trim($_POST['fname'])) . ' ' . htmlspecialchars(trim($_POST['lname']));
+        // $postToReg = '111';
+        // echo $postToReg;
+        // setcookie('postToReg', $postToReg, time() + 60);
+        setcookie("postToReg","$postToReg",time()+3600,"/");
+        header('Location: admin.php');
+        // exit;
+    }
+}
 
 ?>
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Работа с сотрудниками</title>
-    <style>
-        .container{
-            display: flex;
-            margin: 20px;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .box{
-            border: 3px solid skyblue;
-            border-radius: 7px;
-            padding: 10px;
-            width: 200px;
-        }
-
-        .box span{
-            color: brown;
-        }
-
-        .box img{
-            width: 100%;
-        }
-
-        .error-msg{
-            color: red;
-            padding: 10px;
-            border: 3px solid red;
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <title>TheCafe</title>
 </head>
 <body>
+
+
+<header class="header" id="header">
+    <!-- <header class="header  header--fixed"> -->
+    <div class="container">
+        <div class="header__inner">
+            <!-- <div class="header__logo">MoGo</div> -->
+            <a class="header__logo" href="../../index.php">TheCafe</a>
+            <nav class="nav" id="nav">
+                <!-- <a class="nav__link" href="#" data-scroll="#registration">?=$navlinkreg;?></a> -->
+                <?=$navlinkreg;?>
+                <a class="nav__link" href="../../index.php#about">about</a>
+                <a class="nav__link" href="../../index.php#works">Arts</a>
+                <a class="nav__link" href="../../index.php#blog">Blogs</a>
+                <a class="nav__link" href="../../index.php#footer">Contact</a>
+                <!-- <a class="nav__link" href="#" data-scroll="#footer">log in</a> -->
+                <a class="nav__link whatsup" href="https://api.whatsapp.com/send?phone=79168291896">
+                    <i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+
+                <!-- <a class="nav__link" href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>     -->
+            </nav>
+
+            <button class="nav-toggle" id="nav_toggle" type="button">
+                <span class="nav-toggle__item">Menu</span>
+            </button>
+
+        </div>
+    </div>
+</header>
+
+<div class="intro intro--noback" id="intro"></div>
+
+
 <h1>Работа с сотрудниками</h1>
 <?php
 /**
@@ -134,7 +170,7 @@ if( isset($_POST['action']) && $_POST['action'] === 'Создать' ){
 
         // 2. Обрабатываем картинку
         // 2.1 Формируем путь к картинке 'images/avatar.png'
-        $avatar_path = 'images/'. $avatar['size'] . '_'. time() .'_' . $avatar['name'];
+        $avatar_path = '../images/users/'. $avatar['size'] . '_'. time() .'_' . $avatar['name'];
         // echo $avatar_path; // images/97314_1685534255_photo1685362216.jpeg
 
         // 2.2 Перемещаем картинку в нужную папку
@@ -146,7 +182,7 @@ if( isset($_POST['action']) && $_POST['action'] === 'Создать' ){
         $result->execute( [NULL, $first_name, $last_name, $login, $email, $password, $avatar_path] );
 
         // перезагружаем страницу
-        header('Location: /');
+        header('Location: admin.php');
 
     }else{ // если хоть одно поле не заполнено, ошибка.
         echo "<h3 class='error-msg'>Вы не заполнили все поля</h3>";
@@ -185,7 +221,7 @@ if( isset($_POST['action']) && $_POST['action'] === "Удалить" ){
     $result->execute([$id]);
 
     // 4. Перезагружаем страницу
-    header('Location: /');
+    header('Location: admin.php');
 }
 
 
@@ -258,14 +294,48 @@ if( isset($_POST['action']) && $_POST['action'] === "Обновить" ){
         $id = (int)$_POST['id'];
 
         /**
-         * работа с картинкой
+         * 3. работа с новой картинкой
          */
-        // если новая картинка не передана
-        // записываем в БД только текстовые данные
-        // если новая картинка передана
-        // загружаем новую картинку в папку images
-        // удаляем старую картинку
-        // записываем данные в базу включая ссылку на новую картинку
+        $avatar = $_FILES['avatar'];
+
+        if($avatar['size'] === 0){ // если новая картинка не передана
+            // Обновляем в БД только текстовые данные
+            $query = "UPDATE users
+                              SET first_name = ?, last_name = ?, login = ?, email = ?, password = ?
+                              WHERE id = ?";
+            $result = $pdo->prepare($query);
+            $result->execute([$first_name, $last_name, $login, $email, $password, $id]);
+
+        }else{ // если новая картинка передана
+            // Формируем путь к новой картинке
+            $avatar_path = '../images/users/'. $avatar['size'] . '_'. time() .'_' . $avatar['name'];
+            // загружаем новую картинку в папку images
+            move_uploaded_file($avatar['tmp_name'], $avatar_path);
+
+            // удаляем старую картинку
+            // 1. получаем ссылку на старую картинку
+            $query = "SELECT avatar FROM users WHERE id = ?";
+            $result = $pdo->prepare($query);
+            $result->execute([$id]);
+            $del_avatar_path = $result->fetch()['avatar'];
+
+            // 2. если картинка есть, удаляем старую картинку
+            if(file_exists($del_avatar_path)){
+                unlink($del_avatar_path);
+            }
+
+            // записываем данные в базу включая ссылку на новую картинку
+            $query = "UPDATE users 
+                    SET first_name = ?, last_name = ?, login = ?, email = ?, password = ?, avatar = ? 
+                    WHERE id = ?";
+            $result = $pdo->prepare($query);
+            $result->execute([$first_name, $last_name, $login, $email, $password, $avatar_path, $id]);
+
+        }
+
+        // 4. Перезагружаем страницу
+        header('Location: admin.php');
+
 
     }else{ // если хоть одно поле не заполнено, ошибка.
         echo "<h3 class='error-msg'>Вы не заполнили все поля</h3>";
@@ -312,6 +382,11 @@ _HTML_;
 echo "</div>";
 
 ?>
+
+<script src="https://kit.fontawesome.com/48db125bfd.js" crossorigin="anonymous"></script> <!--fonts-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script><!--jquery-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script><!--slider-->
+<script src="../js/jquery.js"></script>
 
 </body>
 </html>
