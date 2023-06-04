@@ -82,6 +82,13 @@ $(function() {
 
     // $(#intro).onmouseover().css("display","block");
 
+    // $(document).keydown(function(e) {
+    //     // ESCAPE key pressed
+    //     if (e.keyCode == 27) {
+    //         window.close();
+    //     }
+    // });
+
 
 
 

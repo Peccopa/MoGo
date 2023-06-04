@@ -255,6 +255,7 @@ if(isset($_COOKIE['postToReg'])) {
                                 </div>
                             </div>
                             <a href="../../index.php#blog" class="back__button" id="backClick">back to blogs</a>
+                            <a href="../php/admin.php" class="back__button" id="backClick">add news</a>
                         </div>
                     </div>
 

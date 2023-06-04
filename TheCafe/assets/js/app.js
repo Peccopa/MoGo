@@ -1,9 +1,68 @@
+
+let modal1 = document.getElementById("myModal1");
+let modal2 = document.getElementById("myModal2");
+let modal3 = document.getElementById("myModal3");
+
+let img1 = document.getElementById("myImg1");
+let modalImg1 = document.getElementById("img01");
+let captionText1 = document.getElementById("caption1");
+
+let img2 = document.getElementById("myImg2");
+let modalImg2 = document.getElementById("img02");
+let captionText2 = document.getElementById("caption2");
+
+let img3 = document.getElementById("myImg3");
+let modalImg3 = document.getElementById("img03");
+let captionText3 = document.getElementById("caption3");
+
+img1.onclick = function(){
+    modal1.style.display = "block";
+    modalImg1.src = this.src;
+    captionText1.innerHTML = this.alt;
+}
+img2.onclick = function(){
+    modal2.style.display = "block";
+    modalImg2.src = this.src;
+    captionText2.innerHTML = this.alt;
+}
+img3.onclick = function(){
+    modal3.style.display = "block";
+    modalImg3.src = this.src;
+    captionText3.innerHTML = this.alt;
+}
+
+
+let span1 = document.getElementById("close-1");
+let span2 = document.getElementById("close-2");
+let span3 = document.getElementById("close-3");
+console.log(span1);
+
+
+span1.onclick = function() {
+    modal1.style.display = "none";
+}
+span2.onclick = function() {
+    modal2.style.display = "none";
+}
+span3.onclick = function() {
+    modal3.style.display = "none";
+}
+
+
+function ESCclose(evt) {
+    if (evt.keyCode == 27)
+        window.close();
+}
+
+
+
 /*aboutUs*/
-let cardItem1 = document.querySelector('#cardItem1');
-let cardInner1 = document.querySelector('#cardInner1');
-let cardImg1 = document.querySelector('#cardImg1');
-let cardIcon1 = document.querySelector('#cardIcon1');
-let cardText1 = document.querySelector('#cardText1');
+
+// let cardItem1 = document.querySelector('#cardItem1');
+// let cardInner1 = document.querySelector('#cardInner1');
+// let cardImg1 = document.querySelector('#cardImg1');
+// let cardIcon1 = document.querySelector('#cardIcon1');
+// let cardText1 = document.querySelector('#cardText1');
 
 // console.log(cardItem1, cardInner1, cardImg1, cardIcon1, cardText1);
 //

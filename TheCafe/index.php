@@ -98,8 +98,8 @@ if(isset($_COOKIE['postToReg'])) {
                 <!-- <a class="nav__link" href="#" data-scroll="#footer">log in</a> -->
                 <a class="nav__link whatsup" href="https://api.whatsapp.com/send?phone=79168291896">
                 <i class="fa-brands fa-whatsapp fa-2xl"></i></a>
-                <a class="nav__link" href="./assets/php/admin.php" >ADMIN</a>
-                
+<!--                <a class="nav__link" href="./assets/php/admin.php" >ADMIN</a>-->
+
                 <!-- <a class="nav__link" href="#">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>     -->
@@ -156,9 +156,14 @@ if(isset($_COOKIE['postToReg'])) {
     </div>
 
     <!-- about  -->
+
+
+
+
+
     <section class="section" id = "about">
         <div class="container">
-            
+
             <div class="section__header">
                 <h3 class="section__suptitle">What we do...</h3>
                 <h2 class="section__title">Story about us</h2>
@@ -166,52 +171,63 @@ if(isset($_COOKIE['postToReg'])) {
             </div>
 
             <div class="card">
-<!--                <div class="card__item--active">-->
-<!--                    <div class="card__inner--active">-->
-<!--                        <div class="card__img--active"><img src="./assets/images/about/1.jpg" alt=""></div>-->
-<!--                        <div class="card__icon--active"><i class="fa-solid fa-umbrella"></i></div>-->
-<!--                        <div class="card__text--active"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, non! </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-                <div class="card__item card__item--active" id="cardItem1">
-                    <div class="card__inner card__inner--active" id="cardInner1">
-                        <div class="card__img card__img--active" id="cardImg1"><img src="./assets/images/about/1.jpg" alt=""></div>
-                        <div class="card__icon card__icon--active" id="cardIcon1"><i class="fa-solid fa-umbrella"></i></div>
-                        <div class="card__text card__text--active" id="cardText1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, non! </div>
+
+                    <div class="card__item card__item--active" id="cardItem1">
+                        <div class="card__inner card__inner--active" id="cardInner1">
+                            <div class="card__img card__img--active" id="cardImg1"><img class="myImg" id="myImg1" src="assets/images/about/1.jpg" alt=""></div>
+                            <div id="myModal1" class="modal">
+                                <span class="close" id="close-1">&times;</span>
+                                <img class="modal-content" id="img01">
+                                <div id="caption1"></div>
+                            </div>
+                            <div class="card__icon card__icon--active" id="cardIcon1"><i class="fa-solid fa-umbrella"></i></div>
+                            <div class="card__text card__text--active" id="cardText1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, non! </div>
+                        </div>
                     </div>
-                </div>
+
                 <div class="card__item">
                     <div class="card__inner">
-                        <div class="card__img"><img src="assets/images/about/2.jpg" alt=""></div>
+                        <div class="card__img"><img class="myImg" id="myImg2" src="assets/images/about/2.jpg" alt=""></div>
+                        <div id="myModal2" class="modal">
+                            <span class="close" id="close-2">&times;</span>
+                            <img class="modal-content" id="img02">
+                            <div id="caption2"></div>
+                        </div>
                         <div class="card__icon"><i class="fa-solid fa-couch"></i></div>
                         <div class="card__text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, delectus? </div>
                     </div>
                 </div>
+
                 <div class="card__item">
                     <div class="card__inner">
-                        <div class="card__img"><img src="assets/images/about/3.jpg" alt=""></div>
-                        <div class="card__icon"><i class="fa-solid fa-mug-hot"></i></div>                
+                        <div class="card__img"><img class="myImg" id="myImg3" src="assets/images/about/3.jpg" alt=""></div>
+                        <div id="myModal3" class="modal">
+                            <span class="close" id="close-3">&times;</span>
+                            <img class="modal-content" id="img03">
+                            <div id="caption3"></div>
+                        </div>
+                        <div class="card__icon"><i class="fa-solid fa-mug-hot"></i></div>
                         <div class="card__text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae. </div>
                     </div>
                 </div>
             </div>
-        
+
         </div>
     </section>
 
+
     <!-- map  -->
-    <a href="https://yandex.ru/maps/-/CCUkVQcODA" target="_blank" >
-    <section class="section  section--map" id="map">
+
+    <section onclick="location.href='https://yandex.ru/maps/-/CCUkVQcODA'" class="section  section--map" id="map">
         <div class="container">
             <div class="map">
                 <h2 class="map__title">
                     <div><i class="fa-solid fa-location-dot"></i></div>
-                    <a href="https://yandex.ru/maps/-/CCUkVQcODA" target="_blank" >Open Map</a>
+                    <a href="https://yandex.ru/maps/-/CCUkVQcODA" target="_blank">Open Map</a>
                 </h2>
             </div>
         </div>
     </section>
-    </a>
 
 
 
@@ -227,6 +243,7 @@ if(isset($_COOKIE['postToReg'])) {
         </div>
 
         <div class="works"> <!--вне контейнера-->
+
             <div class="works__col">
                 <a href="./assets/php/arts.php"><div class="works__item">
                         <img class="works__image" src="./assets/images/works/a1.jpg" alt="">
@@ -238,6 +255,7 @@ if(isset($_COOKIE['postToReg'])) {
                             <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe dolores blanditiis fugiat nesciunt quibusdam?</div>
                         </div>
                     </div></a>
+
                 <div class="works__item">
                     <img class="works__image" src="./assets/images/works/a2.jpg" alt="">
                     <div class="works__info">
@@ -248,7 +266,9 @@ if(isset($_COOKIE['postToReg'])) {
                         <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam.</div>
                     </div>
                 </div>
+
             </div>
+
             <div class="works__col">
                 <div class="works__item">
                     <img class="works__image" src="./assets/images/works/b1.jpg" alt="">
@@ -271,6 +291,7 @@ if(isset($_COOKIE['postToReg'])) {
                     </div>
                 </div>
             </div>
+
             <div class="works__col">
                 <div class="works__item">
                     <img class="works__image" src="./assets/images/works/c1.jpg" alt="">
@@ -283,6 +304,7 @@ if(isset($_COOKIE['postToReg'])) {
                     </div>
                 </div>
             </div>
+
             <div class="works__col">
                 <div class="works__item">
                     <img class="works__image" src="./assets/images/works/d1.jpg" alt="">
@@ -305,8 +327,27 @@ if(isset($_COOKIE['postToReg'])) {
                     </div>
                 </div>
             </div>
+
+
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- wedo  -->
@@ -541,7 +582,7 @@ LIMIT 6";
                                 </a>
                                 <a class="social__item" href="#" target="_blank">
                                 <i class="fa-brands fa-instagram"></i>
-                                </a>                        
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -723,7 +764,7 @@ LIMIT 6";
         <!-- registration  -->
     <section <?=$hidereg;?> id="registration">
         <div class="container">
-            
+
             <div class="section__header">
                 <h3 class="section__suptitle">Join Us Now ...</h3>
                 <h2 class="section__title">registration</h2>
@@ -734,31 +775,31 @@ LIMIT 6";
                 <!-- <form class="method__POST" action="./assets/php/reg.php" method="POST"> -->
                 <form class="method__POST" action="" method="POST">
 
-                    <div class="reg__item">    
-                        <img class="reg__img" src="" alt="">                        
+                    <div class="reg__item">
+                        <img class="reg__img" src="" alt="">
                         <input class="reg__input" type="text" name="fname" id="fname" placeholder="First Name">
                         <span class="reg__span" id="fname-p"></span>
                     </div>
 
-                    <div class="reg__item">    
+                    <div class="reg__item">
                         <img class="reg__img" src="" alt="">
                         <input class="reg__input" type="text" name="lname" id="lname" placeholder="Last Name ">
                         <span class="reg__span" id="lname-p"></span>
                     </div>
 
-                    <div class="reg__item">    
+                    <div class="reg__item">
                         <img class="reg__img" src="" alt="">
                         <input class="reg__input" type="email" name="email" id="email" placeholder="E-mail">
                         <span class="reg__span" id="email-p"></span>
                     </div>
 
-                    <div class="reg__item">    
+                    <div class="reg__item">
                         <img class="reg__img" src="" alt="">
                         <input class="reg__input" type="password" name="pword" id="pword" placeholder="Password">
                         <span class="reg__span" id="pword-p"></span>
                     </div>
 
-                    <div class="reg__item">    
+                    <div class="reg__item">
                         <!-- <img class="reg__img" src="" alt=""> -->
                         <button class="reg__button" type="submit" id="btnClick">Registration</button>
                         <div class="login__button" id="loginClick">log in</div>
@@ -766,15 +807,15 @@ LIMIT 6";
                         <!-- <span class="reg__span" id="button-p"></span> -->
                     </div>
 
-                    <!-- <div class="reg__item">    
+                    <!-- <div class="reg__item">
                         <img class="reg__img" src="" alt="">
                         <button class="reg__button" type="submit" id="btnClick">just let me in</button>
                         <span class="reg__span" id="button-p"></span>
                     </div> -->
 
-                
 
-                </form>  
+
+                </form>
             </div>
 
         </div>
@@ -783,7 +824,7 @@ LIMIT 6";
     <!-- reviews2  -->
     <div class="section section--reviews2" id="reviews2">
         <div class="container">
-            
+
             <div class="reviews">
                 <!-- <a class="reviews__btn reviews__btn--prev" href="#">Prev</a> -->
                 <!-- <a class="reviews__btn reviews__btn--next" href="#">Next</a> -->
@@ -939,7 +980,7 @@ LIMIT 6";
                         <div class="blogs__item">
                             <img class="blogs__img" src="./assets/images/footer/blogs/3.png" alt="">
                             <div class="blogs__content">
-                                <a class="blogs__title" href="./assets/php/arts.php"><p>sed do eiusmod tempor 
+                                <a class="blogs__title" href="./assets/php/arts.php"><p>sed do eiusmod tempor
                                     incididunt ut labore</p></a>
                                 <div class="blogs__date">
                                     Jan 9, 2016
@@ -948,7 +989,7 @@ LIMIT 6";
                         </div>
                     </div>
                 </div>
-                    
+
                 <div class="footer__col footer__col--third">
                     <div class="footer__title">Instagram</div>
                     <div class="instagram">
@@ -984,7 +1025,7 @@ LIMIT 6";
 
             </div> <!--footer__inner-->
 
-                </div>        
+                </div>
                     <div class="copyright">
                         © 2016 MoGo free PSD template by <span>Laaqiq</span>
                     </div>
@@ -995,6 +1036,10 @@ LIMIT 6";
     </footer>
 
 </div>
+
+
+
+
 
 
     <script src="https://kit.fontawesome.com/48db125bfd.js" crossorigin="anonymous"></script> <!--fonts-->
