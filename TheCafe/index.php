@@ -245,7 +245,7 @@ if(isset($_COOKIE['postToReg'])) {
         <div class="works"> <!--вне контейнера-->
 
             <div class="works__col">
-                <a href="./assets/php/arts.php"><div class="works__item">
+                <a href="./assets/php/blogs.php?id=1"><div class="works__item">
                         <img class="works__image" src="./assets/images/works/a1.jpg" alt="">
                         <div class="works__info">
                             <div class="works__icon">

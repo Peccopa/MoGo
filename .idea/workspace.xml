@@ -3,17 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d9c28645-b097-40f9-85ea-9df6376e0d3d" name="Default Changelist" comment="item_card2php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/_intro1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/_intro2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/_intro3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/_intro4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/about/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/images/about/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/about/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/images/about/2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/about/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/images/about/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/_a1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/_a2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/_b1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/_b2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/_c1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/_d1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/_d2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TheCafe/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/js/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/blogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/php/blogs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/php/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TheCafe/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +61,7 @@
       <workItem from="1685589839275" duration="16715000" />
       <workItem from="1685676774089" duration="11119000" />
       <workItem from="1685762885705" duration="22977000" />
-      <workItem from="1685851494791" duration="6757000" />
+      <workItem from="1685851494791" duration="14360000" />
     </task>
     <task id="LOCAL-00001" summary="storm">
       <created>1685351222541</created>
@@ -177,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685802492776</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="item_card2php">
+      <created>1685858449771</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1685858449771</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

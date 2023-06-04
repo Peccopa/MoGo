@@ -105,49 +105,53 @@ if(isset($_COOKIE['postToReg'])) {
 
 
 
-<h1>Работа с сотрудниками</h1>
+<h1>ADD YOUR HISTORY</h1>
 <?php
 /**
  * создаем таблицу для хранения данных
- * id, first_name, last_name, login, email, password, avatar
+ * id, category, title, shortblog, fullblog, blogimage, blogday, blogmonth, authorid
  */
-$query = "CREATE TABLE IF NOT EXISTS users(
+$query = "CREATE TABLE IF NOT EXISTS foodblogs(
                     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                    first_name VARCHAR(255) NOT NULL,
-                    last_name VARCHAR(255) NOT NULL,
-                    login VARCHAR(255) NOT NULL,
-                    email VARCHAR(255) NOT NULL,
-                    password VARCHAR(255) NOT NULL,
-                    avatar TEXT NOT NULL
+                    category VARCHAR(255) NOT NULL,
+                    title VARCHAR(255) NOT NULL,
+                    shortblog TEXT NOT NULL,
+                    fullblog TEXT NOT NULL,
+                    authorid INT NOT NULL,
+                    blogimage TEXT NOT NULL
+                    
                 );";
 $pdo->exec($query);
+
+
 
 /**
  * 2. Если нажата ссылка <a href='?add'>Добавить нового пользователя</a>
  * показываем форму для заполнения
- * id, first_name, last_name, login, email, password, avatar
+ * id=id, category=category, title=title, shortblog=shortblog, fullblog=fullblog, authorid=authorid, blogimage=blogimage, blogday=, blogmonth=
  */
 if(isset($_GET['add'])){
     echo <<<_HTML
-                <h2>Добавление нового пользователя</h2>   
+                <h2>ADD YOUR HISTORY</h2>   
                 <form method="POST" enctype="multipart/form-data">
-                    <label>Имя:</label>
-                    <input type="text" name="first_name"><br>
+                    <label>category</label>
+                    <input type="text" name="category"><br>
                     
-                    <label>Фамилия:</label>
-                    <input type="text" name="last_name"><br>
+                    <label>title</label>
+                    <input type="text" name="title"><br>
 
-                    <label>Логин:</label>
-                    <input type="text" name="login"><br>
+                    <label>shortblog</label>
+                    <input type="text" name="shortblog"><br>
                     
-                    <label>Электронная почта:</label>
-                    <input type="email" name="email"><br>
                     
-                    <label>Пароль:</label>
-                    <input type="password" name="password"><br>
+                    <label>fullblog</label>
+                    <input type="text" name="fullblog"><br>
                     
-                    <label>Аватар:</label>
-                    <input type="file" name="avatar"><br>  
+                    <label>authorid</label>
+                    <input type="text" name="authorid"><br>
+                    
+                    <label>blogimage</label>
+                    <input type="file" name="blogimage"><br>  
                     
                     <input type="submit" name="action" value="Создать">                                                
                 </form>
@@ -162,37 +166,37 @@ _HTML;
 if( isset($_POST['action']) && $_POST['action'] === 'Создать' ){
 
     // получаем данные о картинке
-    $avatar = $_FILES['avatar']; // массив
+    $blogimage = $_FILES['blogimage']; // массив
 
     // проверка на пустые поля
-    if( !empty($_POST['first_name']) &&
-        !empty($_POST['last_name']) &&
-        !empty($_POST['login']) &&
-        !empty($_POST['email']) &&
-        !empty($_POST['password']) &&
-        $avatar['size'] !== 0 )
+    if( !empty($_POST['category']) &&
+        !empty($_POST['title']) &&
+        !empty($_POST['shortblog']) &&
+        !empty($_POST['fullblog']) &&
+        !empty($_POST['authorid']) &&
+        $blogimage['size'] !== 0 )
     { // если НЕ пусто, продолжаем
         // экранируем, переносим картинку в папку, заносим данные в БД
 
         // 1. Экранируем данные < > ' "
-        $first_name = htmlspecialchars(trim($_POST['first_name']));
-        $last_name = htmlspecialchars(trim($_POST['last_name']));
-        $login = htmlspecialchars(trim($_POST['login']));
-        $email = htmlspecialchars(trim($_POST['email']));
-        $password = htmlspecialchars(trim($_POST['password']));
+        $category = htmlspecialchars(trim($_POST['category']));
+        $title = htmlspecialchars(trim($_POST['title']));
+        $shortblog = htmlspecialchars(trim($_POST['shortblog']));
+        $fullblog = htmlspecialchars(trim($_POST['fullblog']));
+        $authorid = htmlspecialchars(trim($_POST['authorid']));
 
         // 2. Обрабатываем картинку
-        // 2.1 Формируем путь к картинке 'images/avatar.png'
-        $avatar_path = '../images/users/'. $avatar['size'] . '_'. time() .'_' . $avatar['name'];
-        // echo $avatar_path; // images/97314_1685534255_photo1685362216.jpeg
+        // 2.1 Формируем путь к картинке 'images/blogimage.png'
+        $blogimage_path = '../images/users/'. $blogimage['size'] . '_'. time() .'_' . $blogimage['name'];
+        // echo $blogimage_path; // images/97314_1685534255_photo1685362216.jpeg
 
         // 2.2 Перемещаем картинку в нужную папку
-        move_uploaded_file($avatar['tmp_name'], $avatar_path);
+        move_uploaded_file($blogimage['tmp_name'], $blogimage_path);
 
         // 3. Записываем данные в БД
-        $query = "INSERT INTO users VALUES( ?, ?, ?, ?, ?, ?, ? );";
+        $query = "INSERT INTO foodblogs VALUES( ?, ?, ?, ?, ?, ?, ? );";
         $result = $pdo->prepare($query);
-        $result->execute( [NULL, $first_name, $last_name, $login, $email, $password, $avatar_path] );
+        $result->execute( [NULL, $category, $title, $shortblog, $fullblog, $authorid, $blogimage_path] );
 
         // перезагружаем страницу
         header('Location: admin.php');
@@ -212,23 +216,23 @@ if( isset($_POST['action']) && $_POST['action'] === "Удалить" ){
 
     // 2. Удаляем картинку пользователя
     // 2.1 Получаем по ID ссылку на картинку
-    $query = "SELECT avatar
-                      FROM users
+    $query = "SELECT blogimage
+                      FROM foodblogs
                       WHERE id = ?;";
     $result = $pdo->prepare($query);
     $result->execute([$id]);
-    $avatar_path = $result->fetch()['avatar']; // string
-    //echo $avatar_path;
+    $blogimage_path = $result->fetch()['blogimage']; // string
+    //echo $blogimage_path;
 
     // 2.2 Проверяем, есть ли такая картинка в папке
-    if( file_exists($avatar_path) ){
+    if( file_exists($blogimage_path) ){
         // 2.3 Если картинка есть, удаляем
-        unlink($avatar_path);
+        unlink($blogimage_path);
     }
 
     // 3. Удаляем пользователя с указанным ID из БД
     $query = "DELETE 
-              FROM users
+              FROM foodblogs
               WHERE id = ?";
     $result = $pdo->prepare($query);
     $result->execute([$id]);
@@ -246,8 +250,8 @@ if( isset($_POST['action']) && $_POST['action'] === "Изменить" ){
     $id = (int)$_POST['id'];
 
     // 2. Получаем данные о текущем пользователе из БД по ID
-    $query = "SELECT id, first_name, last_name, login, email, password
-                      FROM users
+    $query = "SELECT id, category, title, shortblog, fullblog, authorid
+                      FROM foodblogs
                       WHERE id = ?";
     $result = $pdo->prepare($query);
     $result->execute([$id]);
@@ -256,25 +260,25 @@ if( isset($_POST['action']) && $_POST['action'] === "Изменить" ){
 
     // 3. Отображаем форму для изменения данных
     echo <<<_HTML
-                <h2>Изменение пользователя $user[first_name] $user[last_name]</h2>   
+                <h2>Изменение пользователя $user[category] $user[title]</h2>   
                 <form method="POST" enctype="multipart/form-data">
                     <label>Имя:</label>
-                    <input type="text" name="first_name" value="$user[first_name]"><br>
+                    <input type="text" name="category" value="$user[category]"><br>
                     
                     <label>Фамилия:</label>
-                    <input type="text" name="last_name" value="$user[last_name]"><br>
+                    <input type="text" name="title" value="$user[title]"><br>
 
                     <label>Логин:</label>
-                    <input type="text" name="login" value="$user[login]"><br>
+                    <input type="text" name="shortblog" value="$user[shortblog]"><br>
                     
                     <label>Электронная почта:</label>
-                    <input type="email" name="email" value="$user[email]"><br>
+                    <input type="text" name="fullblog" value="$user[fullblog]"><br>
                     
                     <label>Пароль:</label>
-                    <input type="text" name="password" value="$user[password]"><br>
+                    <input type="text" name="authorid" value="$user[authorid]"><br>
                     
                     <label>Аватар:</label>
-                    <input type="file" name="avatar"><br>  
+                    <input type="file" name="blogimage"><br>  
                     
                     <input type="hidden" name="id" value="$user[id]">
                     <input type="submit" name="action" value="Обновить">                                                
@@ -289,19 +293,19 @@ _HTML;
 if( isset($_POST['action']) && $_POST['action'] === "Обновить" ){
 
     // проверка на пустые поля
-    if( !empty($_POST['first_name']) &&
-        !empty($_POST['last_name']) &&
-        !empty($_POST['login']) &&
-        !empty($_POST['email']) &&
-        !empty($_POST['password']) )
+    if( !empty($_POST['category']) &&
+        !empty($_POST['title']) &&
+        !empty($_POST['shortblog']) &&
+        !empty($_POST['fullblog']) &&
+        !empty($_POST['authorid']) )
     { // если все поля заполнены
 
         // 1. Экранируем данные < > ' "
-        $first_name = htmlspecialchars(trim($_POST['first_name']));
-        $last_name = htmlspecialchars(trim($_POST['last_name']));
-        $login = htmlspecialchars(trim($_POST['login']));
-        $email = htmlspecialchars(trim($_POST['email']));
-        $password = htmlspecialchars(trim($_POST['password']));
+        $category = htmlspecialchars(trim($_POST['category']));
+        $title = htmlspecialchars(trim($_POST['title']));
+        $shortblog = htmlspecialchars(trim($_POST['shortblog']));
+        $fullblog = htmlspecialchars(trim($_POST['fullblog']));
+        $authorid = htmlspecialchars(trim($_POST['authorid']));
 
         // 2. Забираем ID
         $id = (int)$_POST['id'];
@@ -309,40 +313,40 @@ if( isset($_POST['action']) && $_POST['action'] === "Обновить" ){
         /**
          * 3. работа с новой картинкой
          */
-        $avatar = $_FILES['avatar'];
+        $blogimage = $_FILES['blogimage'];
 
-        if($avatar['size'] === 0){ // если новая картинка не передана
+        if($blogimage['size'] === 0){ // если новая картинка не передана
             // Обновляем в БД только текстовые данные
-            $query = "UPDATE users
-                              SET first_name = ?, last_name = ?, login = ?, email = ?, password = ?
+            $query = "UPDATE foodblogs
+                              SET category = ?, title = ?, shortblog = ?, fullblog = ?, authorid = ?
                               WHERE id = ?";
             $result = $pdo->prepare($query);
-            $result->execute([$first_name, $last_name, $login, $email, $password, $id]);
+            $result->execute([$category, $title, $shortblog, $fullblog, $authorid, $id]);
 
         }else{ // если новая картинка передана
             // Формируем путь к новой картинке
-            $avatar_path = '../images/users/'. $avatar['size'] . '_'. time() .'_' . $avatar['name'];
+            $blogimage_path = '../images/users/'. $blogimage['size'] . '_'. time() .'_' . $blogimage['name'];
             // загружаем новую картинку в папку images
-            move_uploaded_file($avatar['tmp_name'], $avatar_path);
+            move_uploaded_file($blogimage['tmp_name'], $blogimage_path);
 
             // удаляем старую картинку
             // 1. получаем ссылку на старую картинку
-            $query = "SELECT avatar FROM users WHERE id = ?";
+            $query = "SELECT blogimage FROM foodblogs WHERE id = ?";
             $result = $pdo->prepare($query);
             $result->execute([$id]);
-            $del_avatar_path = $result->fetch()['avatar'];
+            $del_blogimage_path = $result->fetch()['blogimage'];
 
             // 2. если картинка есть, удаляем старую картинку
-            if(file_exists($del_avatar_path)){
-                unlink($del_avatar_path);
+            if(file_exists($del_blogimage_path)){
+                unlink($del_blogimage_path);
             }
 
             // записываем данные в базу включая ссылку на новую картинку
-            $query = "UPDATE users 
-                    SET first_name = ?, last_name = ?, login = ?, email = ?, password = ?, avatar = ? 
+            $query = "UPDATE foodblogs 
+                    SET category = ?, title = ?, shortblog = ?, fullblog = ?, authorid = ?, blogimage = ? 
                     WHERE id = ?";
             $result = $pdo->prepare($query);
-            $result->execute([$first_name, $last_name, $login, $email, $password, $avatar_path, $id]);
+            $result->execute([$category, $title, $shortblog, $fullblog, $authorid, $blogimage_path, $id]);
 
         }
 
@@ -359,9 +363,9 @@ if( isset($_POST['action']) && $_POST['action'] === "Обновить" ){
 /**
  * выводим список пользователей в документ
  */
-$query = "SELECT id, first_name, last_name, login, email, password, avatar
-		            FROM users
-		            ORDER BY first_name;";
+$query = "SELECT id, category, title, shortblog, fullblog, authorid, blogimage
+		            FROM foodblogs
+		            ORDER BY category;";
 $result = $pdo->query($query);
 
 echo "<h2>Список всех пользователей</h2>";
@@ -383,12 +387,12 @@ while( $user = $result->fetch() ){
                         <input class='back__button' type="submit" name="action" value="DELETE USER">
                         <button class='back__button' type="submit" formaction='?add'>add new user</button>
                         
-                        <img src="$user[avatar]" alt="$user[first_name] $user[last_name]">
+                        <img src="$user[blogimage]" alt="$user[category] $user[title]">
                         <p>ID: <span>$user[id]</span></p>
-                        <p>Имя: <span>$user[first_name]</span></p>
-                        <p>Фамилия: <span>$user[last_name]</span></p>
-                        <p>Логин: <span>$user[login]</span></p>
-                        <p>Электронная почта: <span>$user[email]</span></p>
+                        <p>Имя: <span>$user[category]</span></p>
+                        <p>Фамилия: <span>$user[title]</span></p>
+                        <p>Логин: <span>$user[shortblog]</span></p>
+                        <p>Электронная почта: <span>$user[fullblog]</span></p>
                         
                         <form method="POST">
                             <input type="hidden" name="id" value="$user[id]">

@@ -56,38 +56,7 @@ function ESCclose(evt) {
 
 
 
-/*aboutUs*/
 
-// let cardItem1 = document.querySelector('#cardItem1');
-// let cardInner1 = document.querySelector('#cardInner1');
-// let cardImg1 = document.querySelector('#cardImg1');
-// let cardIcon1 = document.querySelector('#cardIcon1');
-// let cardText1 = document.querySelector('#cardText1');
-
-// console.log(cardItem1, cardInner1, cardImg1, cardIcon1, cardText1);
-//
-// cardItem1.addEventListener('mouseover', function () {
-//
-//     if (cardItem1.className == 'card__item card__item--active') {
-//     cardItem1.classList.remove('card__item--active');
-//     cardInner1.classList.remove('card__inner--active');
-//     cardImg1.classList.remove('card__img--active');
-//     cardIcon1.classList.remove('card__icon--active');
-//     cardText1.classList.remove('card__text--active');
-//     console.log('111');
-// } else {
-//     cardItem1.classList.add('card__item--active');
-//     cardInner1.classList.add('card__inner--active');
-//     cardImg1.classList.add('card__img--active');
-//     cardIcon1.classList.add('card__icon--active');
-//     cardText1.classList.add('card__text--active');
-//         console.log('222');
-// }
-//
-//
-//
-// console.log(cardItem1, cardInner1, cardImg1, cardIcon1, cardText1);
-// });
 
 // <div className="card__item card__item--active" id="cardItem1">
 //     <div className="card__inner card__inner--active" id="cardInner1">
