@@ -137,29 +137,27 @@ if(isset($_GET['add'])){
                 
             <div class="storymenu">  
                 <form method="POST" enctype="multipart/form-data">
-                    <label>category</label>
-                    <input type="text" name="category"><br>
+                    <div class="story__lable">
+                       <label>category</label>
+                       <label>title</label>
+                       <label>shortblog</label>
+                       <label>fullblog</label>
+                       <label>authorid</label>
+                       <label>blogday</label>
+                       <label>blogmonth</label>
+                       <label>blogimage</label>
+                   </div>
                     
-                    <label>title</label>
-                    <input type="text" name="title"><br>
-
-                    <label>shortblog</label>
-                    <input type="text" name="shortblog"><br>
-                                    
-                    <label>fullblog</label>
-                    <input type="text" name="fullblog"><br>                   
-                    
-                    <label>authorid</label>
-                    <input type="text" name="authorid"><br>
-                    
-                    <label>blogday</label>
-                    <input type="text" name="blogday"><br>
-                    
-                    <label>blogmonth</label>
-                    <input type="text" name="blogmonth"><br>
-                    
-                    <label>blogimage</label>
-                    <input type="file" name="blogimage"><br>  
+                   <div class="story__input">
+                        <input type="text" name="category">
+                        <input type="text" name="title">
+                        <input type="text" name="shortblog">
+                        <input type="text" name="fullblog">              
+                        <input type="text" name="authorid">
+                        <input type="text" name="blogday">
+                        <input type="text" name="blogmonth">
+                        <input type="file" name="blogimage">
+                    </div>
                     
                     <input type="submit" name="action" value="Создать">                                                
                 </form>
