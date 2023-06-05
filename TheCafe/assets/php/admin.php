@@ -137,29 +137,51 @@ if(isset($_GET['add'])){
                 
             <div class="storymenu">  
                 <form method="POST" enctype="multipart/form-data">
-                    <div class="story__lable">
-                       <label>category</label>
-                       <label>title</label>
-                       <label>shortblog</label>
-                       <label>fullblog</label>
-                       <label>authorid</label>
-                       <label>blogday</label>
-                       <label>blogmonth</label>
-                       <label>blogimage</label>
-                   </div>
+                    <div class="story__label">
                     
-                   <div class="story__input">
-                        <input type="text" name="category">
-                        <input type="text" name="title">
-                        <input type="text" name="shortblog">
-                        <input type="text" name="fullblog">              
-                        <input type="text" name="authorid">
-                        <input type="text" name="blogday">
-                        <input type="text" name="blogmonth">
-                        <input type="file" name="blogimage">
+                       <div class="story__category__title">
+                           <textarea type="text" name="category"></textarea>
+                           <label>category</label>
+                           <label>title</label>
+                           <textarea type="text" name="title"></textarea>
+                       </div>
+                       
+                    <div class="story__shortblog">
+                       <textarea type="text" name="shortblog"></textarea>
+                       <label>shortblog</label>
                     </div>
                     
-                    <input type="submit" name="action" value="Создать">                                                
+                       <div class="story__fullblog">
+                           <textarea type="text" name="fullblog"></textarea>
+                           <label>fullblog</label>
+                       </div>
+                       
+                       <div class="story__authorid">
+                           <input type="text" name="authorid">
+                           <label>authorid</label>
+                       </div>
+                       
+                       <div class="story__blogday">
+                           <input type="text" name="blogday">
+                           <label>blogday</label>
+                       </div>
+                       
+                       <div class="story__blogmonth">
+                           <input type="text" name="blogmonth">
+                           <label>blogmonth</label>
+                       </div>
+                       
+                       <div class="story__blogimage">
+                           <input type="file" name="blogimage">
+                           <label>blogimage</label>
+                       </div>
+                       
+                       <div class="story__blogsubmit">
+                           <input type="submit" name="action" value="Создать">
+                           <label>blogsubmit</label>
+                       </div> 
+                       
+                   </div>
                 </form>
             </div>
 _HTML;
