@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d9c28645-b097-40f9-85ea-9df6376e0d3d" name="Default Changelist" comment="item_card2php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/php/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +52,8 @@
       <workItem from="1685676774089" duration="11119000" />
       <workItem from="1685762885705" duration="22977000" />
       <workItem from="1685851494791" duration="14415000" />
-      <workItem from="1685934523959" duration="13771000" />
+      <workItem from="1685934523959" duration="13818000" />
+      <workItem from="1685963403600" duration="1607000" />
     </task>
     <task id="LOCAL-00001" summary="storm">
       <created>1685351222541</created>
@@ -189,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685956665288</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="item_card2php">
+      <created>1685961559190</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1685961559190</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
