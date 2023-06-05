@@ -93,19 +93,18 @@ if(isset($_COOKIE['postToReg'])) {
     <div class="container">
 
         <div class="section__header">
-            <h3 class="section__suptitle">Who we are</h3>
-            <h2 class="section__title">Meet our team</h2>
+            <h3 class="section__suptitle">What`s going on...</h3>
+            <h2 class="section__title">post your story</h2>
             <div class="section__text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             </div>
         </div>
 
-<section class="section--works"></section>
+<section class="section--works story"></section>
 
 <div class="intro intro--noback" id="intro"></div>
 
 
 
-<h1>ADD YOUR HISTORY</h1>
 <?php
 /**
  * создаем таблицу для хранения данных
@@ -117,8 +116,11 @@ $query = "CREATE TABLE IF NOT EXISTS foodblogs(
                     title VARCHAR(255) NOT NULL,
                     shortblog TEXT NOT NULL,
                     fullblog TEXT NOT NULL,
-                    authorid INT NOT NULL,
+                    authorid INT NOT NULL,                 
+                    blogday VARCHAR(255) NOT NULL,
+                    blogmonth VARCHAR(255) NOT NULL,
                     blogimage TEXT NOT NULL
+    
                     
                 );";
 $pdo->exec($query);
@@ -132,7 +134,8 @@ $pdo->exec($query);
  */
 if(isset($_GET['add'])){
     echo <<<_HTML
-                <h2>ADD YOUR HISTORY</h2>   
+                
+            <div class="storymenu">  
                 <form method="POST" enctype="multipart/form-data">
                     <label>category</label>
                     <input type="text" name="category"><br>
@@ -142,19 +145,25 @@ if(isset($_GET['add'])){
 
                     <label>shortblog</label>
                     <input type="text" name="shortblog"><br>
-                    
-                    
+                                    
                     <label>fullblog</label>
-                    <input type="text" name="fullblog"><br>
+                    <input type="text" name="fullblog"><br>                   
                     
                     <label>authorid</label>
                     <input type="text" name="authorid"><br>
+                    
+                    <label>blogday</label>
+                    <input type="text" name="blogday"><br>
+                    
+                    <label>blogmonth</label>
+                    <input type="text" name="blogmonth"><br>
                     
                     <label>blogimage</label>
                     <input type="file" name="blogimage"><br>  
                     
                     <input type="submit" name="action" value="Создать">                                                
                 </form>
+            </div>
 _HTML;
 
 }
@@ -174,6 +183,8 @@ if( isset($_POST['action']) && $_POST['action'] === 'Создать' ){
         !empty($_POST['shortblog']) &&
         !empty($_POST['fullblog']) &&
         !empty($_POST['authorid']) &&
+        !empty($_POST['blogday']) &&
+        !empty($_POST['blogmonth']) &&
         $blogimage['size'] !== 0 )
     { // если НЕ пусто, продолжаем
         // экранируем, переносим картинку в папку, заносим данные в БД
@@ -184,19 +195,21 @@ if( isset($_POST['action']) && $_POST['action'] === 'Создать' ){
         $shortblog = htmlspecialchars(trim($_POST['shortblog']));
         $fullblog = htmlspecialchars(trim($_POST['fullblog']));
         $authorid = htmlspecialchars(trim($_POST['authorid']));
+        $blogday = htmlspecialchars(trim($_POST['blogday']));
+        $blogmonth = htmlspecialchars(trim($_POST['blogmonth']));
 
         // 2. Обрабатываем картинку
         // 2.1 Формируем путь к картинке 'images/blogimage.png'
-        $blogimage_path = '../images/users/'. $blogimage['size'] . '_'. time() .'_' . $blogimage['name'];
+        $blogimage_path = '../images/blogs/'. $blogimage['size'] . '_'. time() .'_' . $blogimage['name'];
         // echo $blogimage_path; // images/97314_1685534255_photo1685362216.jpeg
 
         // 2.2 Перемещаем картинку в нужную папку
         move_uploaded_file($blogimage['tmp_name'], $blogimage_path);
 
         // 3. Записываем данные в БД
-        $query = "INSERT INTO foodblogs VALUES( ?, ?, ?, ?, ?, ?, ? );";
+        $query = "INSERT INTO foodblogs VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ? );";
         $result = $pdo->prepare($query);
-        $result->execute( [NULL, $category, $title, $shortblog, $fullblog, $authorid, $blogimage_path] );
+        $result->execute( [NULL, $category, $title, $shortblog, $fullblog, $authorid, $blogday, $blogmonth, $blogimage_path] );
 
         // перезагружаем страницу
         header('Location: admin.php');
@@ -250,7 +263,7 @@ if( isset($_POST['action']) && $_POST['action'] === "Изменить" ){
     $id = (int)$_POST['id'];
 
     // 2. Получаем данные о текущем пользователе из БД по ID
-    $query = "SELECT id, category, title, shortblog, fullblog, authorid
+    $query = "SELECT id, category, title, shortblog, fullblog, authorid, blogday, blogmonth
                       FROM foodblogs
                       WHERE id = ?";
     $result = $pdo->prepare($query);
@@ -274,7 +287,13 @@ if( isset($_POST['action']) && $_POST['action'] === "Изменить" ){
                     <label>Электронная почта:</label>
                     <input type="text" name="fullblog" value="$user[fullblog]"><br>
                     
-                    <label>Пароль:</label>
+                    <label>Электронная почта:</label>
+                    <input type="text" name="blogday" value="$user[blogday]"><br>
+                    
+                    <label>Электронная почта:</label>
+                    <input type="text" name="blogmonth" value="$user[blogmonth]"><br>
+                    
+                    <label>authorID:</label>
                     <input type="text" name="authorid" value="$user[authorid]"><br>
                     
                     <label>Аватар:</label>
@@ -297,6 +316,8 @@ if( isset($_POST['action']) && $_POST['action'] === "Обновить" ){
         !empty($_POST['title']) &&
         !empty($_POST['shortblog']) &&
         !empty($_POST['fullblog']) &&
+        !empty($_POST['blogday']) &&
+        !empty($_POST['blogmonth']) &&
         !empty($_POST['authorid']) )
     { // если все поля заполнены
 
@@ -304,6 +325,8 @@ if( isset($_POST['action']) && $_POST['action'] === "Обновить" ){
         $category = htmlspecialchars(trim($_POST['category']));
         $title = htmlspecialchars(trim($_POST['title']));
         $shortblog = htmlspecialchars(trim($_POST['shortblog']));
+        $blogday = htmlspecialchars(trim($_POST['blogday']));
+        $blogmonth = htmlspecialchars(trim($_POST['blogmonth']));
         $fullblog = htmlspecialchars(trim($_POST['fullblog']));
         $authorid = htmlspecialchars(trim($_POST['authorid']));
 
@@ -318,14 +341,14 @@ if( isset($_POST['action']) && $_POST['action'] === "Обновить" ){
         if($blogimage['size'] === 0){ // если новая картинка не передана
             // Обновляем в БД только текстовые данные
             $query = "UPDATE foodblogs
-                              SET category = ?, title = ?, shortblog = ?, fullblog = ?, authorid = ?
+                              SET category = ?, title = ?, shortblog = ?, fullblog = ?, blogday = ?, blogmonth = ?, authorid = ?
                               WHERE id = ?";
             $result = $pdo->prepare($query);
-            $result->execute([$category, $title, $shortblog, $fullblog, $authorid, $id]);
+            $result->execute([$category, $title, $shortblog, $blogday, $blogmonth, $fullblog, $authorid, $id]);
 
         }else{ // если новая картинка передана
             // Формируем путь к новой картинке
-            $blogimage_path = '../images/users/'. $blogimage['size'] . '_'. time() .'_' . $blogimage['name'];
+            $blogimage_path = '../images/blogs/'. $blogimage['size'] . '_'. time() .'_' . $blogimage['name'];
             // загружаем новую картинку в папку images
             move_uploaded_file($blogimage['tmp_name'], $blogimage_path);
 
@@ -343,10 +366,10 @@ if( isset($_POST['action']) && $_POST['action'] === "Обновить" ){
 
             // записываем данные в базу включая ссылку на новую картинку
             $query = "UPDATE foodblogs 
-                    SET category = ?, title = ?, shortblog = ?, fullblog = ?, authorid = ?, blogimage = ? 
+                    SET category = ?, title = ?, shortblog = ?, fullblog = ?, blogday = ?, blogmonth = ?, authorid = ?, blogimage = ? 
                     WHERE id = ?";
             $result = $pdo->prepare($query);
-            $result->execute([$category, $title, $shortblog, $fullblog, $authorid, $blogimage_path, $id]);
+            $result->execute([$category, $title, $shortblog, $fullblog, $blogday, $blogmonth, $authorid, $blogimage_path, $id]);
 
         }
 
@@ -363,43 +386,39 @@ if( isset($_POST['action']) && $_POST['action'] === "Обновить" ){
 /**
  * выводим список пользователей в документ
  */
-$query = "SELECT id, category, title, shortblog, fullblog, authorid, blogimage
+$query = "SELECT id, category, title, shortblog, fullblog, blogday, blogmonth, authorid, blogimage
 		            FROM foodblogs
 		            ORDER BY category;";
 $result = $pdo->query($query);
 
-echo "<h2>Список всех пользователей</h2>";
+//echo "<h2>Список всех пользователей</h2>";
 
 // 1. Ссылка на добавление нового пользователя
 //echo "<a href='?add'>Добавить нового пользователя</a>";
-echo "<a href='?add' class='back__button' id='backClick'>add new user</a>";
+echo "<div class='postnewstory'><a href='?add' class='back__button' id='backClick'>POST NEW STORY</a></div>";
 // тестовый вывод юзеров
 // DBConnect::d( $result->fetchAll() );
 // вывод пользователей в документ
-echo "<div class='card'>";
+echo "<div class='stories__block'>";
 while( $user = $result->fetch() ){
     echo <<<_HTML_
-                    
-                    
-                    
-                    <div class="card__item">
-                        <input class='back__button' type="submit" name="action" value="EDIT USER">
-                        <input class='back__button' type="submit" name="action" value="DELETE USER">
-                        <button class='back__button' type="submit" formaction='?add'>add new user</button>
-                        
-                        <img src="$user[blogimage]" alt="$user[category] $user[title]">
-                        <p>ID: <span>$user[id]</span></p>
-                        <p>Имя: <span>$user[category]</span></p>
-                        <p>Фамилия: <span>$user[title]</span></p>
-                        <p>Логин: <span>$user[shortblog]</span></p>
-                        <p>Электронная почта: <span>$user[fullblog]</span></p>
-                        
-                        <form method="POST">
-                            <input type="hidden" name="id" value="$user[id]">
+                    <div class="stories__col">
+                            <img src="$user[blogimage]" alt="$user[category] $user[title]">
+                            <p>ID: <span>$user[id]</span></p>
+                            <p>CATEGORY: <span>$user[category]</span></p>
+                            <p>TITLE: <span>$user[title]</span></p>
+                            <p>SHORT TEXT: <span>$user[shortblog]</span></p>
+                            <p>FULL TEXT: <span>$user[fullblog]</span></p>
+                            <p>DAY: <span>$user[blogday]</span></p>
+                            <p>MONTH: <span>$user[blogmonth]</span></p>
                             
-                            
-                        </form>
-                    </div>
+                            <form method="POST">
+                                <input type="hidden" name="id" value="$user[id]">
+                                <input class='back__button' type="submit" name="action" value="Изменить">
+                                <input class='back__button' type="submit" name="action" value="Удалить">
+    <!--                        <button class='back__button' type="submit" formaction='?add'>add new user</button>-->
+                            </form>
+                        </div>
 _HTML_;
 }
 echo "</div>";
