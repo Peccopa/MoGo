@@ -242,10 +242,15 @@ if(isset($_COOKIE['postToReg'])) {
             </div>
         </div>
 
+
+
+
+
         <div class="works"> <!--вне контейнера-->
 
             <div class="works__col">
-                <a href="./assets/php/blogs.php?id=1"><div class="works__item">
+
+                <a href="./assets/php/blogs.php?id=7"><div class="works__item">
                         <img class="works__image" src="./assets/images/works/a1.jpg" alt="">
                         <div class="works__info">
                             <div class="works__icon">
@@ -256,7 +261,7 @@ if(isset($_COOKIE['postToReg'])) {
                         </div>
                     </div></a>
 
-                <div class="works__item">
+                <a href="./assets/php/blogs.php?id=8"><div class="works__item">
                     <img class="works__image" src="./assets/images/works/a2.jpg" alt="">
                     <div class="works__info">
                         <div class="works__icon">
@@ -264,13 +269,14 @@ if(isset($_COOKIE['postToReg'])) {
                         </div>
                         <div class="works__title">dolor sit amet</div>
                         <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam.</div>
-                    </div>
+                    </div></a>
                 </div>
 
             </div>
 
             <div class="works__col">
-                <div class="works__item">
+
+                <a href="./assets/php/blogs.php?id=9"><div class="works__item">
                     <img class="works__image" src="./assets/images/works/b1.jpg" alt="">
                     <div class="works__info">
                         <div class="works__icon">
@@ -278,9 +284,9 @@ if(isset($_COOKIE['postToReg'])) {
                         </div>
                         <div class="works__title">Necessitatibus</div>
                         <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, pariatur nostrum!</div>
-                    </div>
+                    </div></a>
                 </div>
-                <div class="works__item">
+                    <a href="./assets/php/blogs.php?id=10"><div class="works__item">
                     <img class="works__image" src="./assets/images/works/b2.jpg" alt="">
                     <div class="works__info">
                         <div class="works__icon">
@@ -288,12 +294,14 @@ if(isset($_COOKIE['postToReg'])) {
                         </div>
                         <div class="works__title">Mollitia fugiat</div>
                         <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugiat accusantium assumenda minima suscipit aperiam laudantium odio? Ratione, cum veritatis?</div>
-                    </div>
+                    </div></a>
                 </div>
+
             </div>
 
             <div class="works__col">
-                <div class="works__item">
+
+                <a href="./assets/php/blogs.php?id=11"><div class="works__item">
                     <img class="works__image" src="./assets/images/works/c1.jpg" alt="">
                     <div class="works__info">
                         <div class="works__icon">
@@ -301,12 +309,14 @@ if(isset($_COOKIE['postToReg'])) {
                         </div>
                         <div class="works__title">vitae mo</div>
                         <div class="works__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aperiam, vitae molestiae quasi in minus officia?</div>
-                    </div>
+                    </div></a>
                 </div>
+
             </div>
 
             <div class="works__col">
-                <div class="works__item">
+
+                <a href="./assets/php/blogs.php?id=12"><div class="works__item">
                     <img class="works__image" src="./assets/images/works/d1.jpg" alt="">
                     <div class="works__info">
                         <div class="works__icon">
@@ -314,9 +324,9 @@ if(isset($_COOKIE['postToReg'])) {
                         </div>
                         <div class="works__title">sit amet consectetur</div>
                         <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                    </div>
+                    </div></a>
                 </div>
-                <div class="works__item">
+                    <a href="./assets/php/blogs.php?id=13"><div class="works__item">
                     <img class="works__image" src="./assets/images/works/d2.jpg" alt="">
                     <div class="works__info">
                         <div class="works__icon">
@@ -324,7 +334,8 @@ if(isset($_COOKIE['postToReg'])) {
                         </div>
                         <div class="works__title">ipsum dolor sit</div>
                         <div class="works__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod assumenda quia illum, excepturi soluta in, corrupti necessitatibus qui placeat, tempore aspernatur repellat possimus. Odit, cumque.</div>
-                    </div>
+                    </div></a>
+
                 </div>
             </div>
 
@@ -442,11 +453,16 @@ if(isset($_COOKIE['postToReg'])) {
     <!-- blog  -->
 
     <?php
-    $query = "SELECT blogs.`id` AS blogs_id, `title`, `full`, `image`, `day`, `month`, blogers.id AS blogers_id, first_name, last_name, photo, short
-FROM `blogs`, blogers
-WHERE blogers.id = author_id
-ORDER BY `blogs`.`day` DESC
-LIMIT 6";
+//    $query = "SELECT blogs.`id` AS blogs_id, `title`, `full`, `image`, `day`, `month`, blogers.id AS blogers_id, first_name, last_name, photo, short
+//FROM `blogs`, blogers
+//WHERE blogers.id = author_id
+//ORDER BY `blogs`.`day` DESC
+//LIMIT 6";
+    $query = "SELECT foodblogs.`id` AS blogs_id, `title`, `fullblog`, `blogimage`, `blogday`, `blogmonth`, blogers.id AS blogers_id, first_name, last_name, shortblog 
+        FROM `foodblogs`, blogers 
+        WHERE blogers.id = authorid
+        ORDER BY `foodblogs`.`id`
+        LIMIT 6";
     $result = $pdo->query($query);
     $i = 0;
     ?>
@@ -468,13 +484,13 @@ LIMIT 6";
                         <div class="blog__header">
                             <a href="./assets/php/blogs.php?id=<?=$db_blogs['blogs_id'];?>">
                                 <?php
-                                if ($i === 0) {echo '<img class="blog__photo blog__photo--active" src="./assets/images/blog/' . $db_blogs['image'] . '" alt=""></a>'; $i++;}
-                                else {echo '<img class="blog__photo" src="./assets/images/blog/' . $db_blogs['image'] . '" alt=""></a>';}
+                                if ($i === 0) {echo '<img class="blog__photo blog__photo--active" src="./assets' . substr($db_blogs['blogimage'], 2) . '" alt=""></a>'; $i++;}
+                                else {echo '<img class="blog__photo" src="./assets' . substr($db_blogs['blogimage'], 2) . '" alt=""></a>';}
                                 ?>
                                 <div class="blog__date">
-                                    <div class="blog__date-day"><?=$db_blogs['day'];?>
+                                    <div class="blog__date-day"><?=$db_blogs['blogday'];?>
                                     </div>
-                                    <div class="blog__date-month"><?=$db_blogs['month'];?>
+                                    <div class="blog__date-month"><?=$db_blogs['blogmonth'];?>
                                     </div>
                                 </div>
                         </div>
@@ -483,7 +499,7 @@ LIMIT 6";
                             <div class="blog__title">
                                 <a href="./assets/php/blogs.php?id=<?=$db_blogs['blogs_id'];?>"><?=$db_blogs['title'];?></a>
                             </div>
-                            <div class="blog__text"><?=$db_blogs['short'];?></div>
+                            <div class="blog__text"><?=$db_blogs['shortblog'];?></div>
                         </div>
 
                         <div class="blog__footer">

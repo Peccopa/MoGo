@@ -2,10 +2,14 @@
 
 require '../php/DBConnect.php';
 $pdo = DBConnect::getConnection();
-$query = "SELECT blogs.`id` AS blogs_id, `title`, `full`, `image`, `day`, `month`, blogers.id AS blogers_id, first_name, last_name 
-        FROM `blogs`, blogers 
-        WHERE blogers.id = author_id 
-        ORDER BY `blogs`.`day` DESC";
+//$query = "SELECT blogs.`id` AS blogs_id, `title`, `fullblog`, `image`, `day`, `month`, blogers.id AS blogers_id, first_name, last_name
+//        FROM `blogs`, blogers
+//        WHERE blogers.id = author_id
+//        ORDER BY `blogs`.`day` DESC";
+$query = "SELECT foodblogs.`id` AS blogs_id, `title`, `fullblog`, `blogimage`, `blogday`, `blogmonth`, blogers.id AS blogers_id, first_name, last_name, shortblog 
+        FROM `foodblogs`, blogers 
+        WHERE blogers.id = authorid
+        ORDER BY `foodblogs`.`id`";
 $result = $pdo->query($query);
 $blogs = $result->fetchAll();
 $blogId = (int)$_GET['id'];
@@ -180,11 +184,11 @@ if(isset($_COOKIE['postToReg'])) {
                                     <div class="blog__inner--opened">
                                     <a class="blog__img--opened" href="./assets/php/blogs.php?id=1">
 <!--                                        <img class="blog__photo blog__photo--active" src="../images/blog/11.jpg" alt=""></a>-->
-                                        <img class="blog__photo blog__photo--active" src="../images/blog/<?=$blog['image']?>" alt=""></a>
+                                        <img class="blog__photo blog__photo--active" src="<?=$blog['blogimage']?>" alt=""></a>
 
                                     <div class="blog__date blog__date--opened">
-                                        <div class="blog__date-day blog__date-day--opened"><?=$blog['day']?></div>
-                                        <div class="blog__date-month blog__date-month--opened"><?=$blog['month']?></div>
+                                        <div class="blog__date-day blog__date-day--opened"><?=$blog['blogday']?></div>
+                                        <div class="blog__date-month blog__date-month--opened"><?=$blog['blogmonth']?></div>
                                     </div>
                                     </div>
 
@@ -251,7 +255,7 @@ if(isset($_COOKIE['postToReg'])) {
                                     <div class="blog__title blog__title--opened">
                                         <a href="./assets/php/blogs.php?id=1"><?=$blog['title']?></a>
                                     </div>
-                                    <p class="blog__text blog__text--opened"><?=$blog['full'] = str_replace("\r\n\r\n",'<br><br>', $blog['full'])?></p>
+                                    <p class="blog__text blog__text--opened"><?=$blog['fullblog'] = str_replace("\r\n\r\n",'<br><br>', $blog['fullblog'])?></p>
                                 </div>
                             </div>
                             <a href="../../index.php#blog" class="back__button" id="backClick">back to blogs</a>
