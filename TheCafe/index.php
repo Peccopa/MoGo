@@ -98,7 +98,7 @@ if(isset($_COOKIE['postToReg'])) {
                 <!-- <a class="nav__link" href="#" data-scroll="#footer">log in</a> -->
                 <a class="nav__link whatsup" href="https://api.whatsapp.com/send?phone=79168291896">
                 <i class="fa-brands fa-whatsapp fa-2xl"></i></a>
-<!--                <a class="nav__link" href="./assets/php/admin.php" >ADMIN</a>-->
+                <a class="nav__link" href="./assets/php/users.php" >ADMIN</a>
 
                 <!-- <a class="nav__link" href="#">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -181,9 +181,9 @@ if(isset($_COOKIE['postToReg'])) {
                                 <div id="caption1"></div>
                             </div>
                             <div class="card__icon card__icon--active" id="cardIcon1"><i class="fa-solid fa-umbrella"></i></div>
-                            <div class="card__text card__text--active" id="cardText1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, non! </div>
+                            <div class="card__text card__text--active" id="cardText1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit! </div>
                         </div>
-                    </div>
+                        </div>
 
                 <div class="card__item">
                     <div class="card__inner">
@@ -525,6 +525,16 @@ if(isset($_COOKIE['postToReg'])) {
 
 
     <!-- reviews1  -->
+
+
+<?php
+$query = "SELECT first_name, last_name, avatar
+    FROM users;";
+$result = $pdo->query($query);
+?>
+
+
+
     <div class="section section--grey"><!--секция без заголовка (div вместо section)-->
         <div class="container">
 
@@ -533,21 +543,30 @@ if(isset($_COOKIE['postToReg'])) {
                 <!-- <a class="reviews__btn reviews__btn--next" href="#">Next</a> -->
 
                 <div data-slider>
+                    <?php while ($db_users = $result->fetch()):?>
                     <div>
                         <div class="reviews__item">
-                            <img class="reviews__photo" src="./assets/images/reviews/reviews_icon.png" alt="">
+                            <img class="reviews__photo" src="./assets . <?=substr($db_users['avatar'], 2);?>" alt="">
                             <div class="reviews__text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p></div>
-                            <div class="reviews__author">Jon Doe</div>
+                            <div class="reviews__author"><?=$db_users['first_name'];?> <?=$db_users['last_name'];?></div>
                         </div>
                     </div>
-
-                    <div>
-                        <div class="reviews__item">
-                            <img class="reviews__photo" src="./assets/images/reviews/reviews_icon.png" alt="">
-                            <div class="reviews__text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p></div>
-                            <div class="reviews__author">Jon Doe</div>
-                        </div>
-                    </div>
+                    <?php endwhile;?>
+<!--                    <div>-->
+<!--                        <div class="reviews__item">-->
+<!--                            <img class="reviews__photo" src="./assets/images/ourteam/fertig.jpg" alt="">-->
+<!--                            <div class="reviews__text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p></div>-->
+<!--                            <div class="reviews__author">Jon Doe</div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!---->
+<!--                    <div>-->
+<!--                        <div class="reviews__item">-->
+<!--                            <img class="reviews__photo" src="./assets/images/reviews/reviews_icon.png" alt="">-->
+<!--                            <div class="reviews__text"><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p></div>-->
+<!--                            <div class="reviews__author">Jon Doe</div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
                 </div>
             </div>
@@ -818,7 +837,7 @@ if(isset($_COOKIE['postToReg'])) {
                     <div class="reg__item">
                         <!-- <img class="reg__img" src="" alt=""> -->
                         <button class="reg__button" type="submit" id="btnClick">Registration</button>
-                        <div class="login__button" id="loginClick">log in</div>
+                        <div onclick="window.location.href='assets/php/reg.php';" class="login__button" id="loginClick">log in</div>
                         <!-- <button class="login__button" type="button" id="loginClick">log in</button> -->
                         <!-- <span class="reg__span" id="button-p"></span> -->
                     </div>

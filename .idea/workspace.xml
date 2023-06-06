@@ -3,6 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="d9c28645-b097-40f9-85ea-9df6376e0d3d" name="Default Changelist" comment="item_card2php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/about/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/images/about/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/about/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/images/about/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/about/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/images/about/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/blog/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/blog/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/blog/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/intro1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/images/intro1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/intro2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/images/intro2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/intro3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/images/intro3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/intro4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/images/intro4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/ourteam/02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/ourteam/03.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/ourteam/222.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/ourteam/_campbell.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/ourteam/_dix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/ourteam/_fertig.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TheCafe/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +73,7 @@
       <workItem from="1685934523959" duration="13818000" />
       <workItem from="1685963403600" duration="1628000" />
       <workItem from="1685970334379" duration="7451000" />
-      <workItem from="1686021875478" duration="6707000" />
+      <workItem from="1686021875478" duration="18596000" />
     </task>
     <task id="LOCAL-00001" summary="storm">
       <created>1685351222541</created>
@@ -219,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686027790971</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="item_card2php">
+      <created>1686035279007</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1686035279007</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

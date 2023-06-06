@@ -524,7 +524,7 @@ hr {
 .card__text {
     padding: 30px;
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
     text-transform: uppercase;
     /* font-weight: 700; */
@@ -624,7 +624,7 @@ hr {
 .card__text--active {
     padding: 30px;
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
@@ -777,18 +777,19 @@ hr {
 .wedo {
     /*position: relative;*/
     display: flex;
+    justify-content: center;
     margin: 0 -15px;
-    /*flex-wrap: wrap;*/
+    flex-wrap: wrap;
 }
 
 .wedo__item {
-    width: 50%; /*можно было flex: 1 1 0;*/
+    width: 45%; /*можно было flex: 1 1 0;*/
     /*padding: 0 15px;*/
     margin-left: 10px;
 }
 
 .wedo__item--photo {
-    width: 50%; /*можно было flex: 1 1 0;*/
+    width: 45%; /*можно было flex: 1 1 0;*/
     margin-right: 10px;
     max-height: 380px;
     /*padding: 0 15px;*/
@@ -909,11 +910,15 @@ hr {
 }
 
 .reviews__photo {
+    object-fit: cover;
     display: block;
     width: 210px;
     height: 210px;
-    /* border: 2px solid #95e1d3; */
-    /* border-radius: 50%; */
+    /*width: 100%;*/
+    /*height: 100%;*/
+     border: 2px solid #985739;
+     border-radius: 50%;
+    /*overflow: hidden;*/
     /* width: 18%; */
     position: absolute;
     top: 0;
@@ -942,7 +947,7 @@ hr {
     vertical-align: middle;
     width: 60px;
     height: 3px;
-    background-color: #f38181;
+    background-color: #985739;
     margin-right: 10px;
 }
 
@@ -1405,10 +1410,10 @@ hr {
     background-color: #ccc;
     display: block;
 }
-
 .blog__photo:hover {
     transform: translate3d(-10px, -10px, 0);
 }
+
 
 .blog__photo--active {
     transform: translate3d(-10px, -10px, 0);
@@ -2139,7 +2144,7 @@ width: 40%;
 
         /* WEDO */
         .wedo__img {
-            display: none;
+            /*display: none;*/
         }
 
         .wedo__item {
@@ -2153,6 +2158,7 @@ width: 40%;
 
     /* Reviews */
         .reviews__photo {
+
             position: static;
             margin: 0 auto 20px;
         }
