@@ -98,7 +98,7 @@ if(isset($_COOKIE['postToReg'])) {
                 <!-- <a class="nav__link" href="#" data-scroll="#footer">log in</a> -->
                 <a class="nav__link whatsup" href="https://api.whatsapp.com/send?phone=79168291896">
                 <i class="fa-brands fa-whatsapp fa-2xl"></i></a>
-                <a class="nav__link" href="./assets/php/users.php" >ADMIN</a>
+<!--                <a class="nav__link" href="./assets/php/users.php" >ADMIN</a>-->
 
                 <!-- <a class="nav__link" href="#">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -1062,7 +1062,7 @@ $result = $pdo->query($query);
 
                 </div>
                     <div class="copyright">
-                        © 2016 MoGo free PSD template by <span>Laaqiq</span>
+                        © 2023 TheCafe by <span>Bonza</span>
                     </div>
                     <div class="date_now"><?=date(DATE_RSS)?></div>
                 </div>

@@ -1005,12 +1005,12 @@ hr {
     width: 55px;
     height: 55px;
     padding: 13px 10px;
-    background-color: #fce38a;
-    border-right: 1px solid #f9bd87;
+    background-color: #cccccc;
+    border-right: 1px solid #c08569;
 
     font-size: 30px;
     text-decoration: none;
-    color: #f38181;
+    color: #985739;
 
     line-height: 1;
     transition: background .1s linear, color .1s linear;
@@ -1021,8 +1021,8 @@ hr {
 }
 
 .social__item:hover {
-    color: #fff;
-    background-color: #f38181;
+    color: #cccccc;
+    background-color: #985739;
 }
 
 /*=====LOGOS========*/
@@ -1757,12 +1757,12 @@ width: 40%;
     vertical-align: middle;
     margin-left: 10px; /*отстуа у каждой ссылки*/
     font-size: 18px;
-    color: #95e1d3;
+    color: #985739;
     transition: background .2s linear;
 }
 
 .footer__social-content a:hover {
-    color: #74c7b8;
+    color: #985739;
 }
 
 .footer__title {
@@ -1867,14 +1867,14 @@ width: 40%;
 
 .subscribe__input:focus {
     outline: 0; /*убираем границы оутлайна*/
-    border-color: #95e1d3;
+    border-color: #985739;
 
 }
 
 .subscribe__button {
     width: 40%;
     height: 40px;
-    background-color: #95e1d3;
+    background-color: #985739;
     border: 0;
     cursor: pointer;
     padding: 12px 30px;
@@ -1889,7 +1889,7 @@ width: 40%;
 }
 
 .subscribe__button:hover {
-    background-color: #74c7b8;
+    background-color: #c08569;
 }
 
 .subscribe__button:focus {
@@ -1908,7 +1908,7 @@ width: 40%;
 }
 
 .copyright span {
-    color: #f38181;
+    color: #6b3d28;
 }
 
 .date_now {
