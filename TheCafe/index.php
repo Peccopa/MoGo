@@ -603,7 +603,7 @@ $result = $pdo->query($query);
 
                 <div class="card__item">
                     <div class="card__inner">
-                    <div class="card__img"><img src="<?=$db_cards['photo'];?>" alt=""></div>
+                    <div class="card__img"><img src="./<?=$db_cards['photo'];?>" alt=""></div>
                         <div class="card__text">
                             <div class="social">
                                 <a class="social__item" href="#" target="_blank">
@@ -855,6 +855,8 @@ $result = $pdo->query($query);
 
         </div>
     </section>
+
+
 
     <!-- reviews2  -->
     <div class="section section--reviews2" id="reviews2">
