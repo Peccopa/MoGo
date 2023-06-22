@@ -1,89 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9c28645-b097-40f9-85ea-9df6376e0d3d" name="Default Changelist" comment="item_card2php">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/about/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/about/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/about/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/clients/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/clients/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/clients/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/clients/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/clients/clients-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/_ipad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/_iphone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/adam-bartoszewicz-deqlbzyVYpY-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/devices-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/images/Без-имени-1_01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/images/Без-имени-1_02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/images/Без-имени-1_04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/images/Без-имени-1_05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/ipad — копия.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/ipad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/iphone — копия.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/iphone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/iphone3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/Без имени-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/Без имени-1.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/Слой 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/blogs/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/blogs/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/blogs/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/a1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/a2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/a3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/b2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/b3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/c1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/c2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/c3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/icons/facebook.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/intro1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/intro2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/intro3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/intro4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/logos/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/logos/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/logos/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/logos/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/logos/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/logos/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/map/map-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/ourteam/dix.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/reviews/reviews_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/reviews/user0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/servises/creativity.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/servises/csshtml.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/servises/digital.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/servises/photography.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/servises/seo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/servises/webdesign.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/wedo/arrow_down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/wedo/arrow_up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/wedo/creativity.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/wedo/photography.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/wedo/webdesign.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/wedo/wedo_bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/a1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/a2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/b1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/b2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/c1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/d1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/d2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/worksIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/DBConnect.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/arts.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/blogs.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/exit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/reg.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/index.php" beforeDir="false" />
+    <list default="true" id="e9102f03-24a2-4fb1-ba01-f758af0c9d9a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,260 +16,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="2Q6DpwVbVRwsdKvqiRxst0dXUB2" />
+  <component name="ProjectId" id="2RYqTFOIlRo0MNGi2LqUBIkM7Jy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\qwerty" />
-      <recent name="C:\xampp\htdocs\" />
-    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d9c28645-b097-40f9-85ea-9df6376e0d3d" name="Default Changelist" comment="" />
-      <created>1684665323552</created>
+      <changelist id="e9102f03-24a2-4fb1-ba01-f758af0c9d9a" name="Default Changelist" comment="" />
+      <created>1687437368923</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1684665323552</updated>
-      <workItem from="1684665324761" duration="30000" />
-      <workItem from="1684665395854" duration="23000" />
-      <workItem from="1684931107540" duration="8000" />
-      <workItem from="1684932439643" duration="600000" />
-      <workItem from="1685199314200" duration="9000" />
-      <workItem from="1685199382624" duration="3511000" />
-      <workItem from="1685203650629" duration="11000" />
-      <workItem from="1685242452493" duration="10258000" />
-      <workItem from="1685334629162" duration="19272000" />
-      <workItem from="1685416717817" duration="23255000" />
-      <workItem from="1685505004776" duration="22222000" />
-      <workItem from="1685589839275" duration="16715000" />
-      <workItem from="1685676774089" duration="11119000" />
-      <workItem from="1685762885705" duration="22977000" />
-      <workItem from="1685851494791" duration="14415000" />
-      <workItem from="1685934523959" duration="13818000" />
-      <workItem from="1685963403600" duration="1628000" />
-      <workItem from="1685970334379" duration="7451000" />
-      <workItem from="1686021875478" duration="18615000" />
-      <workItem from="1686107643338" duration="7094000" />
-      <workItem from="1686371633459" duration="4935000" />
-      <workItem from="1686466272436" duration="8914000" />
-      <workItem from="1686545619821" duration="4286000" />
-      <workItem from="1686576902413" duration="1450000" />
-      <workItem from="1686634729360" duration="4639000" />
-      <workItem from="1686828511867" duration="92000" />
-      <workItem from="1686909615924" duration="13000" />
-      <workItem from="1686913293792" duration="193000" />
-      <workItem from="1686913498201" duration="17000" />
-      <workItem from="1686913573168" duration="130000" />
-      <workItem from="1686913711729" duration="18000" />
-      <workItem from="1687164614612" duration="44000" />
-      <workItem from="1687436694169" duration="180000" />
-      <workItem from="1687436880272" duration="18000" />
+      <updated>1687437368923</updated>
+      <workItem from="1687437370869" duration="361000" />
     </task>
-    <task id="LOCAL-00001" summary="storm">
-      <created>1685351222541</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1685351222541</updated>
-    </task>
-    <task id="LOCAL-00002" summary="item_card2php">
-      <created>1685354429613</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1685354429613</updated>
-    </task>
-    <task id="LOCAL-00003" summary="item_card2php">
-      <created>1685383056793</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1685383056793</updated>
-    </task>
-    <task id="LOCAL-00004" summary="item_card2php">
-      <created>1685443208034</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1685443208034</updated>
-    </task>
-    <task id="LOCAL-00005" summary="item_card2php">
-      <created>1685450154071</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1685450154071</updated>
-    </task>
-    <task id="LOCAL-00006" summary="item_card2php">
-      <created>1685507976294</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1685507976294</updated>
-    </task>
-    <task id="LOCAL-00007" summary="item_card2php">
-      <created>1685536364864</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1685536364864</updated>
-    </task>
-    <task id="LOCAL-00008" summary="item_card2php">
-      <created>1685551566916</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1685551566916</updated>
-    </task>
-    <task id="LOCAL-00009" summary="item_card2php">
-      <created>1685592681408</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1685592681408</updated>
-    </task>
-    <task id="LOCAL-00010" summary="item_card2php">
-      <created>1685607693252</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1685607693252</updated>
-    </task>
-    <task id="LOCAL-00011" summary="item_card2php">
-      <created>1685636357569</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1685636357569</updated>
-    </task>
-    <task id="LOCAL-00012" summary="item_card2php">
-      <created>1685698219457</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1685698219457</updated>
-    </task>
-    <task id="LOCAL-00013" summary="item_card2php">
-      <created>1685705178262</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1685705178262</updated>
-    </task>
-    <task id="LOCAL-00014" summary="item_card2php">
-      <created>1685712169323</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1685712169323</updated>
-    </task>
-    <task id="LOCAL-00015" summary="item_card2php">
-      <created>1685776245376</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1685776245376</updated>
-    </task>
-    <task id="LOCAL-00016" summary="item_card2php">
-      <created>1685802492776</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1685802492776</updated>
-    </task>
-    <task id="LOCAL-00017" summary="item_card2php">
-      <created>1685858449771</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1685858449771</updated>
-    </task>
-    <task id="LOCAL-00018" summary="item_card2php">
-      <created>1685869872397</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1685869872397</updated>
-    </task>
-    <task id="LOCAL-00019" summary="item_card2php">
-      <created>1685956665287</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1685956665288</updated>
-    </task>
-    <task id="LOCAL-00020" summary="item_card2php">
-      <created>1685961559190</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1685961559190</updated>
-    </task>
-    <task id="LOCAL-00021" summary="item_card2php">
-      <created>1685966130625</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1685966130625</updated>
-    </task>
-    <task id="LOCAL-00022" summary="item_card2php">
-      <created>1685978442074</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1685978442075</updated>
-    </task>
-    <task id="LOCAL-00023" summary="item_card2php">
-      <created>1686027790971</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1686027790971</updated>
-    </task>
-    <task id="LOCAL-00024" summary="item_card2php">
-      <created>1686035279007</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1686035279007</updated>
-    </task>
-    <task id="LOCAL-00025" summary="item_card2php">
-      <created>1686066850670</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1686066850670</updated>
-    </task>
-    <task id="LOCAL-00026" summary="item_card2php">
-      <created>1686109279029</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1686109279029</updated>
-    </task>
-    <task id="LOCAL-00027" summary="item_card2php">
-      <created>1686506967859</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1686506967859</updated>
-    </task>
-    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +46,31 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="25f5143c-8b12-4bb7-9505-3eefa7c7f204">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -365,15 +78,10 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="storm" />
-    <MESSAGE value="item_card2php" />
-    <option name="LAST_COMMIT_MESSAGE" value="item_card2php" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="25f5143c-8b12-4bb7-9505-3eefa7c7f204" value="TOOL_WINDOW" />
+      </map>
+    </option>
   </component>
 </project>
