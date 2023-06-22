@@ -3,8 +3,87 @@
   <component name="ChangeListManager">
     <list default="true" id="d9c28645-b097-40f9-85ea-9df6376e0d3d" name="Default Changelist" comment="item_card2php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/reg.php" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/assets/php/reg.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCafe/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/TheCafe/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/about/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/about/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/about/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/clients/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/clients/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/clients/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/clients/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/clients/clients-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/_ipad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/_iphone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/adam-bartoszewicz-deqlbzyVYpY-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/devices-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/images/Без-имени-1_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/images/Без-имени-1_02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/images/Без-имени-1_04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/images/Без-имени-1_05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/ipad — копия.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/ipad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/iphone — копия.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/iphone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/iphone3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/Без имени-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/Без имени-1.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/devices/Слой 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/blogs/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/blogs/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/blogs/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/a1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/a2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/a3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/b1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/b2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/b3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/c1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/c2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/footer/instagram/c3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/icons/facebook.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/intro1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/intro2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/intro3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/intro4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/logos/01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/logos/02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/logos/03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/logos/04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/logos/05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/logos/06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/map/map-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/ourteam/dix.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/reviews/reviews_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/reviews/user0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/servises/creativity.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/servises/csshtml.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/servises/digital.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/servises/photography.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/servises/seo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/servises/webdesign.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/wedo/arrow_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/wedo/arrow_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/wedo/creativity.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/wedo/photography.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/wedo/webdesign.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/wedo/wedo_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/a1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/a2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/b1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/b2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/c1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/d1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/d2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/images/works/worksIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/DBConnect.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/arts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/blogs.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/exit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/assets/php/reg.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCafe/index.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +107,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\qwerty" />
+      <recent name="C:\xampp\htdocs\" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -60,7 +146,19 @@
       <workItem from="1686021875478" duration="18615000" />
       <workItem from="1686107643338" duration="7094000" />
       <workItem from="1686371633459" duration="4935000" />
-      <workItem from="1686466272436" duration="8898000" />
+      <workItem from="1686466272436" duration="8914000" />
+      <workItem from="1686545619821" duration="4286000" />
+      <workItem from="1686576902413" duration="1450000" />
+      <workItem from="1686634729360" duration="4639000" />
+      <workItem from="1686828511867" duration="92000" />
+      <workItem from="1686909615924" duration="13000" />
+      <workItem from="1686913293792" duration="193000" />
+      <workItem from="1686913498201" duration="17000" />
+      <workItem from="1686913573168" duration="130000" />
+      <workItem from="1686913711729" duration="18000" />
+      <workItem from="1687164614612" duration="44000" />
+      <workItem from="1687436694169" duration="180000" />
+      <workItem from="1687436880272" duration="18000" />
     </task>
     <task id="LOCAL-00001" summary="storm">
       <created>1685351222541</created>
@@ -244,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686109279029</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="item_card2php">
+      <created>1686506967859</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1686506967859</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
