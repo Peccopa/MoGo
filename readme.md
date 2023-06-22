@@ -1,8 +1,8 @@
-###Итоговaя аттестационная работа
+## Итоговaя аттестационная работа
 
-Размещение:
+#### Размещение:
 http://f0817755.xsph.ru/
 
-Код на Github:
+#### Код на Github:
 https://github.com/Peccopa/TheCafe-SQL-PHP-JS_jquery-CSS-HTML.git
 
