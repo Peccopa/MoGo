@@ -1,18 +1,8 @@
-## _Итоговaя аттестационная работа_
+## [php-mysql-ru: the-cafe](https://github.com/Peccopa/php-mysql-ru/tree/main)
+[<img src="https://peccopa.github.io/php-mysql-ru/the-cafe.gif">](http://f0817755.xsph.ru/)
+>Responsive design, modal windows, carousel, active tabs,  
+>interactive map, validation form, ~~registration~~
+- http://f0817755.xsph.ru/
+- ***MySQL, PHP, JAVASCRIPT, CSS, HTML***
+- ***jQuery:*** *SlickSlider*
 ___
-_Защита работы 13.06.2023 г._
-
-* __HTML__
-* __CSS__
-* __JavaScript__
-    * _jQuery_
-* __PHP__
-* __SQL__
----
-
-### Размещение:
-http://f0817755.xsph.ru/
-
-### Код на Github:
-https://github.com/Peccopa/TheCafe-SQL-PHP-JS_jquery-CSS-HTML.git
-
